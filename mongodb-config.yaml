@@ -1,0 +1,14 @@
+instances:
+  - name: mongodb-app-b-prod
+    system: app-b
+    owner: app-b-devs
+    lifecycle: production
+    description: Production MongoDB
+    tags: [critical, production]
+    spec:
+      version: "7.0"
+      instance_type: large
+      storage_size: 100Gi
+    connection:
+      host: mongodb01.internal
+      port: 27017

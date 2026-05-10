@@ -1,0 +1,14 @@
+instances:
+  - name: redis-shared
+    system: app-a
+    owner: app-a-devs
+    lifecycle: production
+    description: Shared Redis cache
+    tags: [critical]
+    spec:
+      version: "7.2"
+      instance_type: small
+      storage_size: 5Gi
+    connection:
+      host: redis01.internal
+      port: 6379

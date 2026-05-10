@@ -1,14 +1,29 @@
 instances:
-  - name: db-1
-    owner: app-a
+  - name: mariadb-app-a-prod
+    system: app-a
+    owner: app-a-devs
+    lifecycle: production
+    description: Production MariaDB
+    tags: [critical, production]
     spec:
-      instance_type: small
-      storage_size: 10Gi
       version: "11.4"
-
-  - name: db-2
-    owner: app-b
-    spec:
       instance_type: medium
       storage_size: 50Gi
-      version: "10.11"
+    connection:
+      host: mariadb01.internal
+      port: 3306
+
+  - name: mariadb-app-a-staging
+    system: app-a
+    owner: app-a-devs
+    lifecycle: staging
+    description: Staging MariaDB
+    annotations:
+      maintenance/scheduled: "20260601"
+    spec:
+      version: "11.4"
+      instance_type: small
+      storage_size: 10Gi
+    connection:
+      host: mariadb02.internal
+      port: 3306

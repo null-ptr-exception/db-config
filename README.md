@@ -1,24 +1,36 @@
 # db-config
 
-GitOps-style Internal Developer Platform for MariaDB instances.
+GitOps-style Internal Developer Platform for database instances.
 
 ## How it works
 
-1. Apps declare database instances in `mariadb-config.yaml`
+1. Teams declare database instances in per-type config files on `main`:
+   - `mariadb-config.yaml`
+   - `mongodb-config.yaml`
+   - `redis-config.yaml`
 2. CI transforms declarations into:
-   - **Backstage catalog entries** → pushed to `catalog` branch
-   - **MariaDB operator CRDs** → pushed to `deployment` branch
+   - **Backstage catalog entities** → pushed to `resources` branch
+   - **Kubernetes operator CRDs** → pushed to `deployment` branch
 
 ## Config format
 
 ```yaml
 instances:
-  - name: db-1
-    owner: app-a
+  - name: mariadb-app-a-prod
+    system: app-a
+    owner: app-a-devs
+    lifecycle: production
+    description: Production MariaDB
+    tags: [critical, production]
+    annotations:                    # optional
+      maintenance/scheduled: "20260601"
     spec:
-      instance_type: small    # small | medium | large
+      version: "11.4"
+      instance_type: small
       storage_size: 10Gi
-      version: "11.4"         # optional, defaults to 11.4
+    connection:
+      host: mariadb01.internal
+      port: 3306
 ```
 
 ### Fields
@@ -26,10 +38,17 @@ instances:
 | Field | Required | Description |
 |-------|----------|-------------|
 | `name` | yes | Unique instance name (lowercase, alphanumeric + hyphens) |
-| `owner` | yes | Owning application or team |
+| `system` | yes | Backstage system this resource belongs to |
+| `owner` | yes | Owning group name (expanded to `group:default/<owner>` in catalog) |
+| `lifecycle` | yes | `production`, `staging`, or `development` |
+| `description` | no | Human-readable description |
+| `tags` | no | List of tags |
+| `annotations` | no | Key-value annotations |
+| `spec.version` | yes | Database engine version |
 | `spec.instance_type` | yes | Resource tier: `small`, `medium`, `large` |
 | `spec.storage_size` | yes | Persistent storage size (e.g. `10Gi`, `1Ti`) |
-| `spec.version` | no | MariaDB version, defaults to `11.4` |
+| `connection.host` | yes | Database hostname |
+| `connection.port` | yes | Database port |
 
 ### Instance types
 
@@ -41,4 +60,12 @@ instances:
 
 ## Validation
 
-The config is validated against `schema/mariadb-config.schema.json`.
+Configs are validated against `schema/db-config.schema.json`.
+
+## Branch structure
+
+| Branch | Content |
+|--------|---------|
+| `main` | Simplified source-of-truth config files |
+| `resources` | Generated Backstage catalog entities |
+| `deployment` | Generated Kubernetes operator CRDs |

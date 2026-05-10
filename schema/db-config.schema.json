@@ -1,0 +1,98 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Database Config",
+  "description": "Simplified database instance declarations for GitOps IDP",
+  "type": "object",
+  "required": ["instances"],
+  "additionalProperties": false,
+  "properties": {
+    "instances": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/instance"
+      }
+    }
+  },
+  "$defs": {
+    "instance": {
+      "type": "object",
+      "required": ["name", "system", "owner", "lifecycle", "spec", "connection"],
+      "additionalProperties": false,
+      "properties": {
+        "name": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9-]*$",
+          "description": "Unique instance name, becomes the Backstage Resource entity name"
+        },
+        "system": {
+          "type": "string",
+          "description": "Backstage system this resource belongs to"
+        },
+        "owner": {
+          "type": "string",
+          "description": "Owning group (without group:default/ prefix)"
+        },
+        "lifecycle": {
+          "type": "string",
+          "enum": ["production", "staging", "development"],
+          "description": "Deployment lifecycle stage"
+        },
+        "description": {
+          "type": "string",
+          "description": "Human-readable description"
+        },
+        "tags": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "annotations": {
+          "type": "object",
+          "additionalProperties": { "type": "string" }
+        },
+        "spec": {
+          "$ref": "#/$defs/spec"
+        },
+        "connection": {
+          "$ref": "#/$defs/connection"
+        }
+      }
+    },
+    "spec": {
+      "type": "object",
+      "required": ["version", "instance_type", "storage_size"],
+      "additionalProperties": false,
+      "properties": {
+        "version": {
+          "type": "string",
+          "description": "Database engine version"
+        },
+        "instance_type": {
+          "type": "string",
+          "enum": ["small", "medium", "large"],
+          "description": "Predefined resource tier"
+        },
+        "storage_size": {
+          "type": "string",
+          "pattern": "^[0-9]+(Gi|Ti)$",
+          "description": "Storage size in Kubernetes quantity format"
+        }
+      }
+    },
+    "connection": {
+      "type": "object",
+      "required": ["host", "port"],
+      "additionalProperties": false,
+      "properties": {
+        "host": {
+          "type": "string",
+          "description": "Database hostname"
+        },
+        "port": {
+          "type": "integer",
+          "description": "Database port"
+        }
+      }
+    }
+  }
+}
