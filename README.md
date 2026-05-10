@@ -9,7 +9,7 @@ GitOps-style Internal Developer Platform for database instances.
    - `mongodb-config.yaml`
    - `redis-config.yaml`
 2. CI transforms declarations into:
-   - **Backstage catalog entities** → pushed to `resources` branch
+   - **Backstage catalog entities** → pushed to `catalog` branch
    - **Kubernetes operator CRDs** → pushed to `deployment` branch
 
 ## Config format
@@ -67,5 +67,5 @@ Configs are validated against `schema/db-config.schema.json`.
 | Branch | Content |
 |--------|---------|
 | `main` | Simplified source-of-truth config files |
-| `resources` | Generated Backstage catalog entities |
+| `catalog` | Generated Backstage catalog entities |
 | `deployment` | Generated Kubernetes operator CRDs |
