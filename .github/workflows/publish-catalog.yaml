@@ -1,0 +1,52 @@
+name: Publish Catalog
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "*-config.yaml"
+      - "scripts/**"
+      - "schema/**"
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install pyyaml
+
+      - name: Generate catalog
+        run: python scripts/generate_catalog.py
+
+      - name: Publish to catalog branch
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          if git ls-remote --exit-code origin refs/heads/catalog >/dev/null 2>&1; then
+            git fetch origin catalog
+            git checkout catalog
+          else
+            git checkout --orphan catalog
+            git rm -rf . || true
+          fi
+
+          cp output/databases.yaml databases.yaml
+          git add databases.yaml
+          if git diff --cached --quiet; then
+            echo "No changes to catalog."
+          else
+            git commit -m "chore: update database catalog"
+            git push origin catalog
+          fi
