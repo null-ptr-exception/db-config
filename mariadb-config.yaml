@@ -1,0 +1,14 @@
+instances:
+  - name: db-1
+    owner: app-a
+    spec:
+      instance_type: small
+      storage_size: 10Gi
+      version: "11.4"
+
+  - name: db-2
+    owner: app-b
+    spec:
+      instance_type: medium
+      storage_size: 50Gi
+      version: "10.11"
