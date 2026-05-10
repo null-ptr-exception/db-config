@@ -1,0 +1,69 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: mariadb-app-a-prod
+  description: Production MariaDB
+  tags:
+  - critical
+  - production
+spec:
+  type: mariadb
+  lifecycle: production
+  system: app-a
+  owner: group:default/app-a-devs
+  properties:
+    version: '11.4'
+    host: mariadb01.internal
+    port: 3306
+---
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: mariadb-app-a-staging
+  description: Staging MariaDB
+  annotations:
+    maintenance/scheduled: '20260601'
+spec:
+  type: mariadb
+  lifecycle: staging
+  system: app-a
+  owner: group:default/app-a-devs
+  properties:
+    version: '11.4'
+    host: mariadb02.internal
+    port: 3306
+---
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: mongodb-app-b-prod
+  description: Production MongoDB
+  tags:
+  - critical
+  - production
+spec:
+  type: mongodb
+  lifecycle: production
+  system: app-b
+  owner: group:default/app-b-devs
+  properties:
+    version: '7.0'
+    host: mongodb01.internal
+    port: 27017
+---
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: redis-shared
+  description: Shared Redis cache
+  tags:
+  - critical
+spec:
+  type: redis
+  lifecycle: production
+  system: app-a
+  owner: group:default/app-a-devs
+  properties:
+    version: '7.2'
+    host: redis01.internal
+    port: 6379
