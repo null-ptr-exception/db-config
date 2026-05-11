@@ -23,6 +23,8 @@ apiVersion: dbms.io/v1alpha1
 kind: Instance
 metadata:
   name: mariadb-001-eu-central-1-staging
+  annotations:
+    maintenance/scheduled: '20260601'
 spec:
   target: resource:default/mariadb-001
   site: site:default/eu-central-1
