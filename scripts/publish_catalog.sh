@@ -23,7 +23,8 @@ else
     git rm -rf . >/dev/null 2>&1 || true
 fi
 
-# Copy generated catalog files
+# Remove stale files and copy generated catalog
+git rm -f *.yaml 2>/dev/null || true
 cp "$REPO_ROOT"/output/*.yaml "$WORK_DIR/"
 
 # Commit and push if there are changes

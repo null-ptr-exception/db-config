@@ -42,6 +42,7 @@ jobs:
             git rm -rf . || true
           fi
 
+          git rm -f *.yaml 2>/dev/null || true
           cp output/*.yaml .
           git add *.yaml
           if git diff --cached --quiet; then
