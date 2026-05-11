@@ -1,0 +1,2564 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: redis-001
+spec:
+  type: redis
+  lifecycle: production
+  system: app-d
+  owner: group:default/app-d-devs
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-001-ap-northeast-1-staging
+spec:
+  target: resource:default/redis-001
+  site: site:default/ap-northeast-1
+  stage: staging
+  properties:
+    version: '7.2'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-001-ap-southeast-1-test
+spec:
+  target: resource:default/redis-001
+  site: site:default/ap-southeast-1
+  stage: test
+  properties:
+    version: '7.2'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-001-ap-southeast-1-staging
+spec:
+  target: resource:default/redis-001
+  site: site:default/ap-southeast-1
+  stage: staging
+  properties:
+    version: '7.2'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-001-eu-west-1-test
+spec:
+  target: resource:default/redis-001
+  site: site:default/eu-west-1
+  stage: test
+  properties:
+    version: '7.2'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-001-eu-west-1-staging
+spec:
+  target: resource:default/redis-001
+  site: site:default/eu-west-1
+  stage: staging
+  properties:
+    version: '7.2'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-001-eu-west-1-production
+spec:
+  target: resource:default/redis-001
+  site: site:default/eu-west-1
+  stage: production
+  properties:
+    version: '7.2'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-001-sa-east-1-test
+spec:
+  target: resource:default/redis-001
+  site: site:default/sa-east-1
+  stage: test
+  properties:
+    version: '7.2'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-001-sa-east-1-staging
+spec:
+  target: resource:default/redis-001
+  site: site:default/sa-east-1
+  stage: staging
+  properties:
+    version: '7.2'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-001-sa-east-1-production
+spec:
+  target: resource:default/redis-001
+  site: site:default/sa-east-1
+  stage: production
+  properties:
+    version: '7.2'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-001-us-east-2-production
+spec:
+  target: resource:default/redis-001
+  site: site:default/us-east-2
+  stage: production
+  properties:
+    version: '7.2'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-001-us-west-1-staging
+spec:
+  target: resource:default/redis-001
+  site: site:default/us-west-1
+  stage: staging
+  properties:
+    version: '7.2'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-001-us-west-2-staging
+spec:
+  target: resource:default/redis-001
+  site: site:default/us-west-2
+  stage: staging
+  properties:
+    version: '7.2'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-001-us-west-2-production
+spec:
+  target: resource:default/redis-001
+  site: site:default/us-west-2
+  stage: production
+  properties:
+    version: '7.2'
+---
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: redis-002
+spec:
+  type: redis
+  lifecycle: production
+  system: app-a
+  owner: group:default/app-a-devs
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-002-ap-southeast-1-test
+spec:
+  target: resource:default/redis-002
+  site: site:default/ap-southeast-1
+  stage: test
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-002-ap-southeast-1-staging
+spec:
+  target: resource:default/redis-002
+  site: site:default/ap-southeast-1
+  stage: staging
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-002-ap-southeast-1-production
+spec:
+  target: resource:default/redis-002
+  site: site:default/ap-southeast-1
+  stage: production
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-002-eu-central-1-test
+spec:
+  target: resource:default/redis-002
+  site: site:default/eu-central-1
+  stage: test
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-002-eu-central-1-staging
+spec:
+  target: resource:default/redis-002
+  site: site:default/eu-central-1
+  stage: staging
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-002-eu-central-1-production
+spec:
+  target: resource:default/redis-002
+  site: site:default/eu-central-1
+  stage: production
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-002-sa-east-1-test
+spec:
+  target: resource:default/redis-002
+  site: site:default/sa-east-1
+  stage: test
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-002-sa-east-1-staging
+spec:
+  target: resource:default/redis-002
+  site: site:default/sa-east-1
+  stage: staging
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-002-sa-east-1-production
+spec:
+  target: resource:default/redis-002
+  site: site:default/sa-east-1
+  stage: production
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-002-us-west-2-test
+spec:
+  target: resource:default/redis-002
+  site: site:default/us-west-2
+  stage: test
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-002-us-west-2-staging
+spec:
+  target: resource:default/redis-002
+  site: site:default/us-west-2
+  stage: staging
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-002-us-west-2-production
+spec:
+  target: resource:default/redis-002
+  site: site:default/us-west-2
+  stage: production
+  properties:
+    version: '7.0'
+---
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: redis-003
+spec:
+  type: redis
+  lifecycle: production
+  system: app-b
+  owner: group:default/app-b-devs
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-003-ap-northeast-1-test
+spec:
+  target: resource:default/redis-003
+  site: site:default/ap-northeast-1
+  stage: test
+  properties:
+    version: '7.2'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-003-ap-northeast-1-staging
+spec:
+  target: resource:default/redis-003
+  site: site:default/ap-northeast-1
+  stage: staging
+  properties:
+    version: '7.2'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-003-ap-northeast-1-production
+spec:
+  target: resource:default/redis-003
+  site: site:default/ap-northeast-1
+  stage: production
+  properties:
+    version: '7.2'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-003-ap-south-1-test
+spec:
+  target: resource:default/redis-003
+  site: site:default/ap-south-1
+  stage: test
+  properties:
+    version: '7.2'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-003-ap-south-1-staging
+spec:
+  target: resource:default/redis-003
+  site: site:default/ap-south-1
+  stage: staging
+  properties:
+    version: '7.2'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-003-ap-south-1-production
+spec:
+  target: resource:default/redis-003
+  site: site:default/ap-south-1
+  stage: production
+  properties:
+    version: '7.2'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-003-ap-southeast-1-test
+spec:
+  target: resource:default/redis-003
+  site: site:default/ap-southeast-1
+  stage: test
+  properties:
+    version: '7.2'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-003-ap-southeast-1-staging
+spec:
+  target: resource:default/redis-003
+  site: site:default/ap-southeast-1
+  stage: staging
+  properties:
+    version: '7.2'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-003-eu-west-1-staging
+spec:
+  target: resource:default/redis-003
+  site: site:default/eu-west-1
+  stage: staging
+  properties:
+    version: '7.2'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-003-us-east-1-staging
+spec:
+  target: resource:default/redis-003
+  site: site:default/us-east-1
+  stage: staging
+  properties:
+    version: '7.2'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-003-us-east-1-production
+spec:
+  target: resource:default/redis-003
+  site: site:default/us-east-1
+  stage: production
+  properties:
+    version: '7.2'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-003-us-east-2-production
+spec:
+  target: resource:default/redis-003
+  site: site:default/us-east-2
+  stage: production
+  properties:
+    version: '7.2'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-003-us-west-1-test
+spec:
+  target: resource:default/redis-003
+  site: site:default/us-west-1
+  stage: test
+  properties:
+    version: '7.2'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-003-us-west-1-production
+spec:
+  target: resource:default/redis-003
+  site: site:default/us-west-1
+  stage: production
+  properties:
+    version: '7.2'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-003-us-west-2-test
+spec:
+  target: resource:default/redis-003
+  site: site:default/us-west-2
+  stage: test
+  properties:
+    version: '7.2'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-003-us-west-2-staging
+spec:
+  target: resource:default/redis-003
+  site: site:default/us-west-2
+  stage: staging
+  properties:
+    version: '7.2'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-003-us-west-2-production
+spec:
+  target: resource:default/redis-003
+  site: site:default/us-west-2
+  stage: production
+  properties:
+    version: '7.2'
+---
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: redis-004
+spec:
+  type: redis
+  lifecycle: production
+  system: app-a
+  owner: group:default/app-a-devs
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-004-ap-southeast-1-test
+spec:
+  target: resource:default/redis-004
+  site: site:default/ap-southeast-1
+  stage: test
+  properties:
+    version: '7.2'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-004-ap-southeast-1-staging
+spec:
+  target: resource:default/redis-004
+  site: site:default/ap-southeast-1
+  stage: staging
+  properties:
+    version: '7.2'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-004-eu-west-1-test
+spec:
+  target: resource:default/redis-004
+  site: site:default/eu-west-1
+  stage: test
+  properties:
+    version: '7.2'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-004-eu-west-1-production
+spec:
+  target: resource:default/redis-004
+  site: site:default/eu-west-1
+  stage: production
+  properties:
+    version: '7.2'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-004-sa-east-1-test
+spec:
+  target: resource:default/redis-004
+  site: site:default/sa-east-1
+  stage: test
+  properties:
+    version: '7.2'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-004-sa-east-1-staging
+spec:
+  target: resource:default/redis-004
+  site: site:default/sa-east-1
+  stage: staging
+  properties:
+    version: '7.2'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-004-sa-east-1-production
+spec:
+  target: resource:default/redis-004
+  site: site:default/sa-east-1
+  stage: production
+  properties:
+    version: '7.2'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-004-us-east-1-test
+spec:
+  target: resource:default/redis-004
+  site: site:default/us-east-1
+  stage: test
+  properties:
+    version: '7.2'
+---
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: redis-005
+spec:
+  type: redis
+  lifecycle: production
+  system: app-d
+  owner: group:default/app-d-devs
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-005-ap-northeast-1-test
+spec:
+  target: resource:default/redis-005
+  site: site:default/ap-northeast-1
+  stage: test
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-005-sa-east-1-test
+spec:
+  target: resource:default/redis-005
+  site: site:default/sa-east-1
+  stage: test
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-005-sa-east-1-staging
+spec:
+  target: resource:default/redis-005
+  site: site:default/sa-east-1
+  stage: staging
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-005-us-east-2-test
+spec:
+  target: resource:default/redis-005
+  site: site:default/us-east-2
+  stage: test
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-005-us-east-2-production
+spec:
+  target: resource:default/redis-005
+  site: site:default/us-east-2
+  stage: production
+  properties:
+    version: '7.0'
+---
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: redis-006
+spec:
+  type: redis
+  lifecycle: production
+  system: app-a
+  owner: group:default/app-a-devs
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-006-eu-central-1-production
+spec:
+  target: resource:default/redis-006
+  site: site:default/eu-central-1
+  stage: production
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-006-eu-west-1-production
+spec:
+  target: resource:default/redis-006
+  site: site:default/eu-west-1
+  stage: production
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-006-sa-east-1-staging
+spec:
+  target: resource:default/redis-006
+  site: site:default/sa-east-1
+  stage: staging
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-006-us-east-1-test
+spec:
+  target: resource:default/redis-006
+  site: site:default/us-east-1
+  stage: test
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-006-us-east-1-staging
+spec:
+  target: resource:default/redis-006
+  site: site:default/us-east-1
+  stage: staging
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-006-us-east-1-production
+spec:
+  target: resource:default/redis-006
+  site: site:default/us-east-1
+  stage: production
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-006-us-east-2-test
+spec:
+  target: resource:default/redis-006
+  site: site:default/us-east-2
+  stage: test
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-006-us-west-2-test
+spec:
+  target: resource:default/redis-006
+  site: site:default/us-west-2
+  stage: test
+  properties:
+    version: '7.0'
+---
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: redis-007
+spec:
+  type: redis
+  lifecycle: production
+  system: app-d
+  owner: group:default/app-d-devs
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-007-ap-south-1-test
+spec:
+  target: resource:default/redis-007
+  site: site:default/ap-south-1
+  stage: test
+  properties:
+    version: '7.2'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-007-ap-south-1-staging
+spec:
+  target: resource:default/redis-007
+  site: site:default/ap-south-1
+  stage: staging
+  properties:
+    version: '7.2'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-007-ap-south-1-production
+spec:
+  target: resource:default/redis-007
+  site: site:default/ap-south-1
+  stage: production
+  properties:
+    version: '7.2'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-007-eu-central-1-test
+spec:
+  target: resource:default/redis-007
+  site: site:default/eu-central-1
+  stage: test
+  properties:
+    version: '7.2'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-007-eu-central-1-staging
+spec:
+  target: resource:default/redis-007
+  site: site:default/eu-central-1
+  stage: staging
+  properties:
+    version: '7.2'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-007-eu-central-1-production
+spec:
+  target: resource:default/redis-007
+  site: site:default/eu-central-1
+  stage: production
+  properties:
+    version: '7.2'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-007-sa-east-1-staging
+spec:
+  target: resource:default/redis-007
+  site: site:default/sa-east-1
+  stage: staging
+  properties:
+    version: '7.2'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-007-us-east-1-test
+spec:
+  target: resource:default/redis-007
+  site: site:default/us-east-1
+  stage: test
+  properties:
+    version: '7.2'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-007-us-east-2-test
+spec:
+  target: resource:default/redis-007
+  site: site:default/us-east-2
+  stage: test
+  properties:
+    version: '7.2'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-007-us-east-2-staging
+spec:
+  target: resource:default/redis-007
+  site: site:default/us-east-2
+  stage: staging
+  properties:
+    version: '7.2'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-007-us-east-2-production
+spec:
+  target: resource:default/redis-007
+  site: site:default/us-east-2
+  stage: production
+  properties:
+    version: '7.2'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-007-us-west-1-staging
+spec:
+  target: resource:default/redis-007
+  site: site:default/us-west-1
+  stage: staging
+  properties:
+    version: '7.2'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-007-us-west-1-production
+spec:
+  target: resource:default/redis-007
+  site: site:default/us-west-1
+  stage: production
+  properties:
+    version: '7.2'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-007-us-west-2-test
+spec:
+  target: resource:default/redis-007
+  site: site:default/us-west-2
+  stage: test
+  properties:
+    version: '7.2'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-007-us-west-2-staging
+spec:
+  target: resource:default/redis-007
+  site: site:default/us-west-2
+  stage: staging
+  properties:
+    version: '7.2'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-007-us-west-2-production
+spec:
+  target: resource:default/redis-007
+  site: site:default/us-west-2
+  stage: production
+  properties:
+    version: '7.2'
+---
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: redis-008
+spec:
+  type: redis
+  lifecycle: production
+  system: app-a
+  owner: group:default/app-a-devs
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-008-ap-southeast-1-staging
+spec:
+  target: resource:default/redis-008
+  site: site:default/ap-southeast-1
+  stage: staging
+  properties:
+    version: '7.2'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-008-ap-southeast-1-production
+spec:
+  target: resource:default/redis-008
+  site: site:default/ap-southeast-1
+  stage: production
+  properties:
+    version: '7.2'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-008-eu-west-1-test
+spec:
+  target: resource:default/redis-008
+  site: site:default/eu-west-1
+  stage: test
+  properties:
+    version: '7.2'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-008-eu-west-1-production
+spec:
+  target: resource:default/redis-008
+  site: site:default/eu-west-1
+  stage: production
+  properties:
+    version: '7.2'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-008-sa-east-1-test
+spec:
+  target: resource:default/redis-008
+  site: site:default/sa-east-1
+  stage: test
+  properties:
+    version: '7.2'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-008-sa-east-1-production
+spec:
+  target: resource:default/redis-008
+  site: site:default/sa-east-1
+  stage: production
+  properties:
+    version: '7.2'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-008-us-west-1-test
+spec:
+  target: resource:default/redis-008
+  site: site:default/us-west-1
+  stage: test
+  properties:
+    version: '7.2'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-008-us-west-1-staging
+spec:
+  target: resource:default/redis-008
+  site: site:default/us-west-1
+  stage: staging
+  properties:
+    version: '7.2'
+---
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: redis-009
+spec:
+  type: redis
+  lifecycle: production
+  system: app-d
+  owner: group:default/app-d-devs
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-009-us-east-2-staging
+spec:
+  target: resource:default/redis-009
+  site: site:default/us-east-2
+  stage: staging
+  properties:
+    version: '7.0'
+---
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: redis-010
+spec:
+  type: redis
+  lifecycle: production
+  system: app-d
+  owner: group:default/app-d-devs
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-010-ap-south-1-test
+spec:
+  target: resource:default/redis-010
+  site: site:default/ap-south-1
+  stage: test
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-010-ap-south-1-staging
+spec:
+  target: resource:default/redis-010
+  site: site:default/ap-south-1
+  stage: staging
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-010-ap-south-1-production
+spec:
+  target: resource:default/redis-010
+  site: site:default/ap-south-1
+  stage: production
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-010-eu-central-1-test
+spec:
+  target: resource:default/redis-010
+  site: site:default/eu-central-1
+  stage: test
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-010-eu-central-1-staging
+spec:
+  target: resource:default/redis-010
+  site: site:default/eu-central-1
+  stage: staging
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-010-eu-central-1-production
+spec:
+  target: resource:default/redis-010
+  site: site:default/eu-central-1
+  stage: production
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-010-us-east-1-test
+spec:
+  target: resource:default/redis-010
+  site: site:default/us-east-1
+  stage: test
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-010-us-east-1-staging
+spec:
+  target: resource:default/redis-010
+  site: site:default/us-east-1
+  stage: staging
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-010-us-east-1-production
+spec:
+  target: resource:default/redis-010
+  site: site:default/us-east-1
+  stage: production
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-010-us-west-1-staging
+spec:
+  target: resource:default/redis-010
+  site: site:default/us-west-1
+  stage: staging
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-010-us-west-2-test
+spec:
+  target: resource:default/redis-010
+  site: site:default/us-west-2
+  stage: test
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-010-us-west-2-staging
+spec:
+  target: resource:default/redis-010
+  site: site:default/us-west-2
+  stage: staging
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-010-us-west-2-production
+spec:
+  target: resource:default/redis-010
+  site: site:default/us-west-2
+  stage: production
+  properties:
+    version: '7.0'
+---
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: redis-011
+spec:
+  type: redis
+  lifecycle: production
+  system: app-a
+  owner: group:default/app-a-devs
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-011-ap-northeast-1-test
+spec:
+  target: resource:default/redis-011
+  site: site:default/ap-northeast-1
+  stage: test
+  properties:
+    version: '7.2'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-011-ap-south-1-staging
+spec:
+  target: resource:default/redis-011
+  site: site:default/ap-south-1
+  stage: staging
+  properties:
+    version: '7.2'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-011-ap-south-1-production
+spec:
+  target: resource:default/redis-011
+  site: site:default/ap-south-1
+  stage: production
+  properties:
+    version: '7.2'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-011-ap-southeast-1-production
+spec:
+  target: resource:default/redis-011
+  site: site:default/ap-southeast-1
+  stage: production
+  properties:
+    version: '7.2'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-011-eu-central-1-test
+spec:
+  target: resource:default/redis-011
+  site: site:default/eu-central-1
+  stage: test
+  properties:
+    version: '7.2'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-011-eu-central-1-staging
+spec:
+  target: resource:default/redis-011
+  site: site:default/eu-central-1
+  stage: staging
+  properties:
+    version: '7.2'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-011-eu-central-1-production
+spec:
+  target: resource:default/redis-011
+  site: site:default/eu-central-1
+  stage: production
+  properties:
+    version: '7.2'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-011-eu-west-1-test
+spec:
+  target: resource:default/redis-011
+  site: site:default/eu-west-1
+  stage: test
+  properties:
+    version: '7.2'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-011-eu-west-1-staging
+spec:
+  target: resource:default/redis-011
+  site: site:default/eu-west-1
+  stage: staging
+  properties:
+    version: '7.2'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-011-eu-west-1-production
+spec:
+  target: resource:default/redis-011
+  site: site:default/eu-west-1
+  stage: production
+  properties:
+    version: '7.2'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-011-sa-east-1-test
+spec:
+  target: resource:default/redis-011
+  site: site:default/sa-east-1
+  stage: test
+  properties:
+    version: '7.2'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-011-sa-east-1-staging
+spec:
+  target: resource:default/redis-011
+  site: site:default/sa-east-1
+  stage: staging
+  properties:
+    version: '7.2'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-011-sa-east-1-production
+spec:
+  target: resource:default/redis-011
+  site: site:default/sa-east-1
+  stage: production
+  properties:
+    version: '7.2'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-011-us-east-1-test
+spec:
+  target: resource:default/redis-011
+  site: site:default/us-east-1
+  stage: test
+  properties:
+    version: '7.2'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-011-us-east-1-staging
+spec:
+  target: resource:default/redis-011
+  site: site:default/us-east-1
+  stage: staging
+  properties:
+    version: '7.2'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-011-us-east-2-test
+spec:
+  target: resource:default/redis-011
+  site: site:default/us-east-2
+  stage: test
+  properties:
+    version: '7.2'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-011-us-east-2-staging
+spec:
+  target: resource:default/redis-011
+  site: site:default/us-east-2
+  stage: staging
+  properties:
+    version: '7.2'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-011-us-west-1-staging
+spec:
+  target: resource:default/redis-011
+  site: site:default/us-west-1
+  stage: staging
+  properties:
+    version: '7.2'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-011-us-west-2-test
+spec:
+  target: resource:default/redis-011
+  site: site:default/us-west-2
+  stage: test
+  properties:
+    version: '7.2'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-011-us-west-2-production
+spec:
+  target: resource:default/redis-011
+  site: site:default/us-west-2
+  stage: production
+  properties:
+    version: '7.2'
+---
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: redis-012
+spec:
+  type: redis
+  lifecycle: production
+  system: app-e
+  owner: group:default/app-e-devs
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-012-ap-south-1-test
+spec:
+  target: resource:default/redis-012
+  site: site:default/ap-south-1
+  stage: test
+  properties:
+    version: '7.2'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-012-ap-south-1-production
+spec:
+  target: resource:default/redis-012
+  site: site:default/ap-south-1
+  stage: production
+  properties:
+    version: '7.2'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-012-us-east-1-test
+spec:
+  target: resource:default/redis-012
+  site: site:default/us-east-1
+  stage: test
+  properties:
+    version: '7.2'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-012-us-east-1-staging
+spec:
+  target: resource:default/redis-012
+  site: site:default/us-east-1
+  stage: staging
+  properties:
+    version: '7.2'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-012-us-east-1-production
+spec:
+  target: resource:default/redis-012
+  site: site:default/us-east-1
+  stage: production
+  properties:
+    version: '7.2'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-012-us-east-2-test
+spec:
+  target: resource:default/redis-012
+  site: site:default/us-east-2
+  stage: test
+  properties:
+    version: '7.2'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-012-us-east-2-staging
+spec:
+  target: resource:default/redis-012
+  site: site:default/us-east-2
+  stage: staging
+  properties:
+    version: '7.2'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-012-us-east-2-production
+spec:
+  target: resource:default/redis-012
+  site: site:default/us-east-2
+  stage: production
+  properties:
+    version: '7.2'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-012-us-west-1-test
+spec:
+  target: resource:default/redis-012
+  site: site:default/us-west-1
+  stage: test
+  properties:
+    version: '7.2'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-012-us-west-1-staging
+spec:
+  target: resource:default/redis-012
+  site: site:default/us-west-1
+  stage: staging
+  properties:
+    version: '7.2'
+---
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: redis-013
+spec:
+  type: redis
+  lifecycle: production
+  system: app-c
+  owner: group:default/app-c-devs
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-013-us-east-2-test
+spec:
+  target: resource:default/redis-013
+  site: site:default/us-east-2
+  stage: test
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-013-us-east-2-staging
+spec:
+  target: resource:default/redis-013
+  site: site:default/us-east-2
+  stage: staging
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-013-us-east-2-production
+spec:
+  target: resource:default/redis-013
+  site: site:default/us-east-2
+  stage: production
+  properties:
+    version: '7.0'
+---
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: redis-014
+spec:
+  type: redis
+  lifecycle: production
+  system: app-a
+  owner: group:default/app-a-devs
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-014-ap-northeast-1-staging
+spec:
+  target: resource:default/redis-014
+  site: site:default/ap-northeast-1
+  stage: staging
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-014-ap-northeast-1-production
+spec:
+  target: resource:default/redis-014
+  site: site:default/ap-northeast-1
+  stage: production
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-014-ap-southeast-1-staging
+spec:
+  target: resource:default/redis-014
+  site: site:default/ap-southeast-1
+  stage: staging
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-014-ap-southeast-1-production
+spec:
+  target: resource:default/redis-014
+  site: site:default/ap-southeast-1
+  stage: production
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-014-eu-central-1-test
+spec:
+  target: resource:default/redis-014
+  site: site:default/eu-central-1
+  stage: test
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-014-sa-east-1-test
+spec:
+  target: resource:default/redis-014
+  site: site:default/sa-east-1
+  stage: test
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-014-sa-east-1-staging
+spec:
+  target: resource:default/redis-014
+  site: site:default/sa-east-1
+  stage: staging
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-014-sa-east-1-production
+spec:
+  target: resource:default/redis-014
+  site: site:default/sa-east-1
+  stage: production
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-014-us-east-1-test
+spec:
+  target: resource:default/redis-014
+  site: site:default/us-east-1
+  stage: test
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-014-us-east-1-staging
+spec:
+  target: resource:default/redis-014
+  site: site:default/us-east-1
+  stage: staging
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-014-us-west-1-staging
+spec:
+  target: resource:default/redis-014
+  site: site:default/us-west-1
+  stage: staging
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-014-us-west-2-test
+spec:
+  target: resource:default/redis-014
+  site: site:default/us-west-2
+  stage: test
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-014-us-west-2-staging
+spec:
+  target: resource:default/redis-014
+  site: site:default/us-west-2
+  stage: staging
+  properties:
+    version: '7.0'
+---
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: redis-015
+spec:
+  type: redis
+  lifecycle: production
+  system: app-c
+  owner: group:default/app-c-devs
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-015-eu-central-1-staging
+spec:
+  target: resource:default/redis-015
+  site: site:default/eu-central-1
+  stage: staging
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-015-sa-east-1-test
+spec:
+  target: resource:default/redis-015
+  site: site:default/sa-east-1
+  stage: test
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-015-sa-east-1-staging
+spec:
+  target: resource:default/redis-015
+  site: site:default/sa-east-1
+  stage: staging
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-015-sa-east-1-production
+spec:
+  target: resource:default/redis-015
+  site: site:default/sa-east-1
+  stage: production
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-015-us-east-1-test
+spec:
+  target: resource:default/redis-015
+  site: site:default/us-east-1
+  stage: test
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-015-us-east-1-production
+spec:
+  target: resource:default/redis-015
+  site: site:default/us-east-1
+  stage: production
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-015-us-west-2-test
+spec:
+  target: resource:default/redis-015
+  site: site:default/us-west-2
+  stage: test
+  properties:
+    version: '7.0'
+---
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: redis-016
+spec:
+  type: redis
+  lifecycle: production
+  system: app-a
+  owner: group:default/app-a-devs
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-016-ap-southeast-1-test
+spec:
+  target: resource:default/redis-016
+  site: site:default/ap-southeast-1
+  stage: test
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-016-ap-southeast-1-staging
+spec:
+  target: resource:default/redis-016
+  site: site:default/ap-southeast-1
+  stage: staging
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-016-ap-southeast-1-production
+spec:
+  target: resource:default/redis-016
+  site: site:default/ap-southeast-1
+  stage: production
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-016-sa-east-1-production
+spec:
+  target: resource:default/redis-016
+  site: site:default/sa-east-1
+  stage: production
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-016-us-east-1-test
+spec:
+  target: resource:default/redis-016
+  site: site:default/us-east-1
+  stage: test
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-016-us-east-2-test
+spec:
+  target: resource:default/redis-016
+  site: site:default/us-east-2
+  stage: test
+  properties:
+    version: '7.0'
+---
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: redis-017
+spec:
+  type: redis
+  lifecycle: production
+  system: app-a
+  owner: group:default/app-a-devs
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-017-ap-northeast-1-staging
+spec:
+  target: resource:default/redis-017
+  site: site:default/ap-northeast-1
+  stage: staging
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-017-ap-northeast-1-production
+spec:
+  target: resource:default/redis-017
+  site: site:default/ap-northeast-1
+  stage: production
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-017-ap-south-1-test
+spec:
+  target: resource:default/redis-017
+  site: site:default/ap-south-1
+  stage: test
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-017-ap-south-1-staging
+spec:
+  target: resource:default/redis-017
+  site: site:default/ap-south-1
+  stage: staging
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-017-ap-south-1-production
+spec:
+  target: resource:default/redis-017
+  site: site:default/ap-south-1
+  stage: production
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-017-ap-southeast-1-test
+spec:
+  target: resource:default/redis-017
+  site: site:default/ap-southeast-1
+  stage: test
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-017-ap-southeast-1-production
+spec:
+  target: resource:default/redis-017
+  site: site:default/ap-southeast-1
+  stage: production
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-017-eu-central-1-staging
+spec:
+  target: resource:default/redis-017
+  site: site:default/eu-central-1
+  stage: staging
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-017-eu-west-1-test
+spec:
+  target: resource:default/redis-017
+  site: site:default/eu-west-1
+  stage: test
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-017-eu-west-1-staging
+spec:
+  target: resource:default/redis-017
+  site: site:default/eu-west-1
+  stage: staging
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-017-eu-west-1-production
+spec:
+  target: resource:default/redis-017
+  site: site:default/eu-west-1
+  stage: production
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-017-sa-east-1-staging
+spec:
+  target: resource:default/redis-017
+  site: site:default/sa-east-1
+  stage: staging
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-017-sa-east-1-production
+spec:
+  target: resource:default/redis-017
+  site: site:default/sa-east-1
+  stage: production
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-017-us-east-1-test
+spec:
+  target: resource:default/redis-017
+  site: site:default/us-east-1
+  stage: test
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-017-us-east-1-staging
+spec:
+  target: resource:default/redis-017
+  site: site:default/us-east-1
+  stage: staging
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-017-us-east-1-production
+spec:
+  target: resource:default/redis-017
+  site: site:default/us-east-1
+  stage: production
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-017-us-east-2-test
+spec:
+  target: resource:default/redis-017
+  site: site:default/us-east-2
+  stage: test
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-017-us-east-2-staging
+spec:
+  target: resource:default/redis-017
+  site: site:default/us-east-2
+  stage: staging
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-017-us-east-2-production
+spec:
+  target: resource:default/redis-017
+  site: site:default/us-east-2
+  stage: production
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-017-us-west-1-test
+spec:
+  target: resource:default/redis-017
+  site: site:default/us-west-1
+  stage: test
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-017-us-west-1-production
+spec:
+  target: resource:default/redis-017
+  site: site:default/us-west-1
+  stage: production
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-017-us-west-2-production
+spec:
+  target: resource:default/redis-017
+  site: site:default/us-west-2
+  stage: production
+  properties:
+    version: '7.0'
+---
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: redis-018
+spec:
+  type: redis
+  lifecycle: production
+  system: app-c
+  owner: group:default/app-c-devs
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-018-ap-south-1-test
+spec:
+  target: resource:default/redis-018
+  site: site:default/ap-south-1
+  stage: test
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-018-ap-southeast-1-test
+spec:
+  target: resource:default/redis-018
+  site: site:default/ap-southeast-1
+  stage: test
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-018-ap-southeast-1-staging
+spec:
+  target: resource:default/redis-018
+  site: site:default/ap-southeast-1
+  stage: staging
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-018-ap-southeast-1-production
+spec:
+  target: resource:default/redis-018
+  site: site:default/ap-southeast-1
+  stage: production
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-018-eu-central-1-test
+spec:
+  target: resource:default/redis-018
+  site: site:default/eu-central-1
+  stage: test
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-018-eu-central-1-staging
+spec:
+  target: resource:default/redis-018
+  site: site:default/eu-central-1
+  stage: staging
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-018-eu-central-1-production
+spec:
+  target: resource:default/redis-018
+  site: site:default/eu-central-1
+  stage: production
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-018-sa-east-1-staging
+spec:
+  target: resource:default/redis-018
+  site: site:default/sa-east-1
+  stage: staging
+  properties:
+    version: '7.0'
+---
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: redis-019
+spec:
+  type: redis
+  lifecycle: production
+  system: app-a
+  owner: group:default/app-a-devs
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-019-eu-west-1-test
+spec:
+  target: resource:default/redis-019
+  site: site:default/eu-west-1
+  stage: test
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-019-eu-west-1-staging
+spec:
+  target: resource:default/redis-019
+  site: site:default/eu-west-1
+  stage: staging
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-019-sa-east-1-staging
+spec:
+  target: resource:default/redis-019
+  site: site:default/sa-east-1
+  stage: staging
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-019-us-east-2-staging
+spec:
+  target: resource:default/redis-019
+  site: site:default/us-east-2
+  stage: staging
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-019-us-west-1-test
+spec:
+  target: resource:default/redis-019
+  site: site:default/us-west-1
+  stage: test
+  properties:
+    version: '7.0'
+---
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: redis-020
+spec:
+  type: redis
+  lifecycle: production
+  system: app-b
+  owner: group:default/app-b-devs
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-020-ap-northeast-1-test
+spec:
+  target: resource:default/redis-020
+  site: site:default/ap-northeast-1
+  stage: test
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-020-ap-northeast-1-production
+spec:
+  target: resource:default/redis-020
+  site: site:default/ap-northeast-1
+  stage: production
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-020-ap-south-1-test
+spec:
+  target: resource:default/redis-020
+  site: site:default/ap-south-1
+  stage: test
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-020-ap-south-1-staging
+spec:
+  target: resource:default/redis-020
+  site: site:default/ap-south-1
+  stage: staging
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-020-ap-south-1-production
+spec:
+  target: resource:default/redis-020
+  site: site:default/ap-south-1
+  stage: production
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-020-ap-southeast-1-test
+spec:
+  target: resource:default/redis-020
+  site: site:default/ap-southeast-1
+  stage: test
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-020-ap-southeast-1-staging
+spec:
+  target: resource:default/redis-020
+  site: site:default/ap-southeast-1
+  stage: staging
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-020-ap-southeast-1-production
+spec:
+  target: resource:default/redis-020
+  site: site:default/ap-southeast-1
+  stage: production
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-020-eu-central-1-test
+spec:
+  target: resource:default/redis-020
+  site: site:default/eu-central-1
+  stage: test
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-020-eu-central-1-staging
+spec:
+  target: resource:default/redis-020
+  site: site:default/eu-central-1
+  stage: staging
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-020-eu-central-1-production
+spec:
+  target: resource:default/redis-020
+  site: site:default/eu-central-1
+  stage: production
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-020-sa-east-1-test
+spec:
+  target: resource:default/redis-020
+  site: site:default/sa-east-1
+  stage: test
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-020-sa-east-1-staging
+spec:
+  target: resource:default/redis-020
+  site: site:default/sa-east-1
+  stage: staging
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-020-sa-east-1-production
+spec:
+  target: resource:default/redis-020
+  site: site:default/sa-east-1
+  stage: production
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-020-us-east-1-production
+spec:
+  target: resource:default/redis-020
+  site: site:default/us-east-1
+  stage: production
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-020-us-east-2-staging
+spec:
+  target: resource:default/redis-020
+  site: site:default/us-east-2
+  stage: staging
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-020-us-west-1-test
+spec:
+  target: resource:default/redis-020
+  site: site:default/us-west-1
+  stage: test
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-020-us-west-1-production
+spec:
+  target: resource:default/redis-020
+  site: site:default/us-west-1
+  stage: production
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-020-us-west-2-test
+spec:
+  target: resource:default/redis-020
+  site: site:default/us-west-2
+  stage: test
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: redis-020-us-west-2-production
+spec:
+  target: resource:default/redis-020
+  site: site:default/us-west-2
+  stage: production
+  properties:
+    version: '7.0'

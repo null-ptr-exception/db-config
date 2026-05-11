@@ -1,0 +1,4479 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: mongodb-001
+spec:
+  type: mongodb
+  lifecycle: production
+  system: app-c
+  owner: group:default/app-c-devs
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-001-ap-northeast-1-production
+spec:
+  target: resource:default/mongodb-001
+  site: site:default/ap-northeast-1
+  stage: production
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-001-ap-south-1-staging
+spec:
+  target: resource:default/mongodb-001
+  site: site:default/ap-south-1
+  stage: staging
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-001-ap-south-1-production
+spec:
+  target: resource:default/mongodb-001
+  site: site:default/ap-south-1
+  stage: production
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-001-eu-central-1-staging
+spec:
+  target: resource:default/mongodb-001
+  site: site:default/eu-central-1
+  stage: staging
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-001-eu-central-1-production
+spec:
+  target: resource:default/mongodb-001
+  site: site:default/eu-central-1
+  stage: production
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-001-sa-east-1-staging
+spec:
+  target: resource:default/mongodb-001
+  site: site:default/sa-east-1
+  stage: staging
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-001-sa-east-1-production
+spec:
+  target: resource:default/mongodb-001
+  site: site:default/sa-east-1
+  stage: production
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-001-us-east-1-test
+spec:
+  target: resource:default/mongodb-001
+  site: site:default/us-east-1
+  stage: test
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-001-us-east-2-production
+spec:
+  target: resource:default/mongodb-001
+  site: site:default/us-east-2
+  stage: production
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-001-us-west-1-production
+spec:
+  target: resource:default/mongodb-001
+  site: site:default/us-west-1
+  stage: production
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-001-us-west-2-test
+spec:
+  target: resource:default/mongodb-001
+  site: site:default/us-west-2
+  stage: test
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-001-us-west-2-staging
+spec:
+  target: resource:default/mongodb-001
+  site: site:default/us-west-2
+  stage: staging
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-001-us-west-2-production
+spec:
+  target: resource:default/mongodb-001
+  site: site:default/us-west-2
+  stage: production
+  properties:
+    version: '7.0'
+---
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: mongodb-002
+spec:
+  type: mongodb
+  lifecycle: production
+  system: app-b
+  owner: group:default/app-b-devs
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-002-ap-northeast-1-test
+spec:
+  target: resource:default/mongodb-002
+  site: site:default/ap-northeast-1
+  stage: test
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-002-ap-northeast-1-staging
+spec:
+  target: resource:default/mongodb-002
+  site: site:default/ap-northeast-1
+  stage: staging
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-002-ap-northeast-1-production
+spec:
+  target: resource:default/mongodb-002
+  site: site:default/ap-northeast-1
+  stage: production
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-002-ap-south-1-test
+spec:
+  target: resource:default/mongodb-002
+  site: site:default/ap-south-1
+  stage: test
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-002-ap-southeast-1-staging
+spec:
+  target: resource:default/mongodb-002
+  site: site:default/ap-southeast-1
+  stage: staging
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-002-ap-southeast-1-production
+spec:
+  target: resource:default/mongodb-002
+  site: site:default/ap-southeast-1
+  stage: production
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-002-eu-central-1-test
+spec:
+  target: resource:default/mongodb-002
+  site: site:default/eu-central-1
+  stage: test
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-002-eu-central-1-production
+spec:
+  target: resource:default/mongodb-002
+  site: site:default/eu-central-1
+  stage: production
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-002-eu-west-1-test
+spec:
+  target: resource:default/mongodb-002
+  site: site:default/eu-west-1
+  stage: test
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-002-eu-west-1-staging
+spec:
+  target: resource:default/mongodb-002
+  site: site:default/eu-west-1
+  stage: staging
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-002-eu-west-1-production
+spec:
+  target: resource:default/mongodb-002
+  site: site:default/eu-west-1
+  stage: production
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-002-sa-east-1-production
+spec:
+  target: resource:default/mongodb-002
+  site: site:default/sa-east-1
+  stage: production
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-002-us-east-2-test
+spec:
+  target: resource:default/mongodb-002
+  site: site:default/us-east-2
+  stage: test
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-002-us-east-2-staging
+spec:
+  target: resource:default/mongodb-002
+  site: site:default/us-east-2
+  stage: staging
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-002-us-east-2-production
+spec:
+  target: resource:default/mongodb-002
+  site: site:default/us-east-2
+  stage: production
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-002-us-west-1-test
+spec:
+  target: resource:default/mongodb-002
+  site: site:default/us-west-1
+  stage: test
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-002-us-west-1-staging
+spec:
+  target: resource:default/mongodb-002
+  site: site:default/us-west-1
+  stage: staging
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-002-us-west-1-production
+spec:
+  target: resource:default/mongodb-002
+  site: site:default/us-west-1
+  stage: production
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-002-us-west-2-staging
+spec:
+  target: resource:default/mongodb-002
+  site: site:default/us-west-2
+  stage: staging
+  properties:
+    version: '7.0'
+---
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: mongodb-003
+spec:
+  type: mongodb
+  lifecycle: production
+  system: app-c
+  owner: group:default/app-c-devs
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-003-ap-south-1-test
+spec:
+  target: resource:default/mongodb-003
+  site: site:default/ap-south-1
+  stage: test
+  properties:
+    version: '6.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-003-ap-south-1-production
+spec:
+  target: resource:default/mongodb-003
+  site: site:default/ap-south-1
+  stage: production
+  properties:
+    version: '6.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-003-eu-central-1-production
+spec:
+  target: resource:default/mongodb-003
+  site: site:default/eu-central-1
+  stage: production
+  properties:
+    version: '6.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-003-eu-west-1-test
+spec:
+  target: resource:default/mongodb-003
+  site: site:default/eu-west-1
+  stage: test
+  properties:
+    version: '6.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-003-us-east-2-test
+spec:
+  target: resource:default/mongodb-003
+  site: site:default/us-east-2
+  stage: test
+  properties:
+    version: '6.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-003-us-east-2-staging
+spec:
+  target: resource:default/mongodb-003
+  site: site:default/us-east-2
+  stage: staging
+  properties:
+    version: '6.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-003-us-east-2-production
+spec:
+  target: resource:default/mongodb-003
+  site: site:default/us-east-2
+  stage: production
+  properties:
+    version: '6.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-003-us-west-2-test
+spec:
+  target: resource:default/mongodb-003
+  site: site:default/us-west-2
+  stage: test
+  properties:
+    version: '6.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-003-us-west-2-staging
+spec:
+  target: resource:default/mongodb-003
+  site: site:default/us-west-2
+  stage: staging
+  properties:
+    version: '6.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-003-us-west-2-production
+spec:
+  target: resource:default/mongodb-003
+  site: site:default/us-west-2
+  stage: production
+  properties:
+    version: '6.0'
+---
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: mongodb-004
+spec:
+  type: mongodb
+  lifecycle: production
+  system: app-a
+  owner: group:default/app-a-devs
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-004-ap-northeast-1-test
+spec:
+  target: resource:default/mongodb-004
+  site: site:default/ap-northeast-1
+  stage: test
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-004-ap-northeast-1-staging
+spec:
+  target: resource:default/mongodb-004
+  site: site:default/ap-northeast-1
+  stage: staging
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-004-ap-northeast-1-production
+spec:
+  target: resource:default/mongodb-004
+  site: site:default/ap-northeast-1
+  stage: production
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-004-ap-southeast-1-staging
+spec:
+  target: resource:default/mongodb-004
+  site: site:default/ap-southeast-1
+  stage: staging
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-004-eu-central-1-staging
+spec:
+  target: resource:default/mongodb-004
+  site: site:default/eu-central-1
+  stage: staging
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-004-eu-west-1-staging
+spec:
+  target: resource:default/mongodb-004
+  site: site:default/eu-west-1
+  stage: staging
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-004-eu-west-1-production
+spec:
+  target: resource:default/mongodb-004
+  site: site:default/eu-west-1
+  stage: production
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-004-sa-east-1-test
+spec:
+  target: resource:default/mongodb-004
+  site: site:default/sa-east-1
+  stage: test
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-004-sa-east-1-production
+spec:
+  target: resource:default/mongodb-004
+  site: site:default/sa-east-1
+  stage: production
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-004-us-east-1-test
+spec:
+  target: resource:default/mongodb-004
+  site: site:default/us-east-1
+  stage: test
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-004-us-east-1-staging
+spec:
+  target: resource:default/mongodb-004
+  site: site:default/us-east-1
+  stage: staging
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-004-us-east-2-test
+spec:
+  target: resource:default/mongodb-004
+  site: site:default/us-east-2
+  stage: test
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-004-us-west-1-staging
+spec:
+  target: resource:default/mongodb-004
+  site: site:default/us-west-1
+  stage: staging
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-004-us-west-1-production
+spec:
+  target: resource:default/mongodb-004
+  site: site:default/us-west-1
+  stage: production
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-004-us-west-2-staging
+spec:
+  target: resource:default/mongodb-004
+  site: site:default/us-west-2
+  stage: staging
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-004-us-west-2-production
+spec:
+  target: resource:default/mongodb-004
+  site: site:default/us-west-2
+  stage: production
+  properties:
+    version: '7.0'
+---
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: mongodb-005
+spec:
+  type: mongodb
+  lifecycle: production
+  system: app-d
+  owner: group:default/app-d-devs
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-005-ap-northeast-1-production
+spec:
+  target: resource:default/mongodb-005
+  site: site:default/ap-northeast-1
+  stage: production
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-005-ap-south-1-test
+spec:
+  target: resource:default/mongodb-005
+  site: site:default/ap-south-1
+  stage: test
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-005-ap-southeast-1-staging
+spec:
+  target: resource:default/mongodb-005
+  site: site:default/ap-southeast-1
+  stage: staging
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-005-ap-southeast-1-production
+spec:
+  target: resource:default/mongodb-005
+  site: site:default/ap-southeast-1
+  stage: production
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-005-eu-central-1-test
+spec:
+  target: resource:default/mongodb-005
+  site: site:default/eu-central-1
+  stage: test
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-005-eu-west-1-staging
+spec:
+  target: resource:default/mongodb-005
+  site: site:default/eu-west-1
+  stage: staging
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-005-sa-east-1-staging
+spec:
+  target: resource:default/mongodb-005
+  site: site:default/sa-east-1
+  stage: staging
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-005-sa-east-1-production
+spec:
+  target: resource:default/mongodb-005
+  site: site:default/sa-east-1
+  stage: production
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-005-us-east-2-production
+spec:
+  target: resource:default/mongodb-005
+  site: site:default/us-east-2
+  stage: production
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-005-us-west-1-staging
+spec:
+  target: resource:default/mongodb-005
+  site: site:default/us-west-1
+  stage: staging
+  properties:
+    version: '7.0'
+---
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: mongodb-006
+spec:
+  type: mongodb
+  lifecycle: production
+  system: app-c
+  owner: group:default/app-c-devs
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-006-ap-northeast-1-test
+spec:
+  target: resource:default/mongodb-006
+  site: site:default/ap-northeast-1
+  stage: test
+  properties:
+    version: '6.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-006-ap-south-1-staging
+spec:
+  target: resource:default/mongodb-006
+  site: site:default/ap-south-1
+  stage: staging
+  properties:
+    version: '6.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-006-ap-south-1-production
+spec:
+  target: resource:default/mongodb-006
+  site: site:default/ap-south-1
+  stage: production
+  properties:
+    version: '6.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-006-ap-southeast-1-test
+spec:
+  target: resource:default/mongodb-006
+  site: site:default/ap-southeast-1
+  stage: test
+  properties:
+    version: '6.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-006-ap-southeast-1-staging
+spec:
+  target: resource:default/mongodb-006
+  site: site:default/ap-southeast-1
+  stage: staging
+  properties:
+    version: '6.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-006-ap-southeast-1-production
+spec:
+  target: resource:default/mongodb-006
+  site: site:default/ap-southeast-1
+  stage: production
+  properties:
+    version: '6.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-006-eu-central-1-test
+spec:
+  target: resource:default/mongodb-006
+  site: site:default/eu-central-1
+  stage: test
+  properties:
+    version: '6.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-006-eu-central-1-staging
+spec:
+  target: resource:default/mongodb-006
+  site: site:default/eu-central-1
+  stage: staging
+  properties:
+    version: '6.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-006-eu-central-1-production
+spec:
+  target: resource:default/mongodb-006
+  site: site:default/eu-central-1
+  stage: production
+  properties:
+    version: '6.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-006-eu-west-1-staging
+spec:
+  target: resource:default/mongodb-006
+  site: site:default/eu-west-1
+  stage: staging
+  properties:
+    version: '6.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-006-sa-east-1-test
+spec:
+  target: resource:default/mongodb-006
+  site: site:default/sa-east-1
+  stage: test
+  properties:
+    version: '6.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-006-sa-east-1-staging
+spec:
+  target: resource:default/mongodb-006
+  site: site:default/sa-east-1
+  stage: staging
+  properties:
+    version: '6.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-006-us-west-1-staging
+spec:
+  target: resource:default/mongodb-006
+  site: site:default/us-west-1
+  stage: staging
+  properties:
+    version: '6.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-006-us-west-1-production
+spec:
+  target: resource:default/mongodb-006
+  site: site:default/us-west-1
+  stage: production
+  properties:
+    version: '6.0'
+---
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: mongodb-007
+spec:
+  type: mongodb
+  lifecycle: production
+  system: app-e
+  owner: group:default/app-e-devs
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-007-ap-northeast-1-test
+spec:
+  target: resource:default/mongodb-007
+  site: site:default/ap-northeast-1
+  stage: test
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-007-ap-northeast-1-staging
+spec:
+  target: resource:default/mongodb-007
+  site: site:default/ap-northeast-1
+  stage: staging
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-007-ap-northeast-1-production
+spec:
+  target: resource:default/mongodb-007
+  site: site:default/ap-northeast-1
+  stage: production
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-007-ap-south-1-test
+spec:
+  target: resource:default/mongodb-007
+  site: site:default/ap-south-1
+  stage: test
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-007-ap-south-1-staging
+spec:
+  target: resource:default/mongodb-007
+  site: site:default/ap-south-1
+  stage: staging
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-007-ap-southeast-1-test
+spec:
+  target: resource:default/mongodb-007
+  site: site:default/ap-southeast-1
+  stage: test
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-007-eu-central-1-test
+spec:
+  target: resource:default/mongodb-007
+  site: site:default/eu-central-1
+  stage: test
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-007-eu-central-1-staging
+spec:
+  target: resource:default/mongodb-007
+  site: site:default/eu-central-1
+  stage: staging
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-007-eu-central-1-production
+spec:
+  target: resource:default/mongodb-007
+  site: site:default/eu-central-1
+  stage: production
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-007-eu-west-1-staging
+spec:
+  target: resource:default/mongodb-007
+  site: site:default/eu-west-1
+  stage: staging
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-007-sa-east-1-staging
+spec:
+  target: resource:default/mongodb-007
+  site: site:default/sa-east-1
+  stage: staging
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-007-us-east-1-test
+spec:
+  target: resource:default/mongodb-007
+  site: site:default/us-east-1
+  stage: test
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-007-us-east-1-staging
+spec:
+  target: resource:default/mongodb-007
+  site: site:default/us-east-1
+  stage: staging
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-007-us-east-1-production
+spec:
+  target: resource:default/mongodb-007
+  site: site:default/us-east-1
+  stage: production
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-007-us-east-2-staging
+spec:
+  target: resource:default/mongodb-007
+  site: site:default/us-east-2
+  stage: staging
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-007-us-east-2-production
+spec:
+  target: resource:default/mongodb-007
+  site: site:default/us-east-2
+  stage: production
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-007-us-west-1-test
+spec:
+  target: resource:default/mongodb-007
+  site: site:default/us-west-1
+  stage: test
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-007-us-west-1-staging
+spec:
+  target: resource:default/mongodb-007
+  site: site:default/us-west-1
+  stage: staging
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-007-us-west-2-test
+spec:
+  target: resource:default/mongodb-007
+  site: site:default/us-west-2
+  stage: test
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-007-us-west-2-staging
+spec:
+  target: resource:default/mongodb-007
+  site: site:default/us-west-2
+  stage: staging
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-007-us-west-2-production
+spec:
+  target: resource:default/mongodb-007
+  site: site:default/us-west-2
+  stage: production
+  properties:
+    version: '7.0'
+---
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: mongodb-008
+spec:
+  type: mongodb
+  lifecycle: production
+  system: app-e
+  owner: group:default/app-e-devs
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-008-eu-central-1-test
+spec:
+  target: resource:default/mongodb-008
+  site: site:default/eu-central-1
+  stage: test
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-008-eu-central-1-staging
+spec:
+  target: resource:default/mongodb-008
+  site: site:default/eu-central-1
+  stage: staging
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-008-eu-central-1-production
+spec:
+  target: resource:default/mongodb-008
+  site: site:default/eu-central-1
+  stage: production
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-008-eu-west-1-test
+spec:
+  target: resource:default/mongodb-008
+  site: site:default/eu-west-1
+  stage: test
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-008-eu-west-1-staging
+spec:
+  target: resource:default/mongodb-008
+  site: site:default/eu-west-1
+  stage: staging
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-008-sa-east-1-test
+spec:
+  target: resource:default/mongodb-008
+  site: site:default/sa-east-1
+  stage: test
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-008-sa-east-1-staging
+spec:
+  target: resource:default/mongodb-008
+  site: site:default/sa-east-1
+  stage: staging
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-008-sa-east-1-production
+spec:
+  target: resource:default/mongodb-008
+  site: site:default/sa-east-1
+  stage: production
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-008-us-east-2-test
+spec:
+  target: resource:default/mongodb-008
+  site: site:default/us-east-2
+  stage: test
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-008-us-east-2-production
+spec:
+  target: resource:default/mongodb-008
+  site: site:default/us-east-2
+  stage: production
+  properties:
+    version: '7.0'
+---
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: mongodb-009
+spec:
+  type: mongodb
+  lifecycle: production
+  system: app-c
+  owner: group:default/app-c-devs
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-009-ap-northeast-1-test
+spec:
+  target: resource:default/mongodb-009
+  site: site:default/ap-northeast-1
+  stage: test
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-009-ap-northeast-1-staging
+spec:
+  target: resource:default/mongodb-009
+  site: site:default/ap-northeast-1
+  stage: staging
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-009-ap-northeast-1-production
+spec:
+  target: resource:default/mongodb-009
+  site: site:default/ap-northeast-1
+  stage: production
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-009-ap-south-1-test
+spec:
+  target: resource:default/mongodb-009
+  site: site:default/ap-south-1
+  stage: test
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-009-eu-west-1-test
+spec:
+  target: resource:default/mongodb-009
+  site: site:default/eu-west-1
+  stage: test
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-009-eu-west-1-staging
+spec:
+  target: resource:default/mongodb-009
+  site: site:default/eu-west-1
+  stage: staging
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-009-eu-west-1-production
+spec:
+  target: resource:default/mongodb-009
+  site: site:default/eu-west-1
+  stage: production
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-009-us-east-2-staging
+spec:
+  target: resource:default/mongodb-009
+  site: site:default/us-east-2
+  stage: staging
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-009-us-east-2-production
+spec:
+  target: resource:default/mongodb-009
+  site: site:default/us-east-2
+  stage: production
+  properties:
+    version: '7.0'
+---
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: mongodb-010
+spec:
+  type: mongodb
+  lifecycle: production
+  system: app-b
+  owner: group:default/app-b-devs
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-010-ap-northeast-1-test
+spec:
+  target: resource:default/mongodb-010
+  site: site:default/ap-northeast-1
+  stage: test
+  properties:
+    version: '6.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-010-ap-northeast-1-staging
+spec:
+  target: resource:default/mongodb-010
+  site: site:default/ap-northeast-1
+  stage: staging
+  properties:
+    version: '6.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-010-ap-northeast-1-production
+spec:
+  target: resource:default/mongodb-010
+  site: site:default/ap-northeast-1
+  stage: production
+  properties:
+    version: '6.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-010-ap-south-1-test
+spec:
+  target: resource:default/mongodb-010
+  site: site:default/ap-south-1
+  stage: test
+  properties:
+    version: '6.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-010-ap-southeast-1-test
+spec:
+  target: resource:default/mongodb-010
+  site: site:default/ap-southeast-1
+  stage: test
+  properties:
+    version: '6.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-010-eu-central-1-test
+spec:
+  target: resource:default/mongodb-010
+  site: site:default/eu-central-1
+  stage: test
+  properties:
+    version: '6.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-010-eu-central-1-staging
+spec:
+  target: resource:default/mongodb-010
+  site: site:default/eu-central-1
+  stage: staging
+  properties:
+    version: '6.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-010-eu-west-1-test
+spec:
+  target: resource:default/mongodb-010
+  site: site:default/eu-west-1
+  stage: test
+  properties:
+    version: '6.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-010-eu-west-1-production
+spec:
+  target: resource:default/mongodb-010
+  site: site:default/eu-west-1
+  stage: production
+  properties:
+    version: '6.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-010-sa-east-1-staging
+spec:
+  target: resource:default/mongodb-010
+  site: site:default/sa-east-1
+  stage: staging
+  properties:
+    version: '6.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-010-sa-east-1-production
+spec:
+  target: resource:default/mongodb-010
+  site: site:default/sa-east-1
+  stage: production
+  properties:
+    version: '6.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-010-us-east-1-test
+spec:
+  target: resource:default/mongodb-010
+  site: site:default/us-east-1
+  stage: test
+  properties:
+    version: '6.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-010-us-east-1-staging
+spec:
+  target: resource:default/mongodb-010
+  site: site:default/us-east-1
+  stage: staging
+  properties:
+    version: '6.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-010-us-east-2-production
+spec:
+  target: resource:default/mongodb-010
+  site: site:default/us-east-2
+  stage: production
+  properties:
+    version: '6.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-010-us-west-2-test
+spec:
+  target: resource:default/mongodb-010
+  site: site:default/us-west-2
+  stage: test
+  properties:
+    version: '6.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-010-us-west-2-staging
+spec:
+  target: resource:default/mongodb-010
+  site: site:default/us-west-2
+  stage: staging
+  properties:
+    version: '6.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-010-us-west-2-production
+spec:
+  target: resource:default/mongodb-010
+  site: site:default/us-west-2
+  stage: production
+  properties:
+    version: '6.0'
+---
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: mongodb-011
+spec:
+  type: mongodb
+  lifecycle: production
+  system: app-e
+  owner: group:default/app-e-devs
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-011-ap-south-1-test
+spec:
+  target: resource:default/mongodb-011
+  site: site:default/ap-south-1
+  stage: test
+  properties:
+    version: '6.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-011-ap-south-1-staging
+spec:
+  target: resource:default/mongodb-011
+  site: site:default/ap-south-1
+  stage: staging
+  properties:
+    version: '6.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-011-ap-south-1-production
+spec:
+  target: resource:default/mongodb-011
+  site: site:default/ap-south-1
+  stage: production
+  properties:
+    version: '6.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-011-ap-southeast-1-staging
+spec:
+  target: resource:default/mongodb-011
+  site: site:default/ap-southeast-1
+  stage: staging
+  properties:
+    version: '6.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-011-sa-east-1-test
+spec:
+  target: resource:default/mongodb-011
+  site: site:default/sa-east-1
+  stage: test
+  properties:
+    version: '6.0'
+---
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: mongodb-012
+spec:
+  type: mongodb
+  lifecycle: production
+  system: app-d
+  owner: group:default/app-d-devs
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-012-ap-northeast-1-test
+spec:
+  target: resource:default/mongodb-012
+  site: site:default/ap-northeast-1
+  stage: test
+  properties:
+    version: '6.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-012-ap-northeast-1-staging
+spec:
+  target: resource:default/mongodb-012
+  site: site:default/ap-northeast-1
+  stage: staging
+  properties:
+    version: '6.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-012-ap-northeast-1-production
+spec:
+  target: resource:default/mongodb-012
+  site: site:default/ap-northeast-1
+  stage: production
+  properties:
+    version: '6.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-012-ap-south-1-test
+spec:
+  target: resource:default/mongodb-012
+  site: site:default/ap-south-1
+  stage: test
+  properties:
+    version: '6.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-012-ap-south-1-staging
+spec:
+  target: resource:default/mongodb-012
+  site: site:default/ap-south-1
+  stage: staging
+  properties:
+    version: '6.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-012-ap-southeast-1-test
+spec:
+  target: resource:default/mongodb-012
+  site: site:default/ap-southeast-1
+  stage: test
+  properties:
+    version: '6.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-012-ap-southeast-1-staging
+spec:
+  target: resource:default/mongodb-012
+  site: site:default/ap-southeast-1
+  stage: staging
+  properties:
+    version: '6.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-012-ap-southeast-1-production
+spec:
+  target: resource:default/mongodb-012
+  site: site:default/ap-southeast-1
+  stage: production
+  properties:
+    version: '6.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-012-eu-central-1-test
+spec:
+  target: resource:default/mongodb-012
+  site: site:default/eu-central-1
+  stage: test
+  properties:
+    version: '6.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-012-eu-west-1-staging
+spec:
+  target: resource:default/mongodb-012
+  site: site:default/eu-west-1
+  stage: staging
+  properties:
+    version: '6.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-012-sa-east-1-test
+spec:
+  target: resource:default/mongodb-012
+  site: site:default/sa-east-1
+  stage: test
+  properties:
+    version: '6.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-012-sa-east-1-staging
+spec:
+  target: resource:default/mongodb-012
+  site: site:default/sa-east-1
+  stage: staging
+  properties:
+    version: '6.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-012-sa-east-1-production
+spec:
+  target: resource:default/mongodb-012
+  site: site:default/sa-east-1
+  stage: production
+  properties:
+    version: '6.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-012-us-west-1-production
+spec:
+  target: resource:default/mongodb-012
+  site: site:default/us-west-1
+  stage: production
+  properties:
+    version: '6.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-012-us-west-2-production
+spec:
+  target: resource:default/mongodb-012
+  site: site:default/us-west-2
+  stage: production
+  properties:
+    version: '6.0'
+---
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: mongodb-013
+spec:
+  type: mongodb
+  lifecycle: production
+  system: app-e
+  owner: group:default/app-e-devs
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-013-sa-east-1-production
+spec:
+  target: resource:default/mongodb-013
+  site: site:default/sa-east-1
+  stage: production
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-013-us-west-2-production
+spec:
+  target: resource:default/mongodb-013
+  site: site:default/us-west-2
+  stage: production
+  properties:
+    version: '7.0'
+---
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: mongodb-014
+spec:
+  type: mongodb
+  lifecycle: production
+  system: app-b
+  owner: group:default/app-b-devs
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-014-ap-northeast-1-test
+spec:
+  target: resource:default/mongodb-014
+  site: site:default/ap-northeast-1
+  stage: test
+  properties:
+    version: '6.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-014-ap-northeast-1-staging
+spec:
+  target: resource:default/mongodb-014
+  site: site:default/ap-northeast-1
+  stage: staging
+  properties:
+    version: '6.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-014-ap-south-1-production
+spec:
+  target: resource:default/mongodb-014
+  site: site:default/ap-south-1
+  stage: production
+  properties:
+    version: '6.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-014-eu-central-1-test
+spec:
+  target: resource:default/mongodb-014
+  site: site:default/eu-central-1
+  stage: test
+  properties:
+    version: '6.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-014-eu-central-1-production
+spec:
+  target: resource:default/mongodb-014
+  site: site:default/eu-central-1
+  stage: production
+  properties:
+    version: '6.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-014-eu-west-1-test
+spec:
+  target: resource:default/mongodb-014
+  site: site:default/eu-west-1
+  stage: test
+  properties:
+    version: '6.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-014-eu-west-1-staging
+spec:
+  target: resource:default/mongodb-014
+  site: site:default/eu-west-1
+  stage: staging
+  properties:
+    version: '6.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-014-eu-west-1-production
+spec:
+  target: resource:default/mongodb-014
+  site: site:default/eu-west-1
+  stage: production
+  properties:
+    version: '6.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-014-sa-east-1-production
+spec:
+  target: resource:default/mongodb-014
+  site: site:default/sa-east-1
+  stage: production
+  properties:
+    version: '6.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-014-us-west-2-staging
+spec:
+  target: resource:default/mongodb-014
+  site: site:default/us-west-2
+  stage: staging
+  properties:
+    version: '6.0'
+---
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: mongodb-015
+spec:
+  type: mongodb
+  lifecycle: production
+  system: app-a
+  owner: group:default/app-a-devs
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-015-ap-northeast-1-test
+spec:
+  target: resource:default/mongodb-015
+  site: site:default/ap-northeast-1
+  stage: test
+  properties:
+    version: '6.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-015-ap-northeast-1-staging
+spec:
+  target: resource:default/mongodb-015
+  site: site:default/ap-northeast-1
+  stage: staging
+  properties:
+    version: '6.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-015-us-west-1-test
+spec:
+  target: resource:default/mongodb-015
+  site: site:default/us-west-1
+  stage: test
+  properties:
+    version: '6.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-015-us-west-1-staging
+spec:
+  target: resource:default/mongodb-015
+  site: site:default/us-west-1
+  stage: staging
+  properties:
+    version: '6.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-015-us-west-1-production
+spec:
+  target: resource:default/mongodb-015
+  site: site:default/us-west-1
+  stage: production
+  properties:
+    version: '6.0'
+---
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: mongodb-016
+spec:
+  type: mongodb
+  lifecycle: production
+  system: app-d
+  owner: group:default/app-d-devs
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-016-ap-northeast-1-test
+spec:
+  target: resource:default/mongodb-016
+  site: site:default/ap-northeast-1
+  stage: test
+  properties:
+    version: '6.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-016-ap-southeast-1-staging
+spec:
+  target: resource:default/mongodb-016
+  site: site:default/ap-southeast-1
+  stage: staging
+  properties:
+    version: '6.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-016-ap-southeast-1-production
+spec:
+  target: resource:default/mongodb-016
+  site: site:default/ap-southeast-1
+  stage: production
+  properties:
+    version: '6.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-016-eu-central-1-test
+spec:
+  target: resource:default/mongodb-016
+  site: site:default/eu-central-1
+  stage: test
+  properties:
+    version: '6.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-016-eu-west-1-test
+spec:
+  target: resource:default/mongodb-016
+  site: site:default/eu-west-1
+  stage: test
+  properties:
+    version: '6.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-016-eu-west-1-staging
+spec:
+  target: resource:default/mongodb-016
+  site: site:default/eu-west-1
+  stage: staging
+  properties:
+    version: '6.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-016-sa-east-1-test
+spec:
+  target: resource:default/mongodb-016
+  site: site:default/sa-east-1
+  stage: test
+  properties:
+    version: '6.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-016-us-east-1-test
+spec:
+  target: resource:default/mongodb-016
+  site: site:default/us-east-1
+  stage: test
+  properties:
+    version: '6.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-016-us-east-1-production
+spec:
+  target: resource:default/mongodb-016
+  site: site:default/us-east-1
+  stage: production
+  properties:
+    version: '6.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-016-us-east-2-test
+spec:
+  target: resource:default/mongodb-016
+  site: site:default/us-east-2
+  stage: test
+  properties:
+    version: '6.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-016-us-west-1-staging
+spec:
+  target: resource:default/mongodb-016
+  site: site:default/us-west-1
+  stage: staging
+  properties:
+    version: '6.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-016-us-west-2-test
+spec:
+  target: resource:default/mongodb-016
+  site: site:default/us-west-2
+  stage: test
+  properties:
+    version: '6.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-016-us-west-2-staging
+spec:
+  target: resource:default/mongodb-016
+  site: site:default/us-west-2
+  stage: staging
+  properties:
+    version: '6.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-016-us-west-2-production
+spec:
+  target: resource:default/mongodb-016
+  site: site:default/us-west-2
+  stage: production
+  properties:
+    version: '6.0'
+---
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: mongodb-017
+spec:
+  type: mongodb
+  lifecycle: production
+  system: app-d
+  owner: group:default/app-d-devs
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-017-ap-northeast-1-staging
+spec:
+  target: resource:default/mongodb-017
+  site: site:default/ap-northeast-1
+  stage: staging
+  properties:
+    version: '6.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-017-ap-southeast-1-test
+spec:
+  target: resource:default/mongodb-017
+  site: site:default/ap-southeast-1
+  stage: test
+  properties:
+    version: '6.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-017-ap-southeast-1-staging
+spec:
+  target: resource:default/mongodb-017
+  site: site:default/ap-southeast-1
+  stage: staging
+  properties:
+    version: '6.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-017-ap-southeast-1-production
+spec:
+  target: resource:default/mongodb-017
+  site: site:default/ap-southeast-1
+  stage: production
+  properties:
+    version: '6.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-017-eu-central-1-test
+spec:
+  target: resource:default/mongodb-017
+  site: site:default/eu-central-1
+  stage: test
+  properties:
+    version: '6.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-017-eu-central-1-staging
+spec:
+  target: resource:default/mongodb-017
+  site: site:default/eu-central-1
+  stage: staging
+  properties:
+    version: '6.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-017-eu-central-1-production
+spec:
+  target: resource:default/mongodb-017
+  site: site:default/eu-central-1
+  stage: production
+  properties:
+    version: '6.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-017-eu-west-1-staging
+spec:
+  target: resource:default/mongodb-017
+  site: site:default/eu-west-1
+  stage: staging
+  properties:
+    version: '6.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-017-eu-west-1-production
+spec:
+  target: resource:default/mongodb-017
+  site: site:default/eu-west-1
+  stage: production
+  properties:
+    version: '6.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-017-sa-east-1-test
+spec:
+  target: resource:default/mongodb-017
+  site: site:default/sa-east-1
+  stage: test
+  properties:
+    version: '6.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-017-sa-east-1-staging
+spec:
+  target: resource:default/mongodb-017
+  site: site:default/sa-east-1
+  stage: staging
+  properties:
+    version: '6.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-017-sa-east-1-production
+spec:
+  target: resource:default/mongodb-017
+  site: site:default/sa-east-1
+  stage: production
+  properties:
+    version: '6.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-017-us-east-1-test
+spec:
+  target: resource:default/mongodb-017
+  site: site:default/us-east-1
+  stage: test
+  properties:
+    version: '6.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-017-us-east-1-staging
+spec:
+  target: resource:default/mongodb-017
+  site: site:default/us-east-1
+  stage: staging
+  properties:
+    version: '6.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-017-us-east-1-production
+spec:
+  target: resource:default/mongodb-017
+  site: site:default/us-east-1
+  stage: production
+  properties:
+    version: '6.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-017-us-east-2-test
+spec:
+  target: resource:default/mongodb-017
+  site: site:default/us-east-2
+  stage: test
+  properties:
+    version: '6.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-017-us-east-2-staging
+spec:
+  target: resource:default/mongodb-017
+  site: site:default/us-east-2
+  stage: staging
+  properties:
+    version: '6.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-017-us-west-1-test
+spec:
+  target: resource:default/mongodb-017
+  site: site:default/us-west-1
+  stage: test
+  properties:
+    version: '6.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-017-us-west-1-staging
+spec:
+  target: resource:default/mongodb-017
+  site: site:default/us-west-1
+  stage: staging
+  properties:
+    version: '6.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-017-us-west-1-production
+spec:
+  target: resource:default/mongodb-017
+  site: site:default/us-west-1
+  stage: production
+  properties:
+    version: '6.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-017-us-west-2-test
+spec:
+  target: resource:default/mongodb-017
+  site: site:default/us-west-2
+  stage: test
+  properties:
+    version: '6.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-017-us-west-2-staging
+spec:
+  target: resource:default/mongodb-017
+  site: site:default/us-west-2
+  stage: staging
+  properties:
+    version: '6.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-017-us-west-2-production
+spec:
+  target: resource:default/mongodb-017
+  site: site:default/us-west-2
+  stage: production
+  properties:
+    version: '6.0'
+---
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: mongodb-018
+spec:
+  type: mongodb
+  lifecycle: production
+  system: app-b
+  owner: group:default/app-b-devs
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-018-ap-northeast-1-test
+spec:
+  target: resource:default/mongodb-018
+  site: site:default/ap-northeast-1
+  stage: test
+  properties:
+    version: '6.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-018-ap-northeast-1-staging
+spec:
+  target: resource:default/mongodb-018
+  site: site:default/ap-northeast-1
+  stage: staging
+  properties:
+    version: '6.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-018-ap-northeast-1-production
+spec:
+  target: resource:default/mongodb-018
+  site: site:default/ap-northeast-1
+  stage: production
+  properties:
+    version: '6.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-018-ap-southeast-1-test
+spec:
+  target: resource:default/mongodb-018
+  site: site:default/ap-southeast-1
+  stage: test
+  properties:
+    version: '6.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-018-eu-west-1-test
+spec:
+  target: resource:default/mongodb-018
+  site: site:default/eu-west-1
+  stage: test
+  properties:
+    version: '6.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-018-eu-west-1-staging
+spec:
+  target: resource:default/mongodb-018
+  site: site:default/eu-west-1
+  stage: staging
+  properties:
+    version: '6.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-018-eu-west-1-production
+spec:
+  target: resource:default/mongodb-018
+  site: site:default/eu-west-1
+  stage: production
+  properties:
+    version: '6.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-018-us-west-1-staging
+spec:
+  target: resource:default/mongodb-018
+  site: site:default/us-west-1
+  stage: staging
+  properties:
+    version: '6.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-018-us-west-2-test
+spec:
+  target: resource:default/mongodb-018
+  site: site:default/us-west-2
+  stage: test
+  properties:
+    version: '6.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-018-us-west-2-staging
+spec:
+  target: resource:default/mongodb-018
+  site: site:default/us-west-2
+  stage: staging
+  properties:
+    version: '6.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-018-us-west-2-production
+spec:
+  target: resource:default/mongodb-018
+  site: site:default/us-west-2
+  stage: production
+  properties:
+    version: '6.0'
+---
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: mongodb-019
+spec:
+  type: mongodb
+  lifecycle: production
+  system: app-c
+  owner: group:default/app-c-devs
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-019-ap-northeast-1-test
+spec:
+  target: resource:default/mongodb-019
+  site: site:default/ap-northeast-1
+  stage: test
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-019-ap-northeast-1-staging
+spec:
+  target: resource:default/mongodb-019
+  site: site:default/ap-northeast-1
+  stage: staging
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-019-ap-northeast-1-production
+spec:
+  target: resource:default/mongodb-019
+  site: site:default/ap-northeast-1
+  stage: production
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-019-ap-south-1-production
+spec:
+  target: resource:default/mongodb-019
+  site: site:default/ap-south-1
+  stage: production
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-019-eu-central-1-test
+spec:
+  target: resource:default/mongodb-019
+  site: site:default/eu-central-1
+  stage: test
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-019-eu-central-1-staging
+spec:
+  target: resource:default/mongodb-019
+  site: site:default/eu-central-1
+  stage: staging
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-019-eu-central-1-production
+spec:
+  target: resource:default/mongodb-019
+  site: site:default/eu-central-1
+  stage: production
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-019-us-east-2-test
+spec:
+  target: resource:default/mongodb-019
+  site: site:default/us-east-2
+  stage: test
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-019-us-east-2-staging
+spec:
+  target: resource:default/mongodb-019
+  site: site:default/us-east-2
+  stage: staging
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-019-us-east-2-production
+spec:
+  target: resource:default/mongodb-019
+  site: site:default/us-east-2
+  stage: production
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-019-us-west-1-test
+spec:
+  target: resource:default/mongodb-019
+  site: site:default/us-west-1
+  stage: test
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-019-us-west-1-production
+spec:
+  target: resource:default/mongodb-019
+  site: site:default/us-west-1
+  stage: production
+  properties:
+    version: '7.0'
+---
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: mongodb-020
+spec:
+  type: mongodb
+  lifecycle: production
+  system: app-c
+  owner: group:default/app-c-devs
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-020-ap-northeast-1-test
+spec:
+  target: resource:default/mongodb-020
+  site: site:default/ap-northeast-1
+  stage: test
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-020-ap-northeast-1-staging
+spec:
+  target: resource:default/mongodb-020
+  site: site:default/ap-northeast-1
+  stage: staging
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-020-ap-northeast-1-production
+spec:
+  target: resource:default/mongodb-020
+  site: site:default/ap-northeast-1
+  stage: production
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-020-ap-south-1-test
+spec:
+  target: resource:default/mongodb-020
+  site: site:default/ap-south-1
+  stage: test
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-020-ap-south-1-staging
+spec:
+  target: resource:default/mongodb-020
+  site: site:default/ap-south-1
+  stage: staging
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-020-ap-south-1-production
+spec:
+  target: resource:default/mongodb-020
+  site: site:default/ap-south-1
+  stage: production
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-020-ap-southeast-1-production
+spec:
+  target: resource:default/mongodb-020
+  site: site:default/ap-southeast-1
+  stage: production
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-020-eu-central-1-test
+spec:
+  target: resource:default/mongodb-020
+  site: site:default/eu-central-1
+  stage: test
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-020-eu-west-1-test
+spec:
+  target: resource:default/mongodb-020
+  site: site:default/eu-west-1
+  stage: test
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-020-eu-west-1-staging
+spec:
+  target: resource:default/mongodb-020
+  site: site:default/eu-west-1
+  stage: staging
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-020-sa-east-1-test
+spec:
+  target: resource:default/mongodb-020
+  site: site:default/sa-east-1
+  stage: test
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-020-sa-east-1-staging
+spec:
+  target: resource:default/mongodb-020
+  site: site:default/sa-east-1
+  stage: staging
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-020-sa-east-1-production
+spec:
+  target: resource:default/mongodb-020
+  site: site:default/sa-east-1
+  stage: production
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-020-us-east-1-test
+spec:
+  target: resource:default/mongodb-020
+  site: site:default/us-east-1
+  stage: test
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-020-us-east-1-staging
+spec:
+  target: resource:default/mongodb-020
+  site: site:default/us-east-1
+  stage: staging
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-020-us-east-1-production
+spec:
+  target: resource:default/mongodb-020
+  site: site:default/us-east-1
+  stage: production
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-020-us-west-2-test
+spec:
+  target: resource:default/mongodb-020
+  site: site:default/us-west-2
+  stage: test
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-020-us-west-2-staging
+spec:
+  target: resource:default/mongodb-020
+  site: site:default/us-west-2
+  stage: staging
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-020-us-west-2-production
+spec:
+  target: resource:default/mongodb-020
+  site: site:default/us-west-2
+  stage: production
+  properties:
+    version: '7.0'
+---
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: mongodb-021
+spec:
+  type: mongodb
+  lifecycle: production
+  system: app-e
+  owner: group:default/app-e-devs
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-021-ap-south-1-staging
+spec:
+  target: resource:default/mongodb-021
+  site: site:default/ap-south-1
+  stage: staging
+  properties:
+    version: '6.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-021-ap-south-1-production
+spec:
+  target: resource:default/mongodb-021
+  site: site:default/ap-south-1
+  stage: production
+  properties:
+    version: '6.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-021-ap-southeast-1-test
+spec:
+  target: resource:default/mongodb-021
+  site: site:default/ap-southeast-1
+  stage: test
+  properties:
+    version: '6.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-021-ap-southeast-1-staging
+spec:
+  target: resource:default/mongodb-021
+  site: site:default/ap-southeast-1
+  stage: staging
+  properties:
+    version: '6.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-021-eu-west-1-test
+spec:
+  target: resource:default/mongodb-021
+  site: site:default/eu-west-1
+  stage: test
+  properties:
+    version: '6.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-021-eu-west-1-production
+spec:
+  target: resource:default/mongodb-021
+  site: site:default/eu-west-1
+  stage: production
+  properties:
+    version: '6.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-021-us-east-2-test
+spec:
+  target: resource:default/mongodb-021
+  site: site:default/us-east-2
+  stage: test
+  properties:
+    version: '6.0'
+---
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: mongodb-022
+spec:
+  type: mongodb
+  lifecycle: production
+  system: app-d
+  owner: group:default/app-d-devs
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-022-ap-northeast-1-test
+spec:
+  target: resource:default/mongodb-022
+  site: site:default/ap-northeast-1
+  stage: test
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-022-ap-northeast-1-staging
+spec:
+  target: resource:default/mongodb-022
+  site: site:default/ap-northeast-1
+  stage: staging
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-022-ap-northeast-1-production
+spec:
+  target: resource:default/mongodb-022
+  site: site:default/ap-northeast-1
+  stage: production
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-022-ap-south-1-test
+spec:
+  target: resource:default/mongodb-022
+  site: site:default/ap-south-1
+  stage: test
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-022-ap-south-1-staging
+spec:
+  target: resource:default/mongodb-022
+  site: site:default/ap-south-1
+  stage: staging
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-022-ap-southeast-1-test
+spec:
+  target: resource:default/mongodb-022
+  site: site:default/ap-southeast-1
+  stage: test
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-022-ap-southeast-1-production
+spec:
+  target: resource:default/mongodb-022
+  site: site:default/ap-southeast-1
+  stage: production
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-022-eu-central-1-test
+spec:
+  target: resource:default/mongodb-022
+  site: site:default/eu-central-1
+  stage: test
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-022-sa-east-1-production
+spec:
+  target: resource:default/mongodb-022
+  site: site:default/sa-east-1
+  stage: production
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-022-us-east-1-staging
+spec:
+  target: resource:default/mongodb-022
+  site: site:default/us-east-1
+  stage: staging
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-022-us-east-2-test
+spec:
+  target: resource:default/mongodb-022
+  site: site:default/us-east-2
+  stage: test
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-022-us-east-2-staging
+spec:
+  target: resource:default/mongodb-022
+  site: site:default/us-east-2
+  stage: staging
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-022-us-east-2-production
+spec:
+  target: resource:default/mongodb-022
+  site: site:default/us-east-2
+  stage: production
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-022-us-west-1-test
+spec:
+  target: resource:default/mongodb-022
+  site: site:default/us-west-1
+  stage: test
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-022-us-west-1-staging
+spec:
+  target: resource:default/mongodb-022
+  site: site:default/us-west-1
+  stage: staging
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-022-us-west-1-production
+spec:
+  target: resource:default/mongodb-022
+  site: site:default/us-west-1
+  stage: production
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-022-us-west-2-test
+spec:
+  target: resource:default/mongodb-022
+  site: site:default/us-west-2
+  stage: test
+  properties:
+    version: '7.0'
+---
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: mongodb-023
+spec:
+  type: mongodb
+  lifecycle: production
+  system: app-e
+  owner: group:default/app-e-devs
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-023-ap-northeast-1-test
+spec:
+  target: resource:default/mongodb-023
+  site: site:default/ap-northeast-1
+  stage: test
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-023-ap-northeast-1-staging
+spec:
+  target: resource:default/mongodb-023
+  site: site:default/ap-northeast-1
+  stage: staging
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-023-ap-northeast-1-production
+spec:
+  target: resource:default/mongodb-023
+  site: site:default/ap-northeast-1
+  stage: production
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-023-eu-west-1-test
+spec:
+  target: resource:default/mongodb-023
+  site: site:default/eu-west-1
+  stage: test
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-023-eu-west-1-staging
+spec:
+  target: resource:default/mongodb-023
+  site: site:default/eu-west-1
+  stage: staging
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-023-us-east-1-test
+spec:
+  target: resource:default/mongodb-023
+  site: site:default/us-east-1
+  stage: test
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-023-us-east-2-staging
+spec:
+  target: resource:default/mongodb-023
+  site: site:default/us-east-2
+  stage: staging
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-023-us-west-1-test
+spec:
+  target: resource:default/mongodb-023
+  site: site:default/us-west-1
+  stage: test
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-023-us-west-1-staging
+spec:
+  target: resource:default/mongodb-023
+  site: site:default/us-west-1
+  stage: staging
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-023-us-west-1-production
+spec:
+  target: resource:default/mongodb-023
+  site: site:default/us-west-1
+  stage: production
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-023-us-west-2-staging
+spec:
+  target: resource:default/mongodb-023
+  site: site:default/us-west-2
+  stage: staging
+  properties:
+    version: '7.0'
+---
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: mongodb-024
+spec:
+  type: mongodb
+  lifecycle: production
+  system: app-c
+  owner: group:default/app-c-devs
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-024-us-east-1-staging
+spec:
+  target: resource:default/mongodb-024
+  site: site:default/us-east-1
+  stage: staging
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-024-us-west-2-test
+spec:
+  target: resource:default/mongodb-024
+  site: site:default/us-west-2
+  stage: test
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-024-us-west-2-staging
+spec:
+  target: resource:default/mongodb-024
+  site: site:default/us-west-2
+  stage: staging
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-024-us-west-2-production
+spec:
+  target: resource:default/mongodb-024
+  site: site:default/us-west-2
+  stage: production
+  properties:
+    version: '7.0'
+---
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: mongodb-025
+spec:
+  type: mongodb
+  lifecycle: production
+  system: app-e
+  owner: group:default/app-e-devs
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-025-ap-northeast-1-test
+spec:
+  target: resource:default/mongodb-025
+  site: site:default/ap-northeast-1
+  stage: test
+  properties:
+    version: '6.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-025-ap-northeast-1-staging
+spec:
+  target: resource:default/mongodb-025
+  site: site:default/ap-northeast-1
+  stage: staging
+  properties:
+    version: '6.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-025-ap-northeast-1-production
+spec:
+  target: resource:default/mongodb-025
+  site: site:default/ap-northeast-1
+  stage: production
+  properties:
+    version: '6.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-025-ap-south-1-test
+spec:
+  target: resource:default/mongodb-025
+  site: site:default/ap-south-1
+  stage: test
+  properties:
+    version: '6.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-025-ap-south-1-production
+spec:
+  target: resource:default/mongodb-025
+  site: site:default/ap-south-1
+  stage: production
+  properties:
+    version: '6.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-025-ap-southeast-1-staging
+spec:
+  target: resource:default/mongodb-025
+  site: site:default/ap-southeast-1
+  stage: staging
+  properties:
+    version: '6.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-025-ap-southeast-1-production
+spec:
+  target: resource:default/mongodb-025
+  site: site:default/ap-southeast-1
+  stage: production
+  properties:
+    version: '6.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-025-eu-central-1-test
+spec:
+  target: resource:default/mongodb-025
+  site: site:default/eu-central-1
+  stage: test
+  properties:
+    version: '6.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-025-eu-central-1-staging
+spec:
+  target: resource:default/mongodb-025
+  site: site:default/eu-central-1
+  stage: staging
+  properties:
+    version: '6.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-025-eu-west-1-test
+spec:
+  target: resource:default/mongodb-025
+  site: site:default/eu-west-1
+  stage: test
+  properties:
+    version: '6.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-025-eu-west-1-production
+spec:
+  target: resource:default/mongodb-025
+  site: site:default/eu-west-1
+  stage: production
+  properties:
+    version: '6.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-025-sa-east-1-staging
+spec:
+  target: resource:default/mongodb-025
+  site: site:default/sa-east-1
+  stage: staging
+  properties:
+    version: '6.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-025-us-east-1-staging
+spec:
+  target: resource:default/mongodb-025
+  site: site:default/us-east-1
+  stage: staging
+  properties:
+    version: '6.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-025-us-east-1-production
+spec:
+  target: resource:default/mongodb-025
+  site: site:default/us-east-1
+  stage: production
+  properties:
+    version: '6.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-025-us-east-2-test
+spec:
+  target: resource:default/mongodb-025
+  site: site:default/us-east-2
+  stage: test
+  properties:
+    version: '6.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-025-us-east-2-staging
+spec:
+  target: resource:default/mongodb-025
+  site: site:default/us-east-2
+  stage: staging
+  properties:
+    version: '6.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-025-us-west-1-test
+spec:
+  target: resource:default/mongodb-025
+  site: site:default/us-west-1
+  stage: test
+  properties:
+    version: '6.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-025-us-west-1-staging
+spec:
+  target: resource:default/mongodb-025
+  site: site:default/us-west-1
+  stage: staging
+  properties:
+    version: '6.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-025-us-west-1-production
+spec:
+  target: resource:default/mongodb-025
+  site: site:default/us-west-1
+  stage: production
+  properties:
+    version: '6.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-025-us-west-2-staging
+spec:
+  target: resource:default/mongodb-025
+  site: site:default/us-west-2
+  stage: staging
+  properties:
+    version: '6.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-025-us-west-2-production
+spec:
+  target: resource:default/mongodb-025
+  site: site:default/us-west-2
+  stage: production
+  properties:
+    version: '6.0'
+---
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: mongodb-026
+spec:
+  type: mongodb
+  lifecycle: production
+  system: app-c
+  owner: group:default/app-c-devs
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-026-ap-northeast-1-test
+spec:
+  target: resource:default/mongodb-026
+  site: site:default/ap-northeast-1
+  stage: test
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-026-ap-northeast-1-staging
+spec:
+  target: resource:default/mongodb-026
+  site: site:default/ap-northeast-1
+  stage: staging
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-026-ap-northeast-1-production
+spec:
+  target: resource:default/mongodb-026
+  site: site:default/ap-northeast-1
+  stage: production
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-026-ap-southeast-1-staging
+spec:
+  target: resource:default/mongodb-026
+  site: site:default/ap-southeast-1
+  stage: staging
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-026-eu-central-1-test
+spec:
+  target: resource:default/mongodb-026
+  site: site:default/eu-central-1
+  stage: test
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-026-eu-central-1-staging
+spec:
+  target: resource:default/mongodb-026
+  site: site:default/eu-central-1
+  stage: staging
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-026-eu-central-1-production
+spec:
+  target: resource:default/mongodb-026
+  site: site:default/eu-central-1
+  stage: production
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-026-eu-west-1-staging
+spec:
+  target: resource:default/mongodb-026
+  site: site:default/eu-west-1
+  stage: staging
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-026-us-west-2-production
+spec:
+  target: resource:default/mongodb-026
+  site: site:default/us-west-2
+  stage: production
+  properties:
+    version: '7.0'
+---
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: mongodb-027
+spec:
+  type: mongodb
+  lifecycle: production
+  system: app-d
+  owner: group:default/app-d-devs
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-027-ap-northeast-1-test
+spec:
+  target: resource:default/mongodb-027
+  site: site:default/ap-northeast-1
+  stage: test
+  properties:
+    version: '6.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-027-ap-northeast-1-staging
+spec:
+  target: resource:default/mongodb-027
+  site: site:default/ap-northeast-1
+  stage: staging
+  properties:
+    version: '6.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-027-ap-northeast-1-production
+spec:
+  target: resource:default/mongodb-027
+  site: site:default/ap-northeast-1
+  stage: production
+  properties:
+    version: '6.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-027-ap-south-1-test
+spec:
+  target: resource:default/mongodb-027
+  site: site:default/ap-south-1
+  stage: test
+  properties:
+    version: '6.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-027-ap-south-1-production
+spec:
+  target: resource:default/mongodb-027
+  site: site:default/ap-south-1
+  stage: production
+  properties:
+    version: '6.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-027-ap-southeast-1-test
+spec:
+  target: resource:default/mongodb-027
+  site: site:default/ap-southeast-1
+  stage: test
+  properties:
+    version: '6.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-027-ap-southeast-1-staging
+spec:
+  target: resource:default/mongodb-027
+  site: site:default/ap-southeast-1
+  stage: staging
+  properties:
+    version: '6.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-027-ap-southeast-1-production
+spec:
+  target: resource:default/mongodb-027
+  site: site:default/ap-southeast-1
+  stage: production
+  properties:
+    version: '6.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-027-eu-west-1-staging
+spec:
+  target: resource:default/mongodb-027
+  site: site:default/eu-west-1
+  stage: staging
+  properties:
+    version: '6.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-027-sa-east-1-test
+spec:
+  target: resource:default/mongodb-027
+  site: site:default/sa-east-1
+  stage: test
+  properties:
+    version: '6.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-027-sa-east-1-staging
+spec:
+  target: resource:default/mongodb-027
+  site: site:default/sa-east-1
+  stage: staging
+  properties:
+    version: '6.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-027-sa-east-1-production
+spec:
+  target: resource:default/mongodb-027
+  site: site:default/sa-east-1
+  stage: production
+  properties:
+    version: '6.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-027-us-east-2-test
+spec:
+  target: resource:default/mongodb-027
+  site: site:default/us-east-2
+  stage: test
+  properties:
+    version: '6.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-027-us-east-2-staging
+spec:
+  target: resource:default/mongodb-027
+  site: site:default/us-east-2
+  stage: staging
+  properties:
+    version: '6.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-027-us-east-2-production
+spec:
+  target: resource:default/mongodb-027
+  site: site:default/us-east-2
+  stage: production
+  properties:
+    version: '6.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-027-us-west-1-test
+spec:
+  target: resource:default/mongodb-027
+  site: site:default/us-west-1
+  stage: test
+  properties:
+    version: '6.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-027-us-west-1-staging
+spec:
+  target: resource:default/mongodb-027
+  site: site:default/us-west-1
+  stage: staging
+  properties:
+    version: '6.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-027-us-west-2-staging
+spec:
+  target: resource:default/mongodb-027
+  site: site:default/us-west-2
+  stage: staging
+  properties:
+    version: '6.0'
+---
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: mongodb-028
+spec:
+  type: mongodb
+  lifecycle: production
+  system: app-c
+  owner: group:default/app-c-devs
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-028-ap-northeast-1-staging
+spec:
+  target: resource:default/mongodb-028
+  site: site:default/ap-northeast-1
+  stage: staging
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-028-ap-south-1-test
+spec:
+  target: resource:default/mongodb-028
+  site: site:default/ap-south-1
+  stage: test
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-028-ap-south-1-staging
+spec:
+  target: resource:default/mongodb-028
+  site: site:default/ap-south-1
+  stage: staging
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-028-ap-south-1-production
+spec:
+  target: resource:default/mongodb-028
+  site: site:default/ap-south-1
+  stage: production
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-028-eu-central-1-test
+spec:
+  target: resource:default/mongodb-028
+  site: site:default/eu-central-1
+  stage: test
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-028-us-east-2-test
+spec:
+  target: resource:default/mongodb-028
+  site: site:default/us-east-2
+  stage: test
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-028-us-east-2-staging
+spec:
+  target: resource:default/mongodb-028
+  site: site:default/us-east-2
+  stage: staging
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-028-us-east-2-production
+spec:
+  target: resource:default/mongodb-028
+  site: site:default/us-east-2
+  stage: production
+  properties:
+    version: '7.0'
+---
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: mongodb-029
+spec:
+  type: mongodb
+  lifecycle: production
+  system: app-b
+  owner: group:default/app-b-devs
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-029-ap-northeast-1-test
+spec:
+  target: resource:default/mongodb-029
+  site: site:default/ap-northeast-1
+  stage: test
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-029-ap-northeast-1-production
+spec:
+  target: resource:default/mongodb-029
+  site: site:default/ap-northeast-1
+  stage: production
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-029-ap-south-1-test
+spec:
+  target: resource:default/mongodb-029
+  site: site:default/ap-south-1
+  stage: test
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-029-ap-south-1-staging
+spec:
+  target: resource:default/mongodb-029
+  site: site:default/ap-south-1
+  stage: staging
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-029-ap-southeast-1-staging
+spec:
+  target: resource:default/mongodb-029
+  site: site:default/ap-southeast-1
+  stage: staging
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-029-eu-central-1-production
+spec:
+  target: resource:default/mongodb-029
+  site: site:default/eu-central-1
+  stage: production
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-029-eu-west-1-test
+spec:
+  target: resource:default/mongodb-029
+  site: site:default/eu-west-1
+  stage: test
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-029-eu-west-1-staging
+spec:
+  target: resource:default/mongodb-029
+  site: site:default/eu-west-1
+  stage: staging
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-029-eu-west-1-production
+spec:
+  target: resource:default/mongodb-029
+  site: site:default/eu-west-1
+  stage: production
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-029-sa-east-1-staging
+spec:
+  target: resource:default/mongodb-029
+  site: site:default/sa-east-1
+  stage: staging
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-029-sa-east-1-production
+spec:
+  target: resource:default/mongodb-029
+  site: site:default/sa-east-1
+  stage: production
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-029-us-east-1-staging
+spec:
+  target: resource:default/mongodb-029
+  site: site:default/us-east-1
+  stage: staging
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-029-us-east-1-production
+spec:
+  target: resource:default/mongodb-029
+  site: site:default/us-east-1
+  stage: production
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-029-us-east-2-test
+spec:
+  target: resource:default/mongodb-029
+  site: site:default/us-east-2
+  stage: test
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-029-us-east-2-staging
+spec:
+  target: resource:default/mongodb-029
+  site: site:default/us-east-2
+  stage: staging
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-029-us-east-2-production
+spec:
+  target: resource:default/mongodb-029
+  site: site:default/us-east-2
+  stage: production
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-029-us-west-2-test
+spec:
+  target: resource:default/mongodb-029
+  site: site:default/us-west-2
+  stage: test
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-029-us-west-2-staging
+spec:
+  target: resource:default/mongodb-029
+  site: site:default/us-west-2
+  stage: staging
+  properties:
+    version: '7.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-029-us-west-2-production
+spec:
+  target: resource:default/mongodb-029
+  site: site:default/us-west-2
+  stage: production
+  properties:
+    version: '7.0'
+---
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: mongodb-030
+spec:
+  type: mongodb
+  lifecycle: production
+  system: app-a
+  owner: group:default/app-a-devs
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-030-ap-northeast-1-test
+spec:
+  target: resource:default/mongodb-030
+  site: site:default/ap-northeast-1
+  stage: test
+  properties:
+    version: '6.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-030-ap-northeast-1-staging
+spec:
+  target: resource:default/mongodb-030
+  site: site:default/ap-northeast-1
+  stage: staging
+  properties:
+    version: '6.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-030-ap-northeast-1-production
+spec:
+  target: resource:default/mongodb-030
+  site: site:default/ap-northeast-1
+  stage: production
+  properties:
+    version: '6.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-030-eu-central-1-staging
+spec:
+  target: resource:default/mongodb-030
+  site: site:default/eu-central-1
+  stage: staging
+  properties:
+    version: '6.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-030-sa-east-1-test
+spec:
+  target: resource:default/mongodb-030
+  site: site:default/sa-east-1
+  stage: test
+  properties:
+    version: '6.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-030-sa-east-1-staging
+spec:
+  target: resource:default/mongodb-030
+  site: site:default/sa-east-1
+  stage: staging
+  properties:
+    version: '6.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-030-sa-east-1-production
+spec:
+  target: resource:default/mongodb-030
+  site: site:default/sa-east-1
+  stage: production
+  properties:
+    version: '6.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-030-us-east-1-staging
+spec:
+  target: resource:default/mongodb-030
+  site: site:default/us-east-1
+  stage: staging
+  properties:
+    version: '6.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-030-us-west-2-test
+spec:
+  target: resource:default/mongodb-030
+  site: site:default/us-west-2
+  stage: test
+  properties:
+    version: '6.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-030-us-west-2-staging
+spec:
+  target: resource:default/mongodb-030
+  site: site:default/us-west-2
+  stage: staging
+  properties:
+    version: '6.0'
+---
+apiVersion: dbms.io/v1alpha1
+kind: Instance
+metadata:
+  name: mongodb-030-us-west-2-production
+spec:
+  target: resource:default/mongodb-030
+  site: site:default/us-west-2
+  stage: production
+  properties:
+    version: '6.0'
