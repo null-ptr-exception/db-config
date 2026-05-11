@@ -1,14 +1,961 @@
-instances:
-  - name: redis-shared
-    system: app-a
-    owner: app-a-devs
-    lifecycle: production
-    description: Shared Redis cache
-    tags: [critical]
-    spec:
-      version: "7.2"
-      instance_type: small
-      storage_size: 5Gi
-    connection:
-      host: redis01.internal
-      port: 6379
+resources:
+- name: redis-001
+  owner: app-d
+  lifecycle: production
+  version: '7.2'
+  instances:
+  - site: ap-northeast-1
+    stage: staging
+    instance_type: small
+    storage_size: 10Gi
+  - site: ap-southeast-1
+    stage: test
+    instance_type: small
+    storage_size: 10Gi
+  - site: ap-southeast-1
+    stage: staging
+    instance_type: medium
+    storage_size: 50Gi
+  - site: eu-west-1
+    stage: test
+    instance_type: large
+    storage_size: 100Gi
+  - site: eu-west-1
+    stage: staging
+    instance_type: small
+    storage_size: 10Gi
+  - site: eu-west-1
+    stage: production
+    instance_type: medium
+    storage_size: 50Gi
+  - site: sa-east-1
+    stage: test
+    instance_type: large
+    storage_size: 100Gi
+  - site: sa-east-1
+    stage: staging
+    instance_type: small
+    storage_size: 10Gi
+  - site: sa-east-1
+    stage: production
+    instance_type: medium
+    storage_size: 50Gi
+  - site: us-east-2
+    stage: production
+    instance_type: large
+    storage_size: 100Gi
+  - site: us-west-1
+    stage: staging
+    instance_type: small
+    storage_size: 10Gi
+  - site: us-west-2
+    stage: staging
+    instance_type: small
+    storage_size: 10Gi
+  - site: us-west-2
+    stage: production
+    instance_type: medium
+    storage_size: 50Gi
+- name: redis-002
+  owner: app-a
+  lifecycle: production
+  version: '7.0'
+  instances:
+  - site: ap-southeast-1
+    stage: test
+    instance_type: small
+    storage_size: 10Gi
+  - site: ap-southeast-1
+    stage: staging
+    instance_type: large
+    storage_size: 100Gi
+  - site: ap-southeast-1
+    stage: production
+    instance_type: medium
+    storage_size: 50Gi
+  - site: eu-central-1
+    stage: test
+    instance_type: large
+    storage_size: 100Gi
+  - site: eu-central-1
+    stage: staging
+    instance_type: medium
+    storage_size: 50Gi
+  - site: eu-central-1
+    stage: production
+    instance_type: medium
+    storage_size: 50Gi
+  - site: sa-east-1
+    stage: test
+    instance_type: medium
+    storage_size: 50Gi
+  - site: sa-east-1
+    stage: staging
+    instance_type: small
+    storage_size: 10Gi
+  - site: sa-east-1
+    stage: production
+    instance_type: medium
+    storage_size: 50Gi
+  - site: us-west-2
+    stage: test
+    instance_type: small
+    storage_size: 10Gi
+  - site: us-west-2
+    stage: staging
+    instance_type: large
+    storage_size: 100Gi
+  - site: us-west-2
+    stage: production
+    instance_type: medium
+    storage_size: 50Gi
+- name: redis-003
+  owner: app-b
+  lifecycle: production
+  version: '7.2'
+  instances:
+  - site: ap-northeast-1
+    stage: test
+    instance_type: medium
+    storage_size: 50Gi
+  - site: ap-northeast-1
+    stage: staging
+    instance_type: medium
+    storage_size: 50Gi
+  - site: ap-northeast-1
+    stage: production
+    instance_type: medium
+    storage_size: 50Gi
+  - site: ap-south-1
+    stage: test
+    instance_type: large
+    storage_size: 100Gi
+  - site: ap-south-1
+    stage: staging
+    instance_type: large
+    storage_size: 100Gi
+  - site: ap-south-1
+    stage: production
+    instance_type: large
+    storage_size: 100Gi
+  - site: ap-southeast-1
+    stage: test
+    instance_type: small
+    storage_size: 10Gi
+  - site: ap-southeast-1
+    stage: staging
+    instance_type: medium
+    storage_size: 50Gi
+  - site: eu-west-1
+    stage: staging
+    instance_type: medium
+    storage_size: 50Gi
+  - site: us-east-1
+    stage: staging
+    instance_type: large
+    storage_size: 100Gi
+  - site: us-east-1
+    stage: production
+    instance_type: large
+    storage_size: 100Gi
+  - site: us-east-2
+    stage: production
+    instance_type: medium
+    storage_size: 50Gi
+  - site: us-west-1
+    stage: test
+    instance_type: small
+    storage_size: 10Gi
+  - site: us-west-1
+    stage: production
+    instance_type: small
+    storage_size: 10Gi
+  - site: us-west-2
+    stage: test
+    instance_type: small
+    storage_size: 10Gi
+  - site: us-west-2
+    stage: staging
+    instance_type: medium
+    storage_size: 50Gi
+  - site: us-west-2
+    stage: production
+    instance_type: medium
+    storage_size: 50Gi
+- name: redis-004
+  owner: app-a
+  lifecycle: production
+  version: '7.2'
+  instances:
+  - site: ap-southeast-1
+    stage: test
+    instance_type: medium
+    storage_size: 50Gi
+  - site: ap-southeast-1
+    stage: staging
+    instance_type: small
+    storage_size: 10Gi
+  - site: eu-west-1
+    stage: test
+    instance_type: small
+    storage_size: 10Gi
+  - site: eu-west-1
+    stage: production
+    instance_type: medium
+    storage_size: 50Gi
+  - site: sa-east-1
+    stage: test
+    instance_type: large
+    storage_size: 100Gi
+  - site: sa-east-1
+    stage: staging
+    instance_type: small
+    storage_size: 10Gi
+  - site: sa-east-1
+    stage: production
+    instance_type: large
+    storage_size: 100Gi
+  - site: us-east-1
+    stage: test
+    instance_type: small
+    storage_size: 10Gi
+- name: redis-005
+  owner: app-d
+  lifecycle: production
+  version: '7.0'
+  instances:
+  - site: ap-northeast-1
+    stage: test
+    instance_type: large
+    storage_size: 100Gi
+  - site: sa-east-1
+    stage: test
+    instance_type: large
+    storage_size: 100Gi
+  - site: sa-east-1
+    stage: staging
+    instance_type: small
+    storage_size: 10Gi
+  - site: us-east-2
+    stage: test
+    instance_type: medium
+    storage_size: 50Gi
+  - site: us-east-2
+    stage: production
+    instance_type: small
+    storage_size: 10Gi
+- name: redis-006
+  owner: app-a
+  lifecycle: production
+  version: '7.0'
+  instances:
+  - site: eu-central-1
+    stage: production
+    instance_type: large
+    storage_size: 100Gi
+  - site: eu-west-1
+    stage: production
+    instance_type: large
+    storage_size: 100Gi
+  - site: sa-east-1
+    stage: staging
+    instance_type: medium
+    storage_size: 50Gi
+  - site: us-east-1
+    stage: test
+    instance_type: large
+    storage_size: 100Gi
+  - site: us-east-1
+    stage: staging
+    instance_type: large
+    storage_size: 100Gi
+  - site: us-east-1
+    stage: production
+    instance_type: medium
+    storage_size: 50Gi
+  - site: us-east-2
+    stage: test
+    instance_type: small
+    storage_size: 10Gi
+  - site: us-west-2
+    stage: test
+    instance_type: large
+    storage_size: 100Gi
+- name: redis-007
+  owner: app-d
+  lifecycle: production
+  version: '7.2'
+  instances:
+  - site: ap-south-1
+    stage: test
+    instance_type: large
+    storage_size: 100Gi
+  - site: ap-south-1
+    stage: staging
+    instance_type: medium
+    storage_size: 50Gi
+  - site: ap-south-1
+    stage: production
+    instance_type: small
+    storage_size: 10Gi
+  - site: eu-central-1
+    stage: test
+    instance_type: medium
+    storage_size: 50Gi
+  - site: eu-central-1
+    stage: staging
+    instance_type: large
+    storage_size: 100Gi
+  - site: eu-central-1
+    stage: production
+    instance_type: small
+    storage_size: 10Gi
+  - site: sa-east-1
+    stage: staging
+    instance_type: medium
+    storage_size: 50Gi
+  - site: us-east-1
+    stage: test
+    instance_type: medium
+    storage_size: 50Gi
+  - site: us-east-2
+    stage: test
+    instance_type: medium
+    storage_size: 50Gi
+  - site: us-east-2
+    stage: staging
+    instance_type: medium
+    storage_size: 50Gi
+  - site: us-east-2
+    stage: production
+    instance_type: small
+    storage_size: 10Gi
+  - site: us-west-1
+    stage: staging
+    instance_type: medium
+    storage_size: 50Gi
+  - site: us-west-1
+    stage: production
+    instance_type: large
+    storage_size: 100Gi
+  - site: us-west-2
+    stage: test
+    instance_type: small
+    storage_size: 10Gi
+  - site: us-west-2
+    stage: staging
+    instance_type: large
+    storage_size: 100Gi
+  - site: us-west-2
+    stage: production
+    instance_type: small
+    storage_size: 10Gi
+- name: redis-008
+  owner: app-a
+  lifecycle: production
+  version: '7.2'
+  instances:
+  - site: ap-southeast-1
+    stage: staging
+    instance_type: medium
+    storage_size: 50Gi
+  - site: ap-southeast-1
+    stage: production
+    instance_type: large
+    storage_size: 100Gi
+  - site: eu-west-1
+    stage: test
+    instance_type: medium
+    storage_size: 50Gi
+  - site: eu-west-1
+    stage: production
+    instance_type: small
+    storage_size: 10Gi
+  - site: sa-east-1
+    stage: test
+    instance_type: small
+    storage_size: 10Gi
+  - site: sa-east-1
+    stage: production
+    instance_type: large
+    storage_size: 100Gi
+  - site: us-west-1
+    stage: test
+    instance_type: medium
+    storage_size: 50Gi
+  - site: us-west-1
+    stage: staging
+    instance_type: large
+    storage_size: 100Gi
+- name: redis-009
+  owner: app-d
+  lifecycle: production
+  version: '7.0'
+  instances:
+  - site: us-east-2
+    stage: staging
+    instance_type: small
+    storage_size: 10Gi
+- name: redis-010
+  owner: app-d
+  lifecycle: production
+  version: '7.0'
+  instances:
+  - site: ap-south-1
+    stage: test
+    instance_type: medium
+    storage_size: 50Gi
+  - site: ap-south-1
+    stage: staging
+    instance_type: large
+    storage_size: 100Gi
+  - site: ap-south-1
+    stage: production
+    instance_type: large
+    storage_size: 100Gi
+  - site: eu-central-1
+    stage: test
+    instance_type: small
+    storage_size: 10Gi
+  - site: eu-central-1
+    stage: staging
+    instance_type: large
+    storage_size: 100Gi
+  - site: eu-central-1
+    stage: production
+    instance_type: medium
+    storage_size: 50Gi
+  - site: us-east-1
+    stage: test
+    instance_type: medium
+    storage_size: 50Gi
+  - site: us-east-1
+    stage: staging
+    instance_type: medium
+    storage_size: 50Gi
+  - site: us-east-1
+    stage: production
+    instance_type: large
+    storage_size: 100Gi
+  - site: us-west-1
+    stage: staging
+    instance_type: large
+    storage_size: 100Gi
+  - site: us-west-2
+    stage: test
+    instance_type: medium
+    storage_size: 50Gi
+  - site: us-west-2
+    stage: staging
+    instance_type: large
+    storage_size: 100Gi
+  - site: us-west-2
+    stage: production
+    instance_type: medium
+    storage_size: 50Gi
+- name: redis-011
+  owner: app-a
+  lifecycle: production
+  version: '7.2'
+  instances:
+  - site: ap-northeast-1
+    stage: test
+    instance_type: small
+    storage_size: 10Gi
+  - site: ap-south-1
+    stage: staging
+    instance_type: small
+    storage_size: 10Gi
+  - site: ap-south-1
+    stage: production
+    instance_type: small
+    storage_size: 10Gi
+  - site: ap-southeast-1
+    stage: production
+    instance_type: large
+    storage_size: 100Gi
+  - site: eu-central-1
+    stage: test
+    instance_type: medium
+    storage_size: 50Gi
+  - site: eu-central-1
+    stage: staging
+    instance_type: small
+    storage_size: 10Gi
+  - site: eu-central-1
+    stage: production
+    instance_type: medium
+    storage_size: 50Gi
+  - site: eu-west-1
+    stage: test
+    instance_type: large
+    storage_size: 100Gi
+  - site: eu-west-1
+    stage: staging
+    instance_type: medium
+    storage_size: 50Gi
+  - site: eu-west-1
+    stage: production
+    instance_type: small
+    storage_size: 10Gi
+  - site: sa-east-1
+    stage: test
+    instance_type: small
+    storage_size: 10Gi
+  - site: sa-east-1
+    stage: staging
+    instance_type: large
+    storage_size: 100Gi
+  - site: sa-east-1
+    stage: production
+    instance_type: small
+    storage_size: 10Gi
+  - site: us-east-1
+    stage: test
+    instance_type: medium
+    storage_size: 50Gi
+  - site: us-east-1
+    stage: staging
+    instance_type: medium
+    storage_size: 50Gi
+  - site: us-east-2
+    stage: test
+    instance_type: small
+    storage_size: 10Gi
+  - site: us-east-2
+    stage: staging
+    instance_type: medium
+    storage_size: 50Gi
+  - site: us-west-1
+    stage: staging
+    instance_type: large
+    storage_size: 100Gi
+  - site: us-west-2
+    stage: test
+    instance_type: medium
+    storage_size: 50Gi
+  - site: us-west-2
+    stage: production
+    instance_type: medium
+    storage_size: 50Gi
+- name: redis-012
+  owner: app-e
+  lifecycle: production
+  version: '7.2'
+  instances:
+  - site: ap-south-1
+    stage: test
+    instance_type: large
+    storage_size: 100Gi
+  - site: ap-south-1
+    stage: production
+    instance_type: medium
+    storage_size: 50Gi
+  - site: us-east-1
+    stage: test
+    instance_type: small
+    storage_size: 10Gi
+  - site: us-east-1
+    stage: staging
+    instance_type: large
+    storage_size: 100Gi
+  - site: us-east-1
+    stage: production
+    instance_type: medium
+    storage_size: 50Gi
+  - site: us-east-2
+    stage: test
+    instance_type: small
+    storage_size: 10Gi
+  - site: us-east-2
+    stage: staging
+    instance_type: large
+    storage_size: 100Gi
+  - site: us-east-2
+    stage: production
+    instance_type: small
+    storage_size: 10Gi
+  - site: us-west-1
+    stage: test
+    instance_type: small
+    storage_size: 10Gi
+  - site: us-west-1
+    stage: staging
+    instance_type: large
+    storage_size: 100Gi
+- name: redis-013
+  owner: app-c
+  lifecycle: production
+  version: '7.0'
+  instances:
+  - site: us-east-2
+    stage: test
+    instance_type: large
+    storage_size: 100Gi
+  - site: us-east-2
+    stage: staging
+    instance_type: small
+    storage_size: 10Gi
+  - site: us-east-2
+    stage: production
+    instance_type: large
+    storage_size: 100Gi
+- name: redis-014
+  owner: app-a
+  lifecycle: production
+  version: '7.0'
+  instances:
+  - site: ap-northeast-1
+    stage: staging
+    instance_type: large
+    storage_size: 100Gi
+  - site: ap-northeast-1
+    stage: production
+    instance_type: large
+    storage_size: 100Gi
+  - site: ap-southeast-1
+    stage: staging
+    instance_type: medium
+    storage_size: 50Gi
+  - site: ap-southeast-1
+    stage: production
+    instance_type: small
+    storage_size: 10Gi
+  - site: eu-central-1
+    stage: test
+    instance_type: small
+    storage_size: 10Gi
+  - site: sa-east-1
+    stage: test
+    instance_type: small
+    storage_size: 10Gi
+  - site: sa-east-1
+    stage: staging
+    instance_type: medium
+    storage_size: 50Gi
+  - site: sa-east-1
+    stage: production
+    instance_type: medium
+    storage_size: 50Gi
+  - site: us-east-1
+    stage: test
+    instance_type: large
+    storage_size: 100Gi
+  - site: us-east-1
+    stage: staging
+    instance_type: medium
+    storage_size: 50Gi
+  - site: us-west-1
+    stage: staging
+    instance_type: medium
+    storage_size: 50Gi
+  - site: us-west-2
+    stage: test
+    instance_type: small
+    storage_size: 10Gi
+  - site: us-west-2
+    stage: staging
+    instance_type: small
+    storage_size: 10Gi
+- name: redis-015
+  owner: app-c
+  lifecycle: production
+  version: '7.0'
+  instances:
+  - site: eu-central-1
+    stage: staging
+    instance_type: medium
+    storage_size: 50Gi
+  - site: sa-east-1
+    stage: test
+    instance_type: small
+    storage_size: 10Gi
+  - site: sa-east-1
+    stage: staging
+    instance_type: small
+    storage_size: 10Gi
+  - site: sa-east-1
+    stage: production
+    instance_type: medium
+    storage_size: 50Gi
+  - site: us-east-1
+    stage: test
+    instance_type: small
+    storage_size: 10Gi
+  - site: us-east-1
+    stage: production
+    instance_type: medium
+    storage_size: 50Gi
+  - site: us-west-2
+    stage: test
+    instance_type: small
+    storage_size: 10Gi
+- name: redis-016
+  owner: app-a
+  lifecycle: production
+  version: '7.0'
+  instances:
+  - site: ap-southeast-1
+    stage: test
+    instance_type: small
+    storage_size: 10Gi
+  - site: ap-southeast-1
+    stage: staging
+    instance_type: small
+    storage_size: 10Gi
+  - site: ap-southeast-1
+    stage: production
+    instance_type: small
+    storage_size: 10Gi
+  - site: sa-east-1
+    stage: production
+    instance_type: medium
+    storage_size: 50Gi
+  - site: us-east-1
+    stage: test
+    instance_type: medium
+    storage_size: 50Gi
+  - site: us-east-2
+    stage: test
+    instance_type: medium
+    storage_size: 50Gi
+- name: redis-017
+  owner: app-a
+  lifecycle: production
+  version: '7.0'
+  instances:
+  - site: ap-northeast-1
+    stage: staging
+    instance_type: small
+    storage_size: 10Gi
+  - site: ap-northeast-1
+    stage: production
+    instance_type: small
+    storage_size: 10Gi
+  - site: ap-south-1
+    stage: test
+    instance_type: medium
+    storage_size: 50Gi
+  - site: ap-south-1
+    stage: staging
+    instance_type: medium
+    storage_size: 50Gi
+  - site: ap-south-1
+    stage: production
+    instance_type: large
+    storage_size: 100Gi
+  - site: ap-southeast-1
+    stage: test
+    instance_type: medium
+    storage_size: 50Gi
+  - site: ap-southeast-1
+    stage: production
+    instance_type: medium
+    storage_size: 50Gi
+  - site: eu-central-1
+    stage: staging
+    instance_type: small
+    storage_size: 10Gi
+  - site: eu-west-1
+    stage: test
+    instance_type: medium
+    storage_size: 50Gi
+  - site: eu-west-1
+    stage: staging
+    instance_type: large
+    storage_size: 100Gi
+  - site: eu-west-1
+    stage: production
+    instance_type: medium
+    storage_size: 50Gi
+  - site: sa-east-1
+    stage: staging
+    instance_type: medium
+    storage_size: 50Gi
+  - site: sa-east-1
+    stage: production
+    instance_type: large
+    storage_size: 100Gi
+  - site: us-east-1
+    stage: test
+    instance_type: small
+    storage_size: 10Gi
+  - site: us-east-1
+    stage: staging
+    instance_type: small
+    storage_size: 10Gi
+  - site: us-east-1
+    stage: production
+    instance_type: medium
+    storage_size: 50Gi
+  - site: us-east-2
+    stage: test
+    instance_type: small
+    storage_size: 10Gi
+  - site: us-east-2
+    stage: staging
+    instance_type: medium
+    storage_size: 50Gi
+  - site: us-east-2
+    stage: production
+    instance_type: large
+    storage_size: 100Gi
+  - site: us-west-1
+    stage: test
+    instance_type: small
+    storage_size: 10Gi
+  - site: us-west-1
+    stage: production
+    instance_type: small
+    storage_size: 10Gi
+  - site: us-west-2
+    stage: production
+    instance_type: small
+    storage_size: 10Gi
+- name: redis-018
+  owner: app-c
+  lifecycle: production
+  version: '7.0'
+  instances:
+  - site: ap-south-1
+    stage: test
+    instance_type: small
+    storage_size: 10Gi
+  - site: ap-southeast-1
+    stage: test
+    instance_type: large
+    storage_size: 100Gi
+  - site: ap-southeast-1
+    stage: staging
+    instance_type: large
+    storage_size: 100Gi
+  - site: ap-southeast-1
+    stage: production
+    instance_type: medium
+    storage_size: 50Gi
+  - site: eu-central-1
+    stage: test
+    instance_type: medium
+    storage_size: 50Gi
+  - site: eu-central-1
+    stage: staging
+    instance_type: large
+    storage_size: 100Gi
+  - site: eu-central-1
+    stage: production
+    instance_type: medium
+    storage_size: 50Gi
+  - site: sa-east-1
+    stage: staging
+    instance_type: small
+    storage_size: 10Gi
+- name: redis-019
+  owner: app-a
+  lifecycle: production
+  version: '7.0'
+  instances:
+  - site: eu-west-1
+    stage: test
+    instance_type: large
+    storage_size: 100Gi
+  - site: eu-west-1
+    stage: staging
+    instance_type: small
+    storage_size: 10Gi
+  - site: sa-east-1
+    stage: staging
+    instance_type: large
+    storage_size: 100Gi
+  - site: us-east-2
+    stage: staging
+    instance_type: small
+    storage_size: 10Gi
+  - site: us-west-1
+    stage: test
+    instance_type: large
+    storage_size: 100Gi
+- name: redis-020
+  owner: app-b
+  lifecycle: production
+  version: '7.0'
+  instances:
+  - site: ap-northeast-1
+    stage: test
+    instance_type: large
+    storage_size: 100Gi
+  - site: ap-northeast-1
+    stage: production
+    instance_type: medium
+    storage_size: 50Gi
+  - site: ap-south-1
+    stage: test
+    instance_type: large
+    storage_size: 100Gi
+  - site: ap-south-1
+    stage: staging
+    instance_type: large
+    storage_size: 100Gi
+  - site: ap-south-1
+    stage: production
+    instance_type: large
+    storage_size: 100Gi
+  - site: ap-southeast-1
+    stage: test
+    instance_type: medium
+    storage_size: 50Gi
+  - site: ap-southeast-1
+    stage: staging
+    instance_type: medium
+    storage_size: 50Gi
+  - site: ap-southeast-1
+    stage: production
+    instance_type: large
+    storage_size: 100Gi
+  - site: eu-central-1
+    stage: test
+    instance_type: large
+    storage_size: 100Gi
+  - site: eu-central-1
+    stage: staging
+    instance_type: small
+    storage_size: 10Gi
+  - site: eu-central-1
+    stage: production
+    instance_type: large
+    storage_size: 100Gi
+  - site: sa-east-1
+    stage: test
+    instance_type: large
+    storage_size: 100Gi
+  - site: sa-east-1
+    stage: staging
+    instance_type: medium
+    storage_size: 50Gi
+  - site: sa-east-1
+    stage: production
+    instance_type: large
+    storage_size: 100Gi
+  - site: us-east-1
+    stage: production
+    instance_type: large
+    storage_size: 100Gi
+  - site: us-east-2
+    stage: staging
+    instance_type: small
+    storage_size: 10Gi
+  - site: us-west-1
+    stage: test
+    instance_type: small
+    storage_size: 10Gi
+  - site: us-west-1
+    stage: production
+    instance_type: medium
+    storage_size: 50Gi
+  - site: us-west-2
+    stage: test
+    instance_type: large
+    storage_size: 100Gi
+  - site: us-west-2
+    stage: production
+    instance_type: large
+    storage_size: 100Gi

@@ -3,8 +3,6 @@ set -euo pipefail
 
 REPO_ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 BRANCH="catalog"
-OUTPUT_FILE="databases.yaml"
-
 # Generate catalog
 python3 "$REPO_ROOT/scripts/generate_catalog.py"
 
@@ -25,11 +23,11 @@ else
     git rm -rf . >/dev/null 2>&1 || true
 fi
 
-# Copy generated catalog
-cp "$REPO_ROOT/output/$OUTPUT_FILE" "$WORK_DIR/$OUTPUT_FILE"
+# Copy generated catalog files
+cp "$REPO_ROOT"/output/*.yaml "$WORK_DIR/"
 
 # Commit and push if there are changes
-git add "$OUTPUT_FILE"
+git add *.yaml
 if git diff --cached --quiet; then
     echo "No changes to catalog, skipping commit."
 else

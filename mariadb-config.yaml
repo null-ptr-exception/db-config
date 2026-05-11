@@ -1,29 +1,2743 @@
-instances:
-  - name: mariadb-app-a-prod
-    system: app-a
-    owner: app-a-devs
-    lifecycle: production
-    description: Production MariaDB
-    tags: [critical, production]
-    spec:
-      version: "11.4"
-      instance_type: medium
-      storage_size: 50Gi
-    connection:
-      host: mariadb01.internal
-      port: 3306
-
-  - name: mariadb-app-a-staging
-    system: app-a
-    owner: app-a-devs
-    lifecycle: staging
-    description: Staging MariaDB
-    annotations:
-      maintenance/scheduled: "20260601"
-    spec:
-      version: "11.4"
-      instance_type: small
-      storage_size: 10Gi
-    connection:
-      host: mariadb02.internal
-      port: 3306
+resources:
+- name: mariadb-001
+  owner: app-a
+  lifecycle: production
+  version: '10.11'
+  instances:
+  - site: eu-central-1
+    stage: test
+    instance_type: small
+    storage_size: 10Gi
+  - site: eu-central-1
+    stage: staging
+    instance_type: small
+    storage_size: 10Gi
+  - site: eu-central-1
+    stage: production
+    instance_type: small
+    storage_size: 10Gi
+  - site: sa-east-1
+    stage: test
+    instance_type: large
+    storage_size: 100Gi
+  - site: us-east-1
+    stage: test
+    instance_type: small
+    storage_size: 10Gi
+  - site: us-east-1
+    stage: staging
+    instance_type: medium
+    storage_size: 50Gi
+  - site: us-east-1
+    stage: production
+    instance_type: large
+    storage_size: 100Gi
+  - site: us-east-2
+    stage: test
+    instance_type: large
+    storage_size: 100Gi
+  - site: us-east-2
+    stage: production
+    instance_type: medium
+    storage_size: 50Gi
+  - site: us-west-1
+    stage: test
+    instance_type: small
+    storage_size: 10Gi
+  - site: us-west-1
+    stage: staging
+    instance_type: medium
+    storage_size: 50Gi
+- name: mariadb-002
+  owner: app-a
+  lifecycle: production
+  version: '10.11'
+  instances:
+  - site: ap-south-1
+    stage: test
+    instance_type: large
+    storage_size: 100Gi
+  - site: ap-south-1
+    stage: staging
+    instance_type: medium
+    storage_size: 50Gi
+  - site: ap-south-1
+    stage: production
+    instance_type: large
+    storage_size: 100Gi
+  - site: eu-central-1
+    stage: test
+    instance_type: small
+    storage_size: 10Gi
+  - site: eu-central-1
+    stage: staging
+    instance_type: large
+    storage_size: 100Gi
+  - site: eu-central-1
+    stage: production
+    instance_type: small
+    storage_size: 10Gi
+  - site: eu-west-1
+    stage: test
+    instance_type: small
+    storage_size: 10Gi
+  - site: eu-west-1
+    stage: production
+    instance_type: medium
+    storage_size: 50Gi
+  - site: us-east-1
+    stage: staging
+    instance_type: small
+    storage_size: 10Gi
+  - site: us-east-1
+    stage: production
+    instance_type: medium
+    storage_size: 50Gi
+  - site: us-east-2
+    stage: test
+    instance_type: large
+    storage_size: 100Gi
+  - site: us-east-2
+    stage: staging
+    instance_type: large
+    storage_size: 100Gi
+  - site: us-west-1
+    stage: test
+    instance_type: small
+    storage_size: 10Gi
+  - site: us-west-1
+    stage: staging
+    instance_type: medium
+    storage_size: 50Gi
+  - site: us-west-1
+    stage: production
+    instance_type: medium
+    storage_size: 50Gi
+  - site: us-west-2
+    stage: test
+    instance_type: large
+    storage_size: 100Gi
+  - site: us-west-2
+    stage: production
+    instance_type: medium
+    storage_size: 50Gi
+- name: mariadb-003
+  owner: app-a
+  lifecycle: production
+  version: '10.11'
+  instances:
+  - site: eu-central-1
+    stage: test
+    instance_type: small
+    storage_size: 10Gi
+  - site: eu-central-1
+    stage: staging
+    instance_type: large
+    storage_size: 100Gi
+- name: mariadb-004
+  owner: app-c
+  lifecycle: production
+  version: '10.11'
+  instances:
+  - site: ap-northeast-1
+    stage: test
+    instance_type: small
+    storage_size: 10Gi
+  - site: ap-northeast-1
+    stage: staging
+    instance_type: small
+    storage_size: 10Gi
+  - site: ap-northeast-1
+    stage: production
+    instance_type: large
+    storage_size: 100Gi
+  - site: ap-south-1
+    stage: test
+    instance_type: small
+    storage_size: 10Gi
+  - site: ap-south-1
+    stage: production
+    instance_type: small
+    storage_size: 10Gi
+  - site: ap-southeast-1
+    stage: test
+    instance_type: medium
+    storage_size: 50Gi
+  - site: ap-southeast-1
+    stage: staging
+    instance_type: medium
+    storage_size: 50Gi
+  - site: ap-southeast-1
+    stage: production
+    instance_type: large
+    storage_size: 100Gi
+  - site: eu-central-1
+    stage: staging
+    instance_type: large
+    storage_size: 100Gi
+  - site: eu-central-1
+    stage: production
+    instance_type: small
+    storage_size: 10Gi
+  - site: sa-east-1
+    stage: test
+    instance_type: large
+    storage_size: 100Gi
+  - site: sa-east-1
+    stage: staging
+    instance_type: medium
+    storage_size: 50Gi
+  - site: sa-east-1
+    stage: production
+    instance_type: small
+    storage_size: 10Gi
+  - site: us-east-1
+    stage: test
+    instance_type: medium
+    storage_size: 50Gi
+  - site: us-east-1
+    stage: staging
+    instance_type: small
+    storage_size: 10Gi
+  - site: us-east-2
+    stage: test
+    instance_type: large
+    storage_size: 100Gi
+  - site: us-east-2
+    stage: staging
+    instance_type: small
+    storage_size: 10Gi
+  - site: us-east-2
+    stage: production
+    instance_type: large
+    storage_size: 100Gi
+  - site: us-west-2
+    stage: test
+    instance_type: small
+    storage_size: 10Gi
+  - site: us-west-2
+    stage: production
+    instance_type: medium
+    storage_size: 50Gi
+- name: mariadb-005
+  owner: app-b
+  lifecycle: production
+  version: '10.11'
+  instances:
+  - site: ap-northeast-1
+    stage: production
+    instance_type: medium
+    storage_size: 50Gi
+  - site: ap-south-1
+    stage: production
+    instance_type: small
+    storage_size: 10Gi
+  - site: ap-southeast-1
+    stage: production
+    instance_type: medium
+    storage_size: 50Gi
+  - site: eu-central-1
+    stage: test
+    instance_type: small
+    storage_size: 10Gi
+  - site: eu-central-1
+    stage: staging
+    instance_type: large
+    storage_size: 100Gi
+  - site: eu-central-1
+    stage: production
+    instance_type: large
+    storage_size: 100Gi
+  - site: eu-west-1
+    stage: test
+    instance_type: large
+    storage_size: 100Gi
+  - site: eu-west-1
+    stage: staging
+    instance_type: large
+    storage_size: 100Gi
+  - site: eu-west-1
+    stage: production
+    instance_type: medium
+    storage_size: 50Gi
+  - site: sa-east-1
+    stage: staging
+    instance_type: small
+    storage_size: 10Gi
+  - site: sa-east-1
+    stage: production
+    instance_type: small
+    storage_size: 10Gi
+  - site: us-east-1
+    stage: test
+    instance_type: medium
+    storage_size: 50Gi
+  - site: us-east-2
+    stage: production
+    instance_type: large
+    storage_size: 100Gi
+  - site: us-west-1
+    stage: production
+    instance_type: small
+    storage_size: 10Gi
+  - site: us-west-2
+    stage: test
+    instance_type: large
+    storage_size: 100Gi
+- name: mariadb-006
+  owner: app-a
+  lifecycle: production
+  version: '10.11'
+  instances:
+  - site: eu-central-1
+    stage: production
+    instance_type: small
+    storage_size: 10Gi
+  - site: us-west-1
+    stage: staging
+    instance_type: small
+    storage_size: 10Gi
+  - site: us-west-1
+    stage: production
+    instance_type: large
+    storage_size: 100Gi
+- name: mariadb-007
+  owner: app-b
+  lifecycle: production
+  version: '11.4'
+  instances:
+  - site: ap-northeast-1
+    stage: production
+    instance_type: medium
+    storage_size: 50Gi
+  - site: ap-southeast-1
+    stage: staging
+    instance_type: medium
+    storage_size: 50Gi
+  - site: ap-southeast-1
+    stage: production
+    instance_type: large
+    storage_size: 100Gi
+  - site: us-east-2
+    stage: production
+    instance_type: large
+    storage_size: 100Gi
+  - site: us-west-1
+    stage: test
+    instance_type: large
+    storage_size: 100Gi
+  - site: us-west-1
+    stage: staging
+    instance_type: medium
+    storage_size: 50Gi
+  - site: us-west-1
+    stage: production
+    instance_type: small
+    storage_size: 10Gi
+- name: mariadb-008
+  owner: app-b
+  lifecycle: production
+  version: '10.11'
+  instances:
+  - site: ap-northeast-1
+    stage: staging
+    instance_type: medium
+    storage_size: 50Gi
+  - site: ap-south-1
+    stage: test
+    instance_type: medium
+    storage_size: 50Gi
+  - site: us-east-1
+    stage: test
+    instance_type: small
+    storage_size: 10Gi
+  - site: us-east-1
+    stage: staging
+    instance_type: small
+    storage_size: 10Gi
+  - site: us-east-1
+    stage: production
+    instance_type: small
+    storage_size: 10Gi
+  - site: us-east-2
+    stage: staging
+    instance_type: small
+    storage_size: 10Gi
+  - site: us-east-2
+    stage: production
+    instance_type: medium
+    storage_size: 50Gi
+- name: mariadb-009
+  owner: app-a
+  lifecycle: production
+  version: '10.11'
+  instances:
+  - site: ap-south-1
+    stage: test
+    instance_type: small
+    storage_size: 10Gi
+  - site: ap-south-1
+    stage: staging
+    instance_type: medium
+    storage_size: 50Gi
+  - site: ap-south-1
+    stage: production
+    instance_type: small
+    storage_size: 10Gi
+  - site: ap-southeast-1
+    stage: production
+    instance_type: large
+    storage_size: 100Gi
+  - site: eu-central-1
+    stage: test
+    instance_type: small
+    storage_size: 10Gi
+  - site: eu-central-1
+    stage: staging
+    instance_type: large
+    storage_size: 100Gi
+  - site: eu-central-1
+    stage: production
+    instance_type: medium
+    storage_size: 50Gi
+  - site: eu-west-1
+    stage: test
+    instance_type: large
+    storage_size: 100Gi
+  - site: eu-west-1
+    stage: staging
+    instance_type: small
+    storage_size: 10Gi
+  - site: eu-west-1
+    stage: production
+    instance_type: small
+    storage_size: 10Gi
+  - site: us-east-1
+    stage: production
+    instance_type: small
+    storage_size: 10Gi
+  - site: us-east-2
+    stage: test
+    instance_type: large
+    storage_size: 100Gi
+  - site: us-east-2
+    stage: staging
+    instance_type: small
+    storage_size: 10Gi
+  - site: us-east-2
+    stage: production
+    instance_type: large
+    storage_size: 100Gi
+  - site: us-west-1
+    stage: test
+    instance_type: large
+    storage_size: 100Gi
+  - site: us-west-1
+    stage: staging
+    instance_type: large
+    storage_size: 100Gi
+  - site: us-west-1
+    stage: production
+    instance_type: large
+    storage_size: 100Gi
+- name: mariadb-010
+  owner: app-e
+  lifecycle: production
+  version: '11.4'
+  instances:
+  - site: ap-northeast-1
+    stage: production
+    instance_type: large
+    storage_size: 100Gi
+  - site: eu-central-1
+    stage: staging
+    instance_type: small
+    storage_size: 10Gi
+  - site: eu-central-1
+    stage: production
+    instance_type: small
+    storage_size: 10Gi
+  - site: sa-east-1
+    stage: test
+    instance_type: small
+    storage_size: 10Gi
+  - site: sa-east-1
+    stage: production
+    instance_type: large
+    storage_size: 100Gi
+  - site: us-east-1
+    stage: production
+    instance_type: medium
+    storage_size: 50Gi
+  - site: us-east-2
+    stage: staging
+    instance_type: small
+    storage_size: 10Gi
+- name: mariadb-011
+  owner: app-b
+  lifecycle: production
+  version: '11.4'
+  instances:
+  - site: ap-northeast-1
+    stage: test
+    instance_type: small
+    storage_size: 10Gi
+  - site: ap-northeast-1
+    stage: staging
+    instance_type: medium
+    storage_size: 50Gi
+  - site: ap-northeast-1
+    stage: production
+    instance_type: small
+    storage_size: 10Gi
+  - site: ap-south-1
+    stage: production
+    instance_type: large
+    storage_size: 100Gi
+  - site: eu-central-1
+    stage: staging
+    instance_type: medium
+    storage_size: 50Gi
+  - site: eu-west-1
+    stage: test
+    instance_type: large
+    storage_size: 100Gi
+  - site: eu-west-1
+    stage: staging
+    instance_type: large
+    storage_size: 100Gi
+  - site: eu-west-1
+    stage: production
+    instance_type: medium
+    storage_size: 50Gi
+  - site: us-east-1
+    stage: test
+    instance_type: small
+    storage_size: 10Gi
+  - site: us-east-1
+    stage: staging
+    instance_type: large
+    storage_size: 100Gi
+  - site: us-east-1
+    stage: production
+    instance_type: medium
+    storage_size: 50Gi
+- name: mariadb-012
+  owner: app-c
+  lifecycle: production
+  version: '10.11'
+  instances:
+  - site: eu-central-1
+    stage: production
+    instance_type: medium
+    storage_size: 50Gi
+- name: mariadb-013
+  owner: app-b
+  lifecycle: production
+  version: '11.4'
+  instances:
+  - site: ap-northeast-1
+    stage: test
+    instance_type: medium
+    storage_size: 50Gi
+  - site: ap-northeast-1
+    stage: production
+    instance_type: medium
+    storage_size: 50Gi
+  - site: ap-south-1
+    stage: staging
+    instance_type: small
+    storage_size: 10Gi
+  - site: ap-southeast-1
+    stage: test
+    instance_type: large
+    storage_size: 100Gi
+  - site: ap-southeast-1
+    stage: staging
+    instance_type: medium
+    storage_size: 50Gi
+  - site: ap-southeast-1
+    stage: production
+    instance_type: large
+    storage_size: 100Gi
+  - site: eu-central-1
+    stage: test
+    instance_type: small
+    storage_size: 10Gi
+  - site: eu-central-1
+    stage: staging
+    instance_type: medium
+    storage_size: 50Gi
+  - site: eu-central-1
+    stage: production
+    instance_type: small
+    storage_size: 10Gi
+  - site: eu-west-1
+    stage: production
+    instance_type: medium
+    storage_size: 50Gi
+  - site: sa-east-1
+    stage: test
+    instance_type: medium
+    storage_size: 50Gi
+  - site: sa-east-1
+    stage: production
+    instance_type: small
+    storage_size: 10Gi
+  - site: us-east-2
+    stage: test
+    instance_type: medium
+    storage_size: 50Gi
+  - site: us-east-2
+    stage: staging
+    instance_type: small
+    storage_size: 10Gi
+  - site: us-east-2
+    stage: production
+    instance_type: small
+    storage_size: 10Gi
+  - site: us-west-1
+    stage: staging
+    instance_type: small
+    storage_size: 10Gi
+  - site: us-west-1
+    stage: production
+    instance_type: small
+    storage_size: 10Gi
+  - site: us-west-2
+    stage: production
+    instance_type: small
+    storage_size: 10Gi
+- name: mariadb-014
+  owner: app-d
+  lifecycle: production
+  version: '11.4'
+  instances:
+  - site: ap-northeast-1
+    stage: staging
+    instance_type: small
+    storage_size: 10Gi
+  - site: ap-northeast-1
+    stage: production
+    instance_type: small
+    storage_size: 10Gi
+  - site: ap-south-1
+    stage: test
+    instance_type: small
+    storage_size: 10Gi
+  - site: ap-south-1
+    stage: staging
+    instance_type: small
+    storage_size: 10Gi
+  - site: eu-central-1
+    stage: test
+    instance_type: medium
+    storage_size: 50Gi
+  - site: eu-central-1
+    stage: staging
+    instance_type: large
+    storage_size: 100Gi
+  - site: eu-central-1
+    stage: production
+    instance_type: large
+    storage_size: 100Gi
+  - site: eu-west-1
+    stage: staging
+    instance_type: large
+    storage_size: 100Gi
+  - site: us-west-2
+    stage: staging
+    instance_type: small
+    storage_size: 10Gi
+- name: mariadb-015
+  owner: app-d
+  lifecycle: production
+  version: '10.11'
+  instances:
+  - site: ap-northeast-1
+    stage: test
+    instance_type: medium
+    storage_size: 50Gi
+  - site: ap-northeast-1
+    stage: staging
+    instance_type: medium
+    storage_size: 50Gi
+  - site: ap-northeast-1
+    stage: production
+    instance_type: large
+    storage_size: 100Gi
+  - site: ap-south-1
+    stage: test
+    instance_type: small
+    storage_size: 10Gi
+  - site: ap-south-1
+    stage: production
+    instance_type: medium
+    storage_size: 50Gi
+  - site: ap-southeast-1
+    stage: test
+    instance_type: medium
+    storage_size: 50Gi
+  - site: ap-southeast-1
+    stage: staging
+    instance_type: large
+    storage_size: 100Gi
+  - site: ap-southeast-1
+    stage: production
+    instance_type: small
+    storage_size: 10Gi
+  - site: eu-central-1
+    stage: test
+    instance_type: medium
+    storage_size: 50Gi
+  - site: eu-central-1
+    stage: staging
+    instance_type: large
+    storage_size: 100Gi
+  - site: eu-west-1
+    stage: test
+    instance_type: medium
+    storage_size: 50Gi
+  - site: eu-west-1
+    stage: staging
+    instance_type: medium
+    storage_size: 50Gi
+  - site: eu-west-1
+    stage: production
+    instance_type: large
+    storage_size: 100Gi
+  - site: sa-east-1
+    stage: production
+    instance_type: medium
+    storage_size: 50Gi
+  - site: us-east-1
+    stage: test
+    instance_type: large
+    storage_size: 100Gi
+  - site: us-east-1
+    stage: staging
+    instance_type: large
+    storage_size: 100Gi
+  - site: us-east-1
+    stage: production
+    instance_type: large
+    storage_size: 100Gi
+  - site: us-east-2
+    stage: test
+    instance_type: large
+    storage_size: 100Gi
+  - site: us-east-2
+    stage: staging
+    instance_type: medium
+    storage_size: 50Gi
+  - site: us-east-2
+    stage: production
+    instance_type: small
+    storage_size: 10Gi
+  - site: us-west-1
+    stage: test
+    instance_type: small
+    storage_size: 10Gi
+- name: mariadb-016
+  owner: app-a
+  lifecycle: production
+  version: '10.11'
+  instances:
+  - site: ap-northeast-1
+    stage: test
+    instance_type: small
+    storage_size: 10Gi
+  - site: ap-northeast-1
+    stage: staging
+    instance_type: small
+    storage_size: 10Gi
+  - site: ap-northeast-1
+    stage: production
+    instance_type: large
+    storage_size: 100Gi
+  - site: ap-south-1
+    stage: test
+    instance_type: small
+    storage_size: 10Gi
+  - site: ap-south-1
+    stage: staging
+    instance_type: small
+    storage_size: 10Gi
+  - site: ap-south-1
+    stage: production
+    instance_type: large
+    storage_size: 100Gi
+  - site: eu-central-1
+    stage: test
+    instance_type: small
+    storage_size: 10Gi
+  - site: eu-central-1
+    stage: staging
+    instance_type: medium
+    storage_size: 50Gi
+  - site: eu-central-1
+    stage: production
+    instance_type: small
+    storage_size: 10Gi
+  - site: eu-west-1
+    stage: staging
+    instance_type: medium
+    storage_size: 50Gi
+  - site: eu-west-1
+    stage: production
+    instance_type: large
+    storage_size: 100Gi
+  - site: sa-east-1
+    stage: test
+    instance_type: small
+    storage_size: 10Gi
+  - site: sa-east-1
+    stage: staging
+    instance_type: large
+    storage_size: 100Gi
+  - site: sa-east-1
+    stage: production
+    instance_type: medium
+    storage_size: 50Gi
+  - site: us-east-1
+    stage: test
+    instance_type: large
+    storage_size: 100Gi
+  - site: us-east-1
+    stage: staging
+    instance_type: medium
+    storage_size: 50Gi
+  - site: us-east-2
+    stage: test
+    instance_type: medium
+    storage_size: 50Gi
+  - site: us-east-2
+    stage: staging
+    instance_type: small
+    storage_size: 10Gi
+  - site: us-east-2
+    stage: production
+    instance_type: large
+    storage_size: 100Gi
+  - site: us-west-2
+    stage: test
+    instance_type: medium
+    storage_size: 50Gi
+  - site: us-west-2
+    stage: staging
+    instance_type: medium
+    storage_size: 50Gi
+- name: mariadb-017
+  owner: app-e
+  lifecycle: production
+  version: '10.11'
+  instances:
+  - site: ap-southeast-1
+    stage: test
+    instance_type: medium
+    storage_size: 50Gi
+  - site: ap-southeast-1
+    stage: staging
+    instance_type: medium
+    storage_size: 50Gi
+  - site: ap-southeast-1
+    stage: production
+    instance_type: medium
+    storage_size: 50Gi
+  - site: us-east-1
+    stage: test
+    instance_type: small
+    storage_size: 10Gi
+  - site: us-east-1
+    stage: staging
+    instance_type: medium
+    storage_size: 50Gi
+  - site: us-east-1
+    stage: production
+    instance_type: medium
+    storage_size: 50Gi
+  - site: us-east-2
+    stage: test
+    instance_type: medium
+    storage_size: 50Gi
+  - site: us-east-2
+    stage: staging
+    instance_type: small
+    storage_size: 10Gi
+  - site: us-east-2
+    stage: production
+    instance_type: medium
+    storage_size: 50Gi
+- name: mariadb-018
+  owner: app-c
+  lifecycle: production
+  version: '11.4'
+  instances:
+  - site: ap-northeast-1
+    stage: test
+    instance_type: medium
+    storage_size: 50Gi
+  - site: ap-northeast-1
+    stage: staging
+    instance_type: large
+    storage_size: 100Gi
+  - site: ap-south-1
+    stage: test
+    instance_type: small
+    storage_size: 10Gi
+  - site: ap-south-1
+    stage: staging
+    instance_type: large
+    storage_size: 100Gi
+  - site: ap-south-1
+    stage: production
+    instance_type: large
+    storage_size: 100Gi
+  - site: ap-southeast-1
+    stage: staging
+    instance_type: large
+    storage_size: 100Gi
+  - site: sa-east-1
+    stage: test
+    instance_type: large
+    storage_size: 100Gi
+  - site: sa-east-1
+    stage: staging
+    instance_type: medium
+    storage_size: 50Gi
+  - site: sa-east-1
+    stage: production
+    instance_type: small
+    storage_size: 10Gi
+  - site: us-east-1
+    stage: test
+    instance_type: medium
+    storage_size: 50Gi
+  - site: us-east-1
+    stage: production
+    instance_type: medium
+    storage_size: 50Gi
+  - site: us-east-2
+    stage: test
+    instance_type: medium
+    storage_size: 50Gi
+  - site: us-east-2
+    stage: staging
+    instance_type: medium
+    storage_size: 50Gi
+  - site: us-west-2
+    stage: staging
+    instance_type: medium
+    storage_size: 50Gi
+  - site: us-west-2
+    stage: production
+    instance_type: small
+    storage_size: 10Gi
+- name: mariadb-019
+  owner: app-d
+  lifecycle: production
+  version: '10.11'
+  instances:
+  - site: ap-northeast-1
+    stage: production
+    instance_type: small
+    storage_size: 10Gi
+  - site: ap-south-1
+    stage: test
+    instance_type: medium
+    storage_size: 50Gi
+  - site: ap-southeast-1
+    stage: test
+    instance_type: large
+    storage_size: 100Gi
+  - site: ap-southeast-1
+    stage: staging
+    instance_type: medium
+    storage_size: 50Gi
+  - site: ap-southeast-1
+    stage: production
+    instance_type: medium
+    storage_size: 50Gi
+  - site: eu-central-1
+    stage: production
+    instance_type: large
+    storage_size: 100Gi
+  - site: eu-west-1
+    stage: test
+    instance_type: medium
+    storage_size: 50Gi
+  - site: eu-west-1
+    stage: staging
+    instance_type: small
+    storage_size: 10Gi
+  - site: eu-west-1
+    stage: production
+    instance_type: large
+    storage_size: 100Gi
+  - site: sa-east-1
+    stage: staging
+    instance_type: large
+    storage_size: 100Gi
+  - site: us-east-1
+    stage: test
+    instance_type: small
+    storage_size: 10Gi
+  - site: us-east-1
+    stage: staging
+    instance_type: large
+    storage_size: 100Gi
+  - site: us-east-1
+    stage: production
+    instance_type: large
+    storage_size: 100Gi
+  - site: us-east-2
+    stage: test
+    instance_type: large
+    storage_size: 100Gi
+  - site: us-east-2
+    stage: staging
+    instance_type: large
+    storage_size: 100Gi
+  - site: us-east-2
+    stage: production
+    instance_type: small
+    storage_size: 10Gi
+  - site: us-west-1
+    stage: test
+    instance_type: large
+    storage_size: 100Gi
+  - site: us-west-1
+    stage: staging
+    instance_type: medium
+    storage_size: 50Gi
+  - site: us-west-1
+    stage: production
+    instance_type: small
+    storage_size: 10Gi
+- name: mariadb-020
+  owner: app-e
+  lifecycle: production
+  version: '11.4'
+  instances:
+  - site: ap-southeast-1
+    stage: test
+    instance_type: medium
+    storage_size: 50Gi
+  - site: ap-southeast-1
+    stage: staging
+    instance_type: large
+    storage_size: 100Gi
+- name: mariadb-021
+  owner: app-d
+  lifecycle: production
+  version: '10.11'
+  instances:
+  - site: ap-northeast-1
+    stage: staging
+    instance_type: medium
+    storage_size: 50Gi
+  - site: ap-northeast-1
+    stage: production
+    instance_type: small
+    storage_size: 10Gi
+  - site: ap-south-1
+    stage: staging
+    instance_type: medium
+    storage_size: 50Gi
+  - site: ap-southeast-1
+    stage: staging
+    instance_type: large
+    storage_size: 100Gi
+  - site: eu-central-1
+    stage: test
+    instance_type: small
+    storage_size: 10Gi
+  - site: eu-central-1
+    stage: staging
+    instance_type: medium
+    storage_size: 50Gi
+  - site: eu-central-1
+    stage: production
+    instance_type: medium
+    storage_size: 50Gi
+  - site: eu-west-1
+    stage: staging
+    instance_type: small
+    storage_size: 10Gi
+  - site: us-east-1
+    stage: staging
+    instance_type: medium
+    storage_size: 50Gi
+  - site: us-east-1
+    stage: production
+    instance_type: large
+    storage_size: 100Gi
+  - site: us-east-2
+    stage: test
+    instance_type: small
+    storage_size: 10Gi
+  - site: us-east-2
+    stage: staging
+    instance_type: small
+    storage_size: 10Gi
+  - site: us-east-2
+    stage: production
+    instance_type: large
+    storage_size: 100Gi
+- name: mariadb-022
+  owner: app-d
+  lifecycle: production
+  version: '11.4'
+  instances:
+  - site: ap-northeast-1
+    stage: test
+    instance_type: medium
+    storage_size: 50Gi
+  - site: ap-northeast-1
+    stage: staging
+    instance_type: large
+    storage_size: 100Gi
+  - site: ap-northeast-1
+    stage: production
+    instance_type: large
+    storage_size: 100Gi
+  - site: ap-south-1
+    stage: staging
+    instance_type: medium
+    storage_size: 50Gi
+  - site: ap-south-1
+    stage: production
+    instance_type: large
+    storage_size: 100Gi
+  - site: eu-central-1
+    stage: staging
+    instance_type: medium
+    storage_size: 50Gi
+  - site: eu-central-1
+    stage: production
+    instance_type: small
+    storage_size: 10Gi
+  - site: eu-west-1
+    stage: production
+    instance_type: small
+    storage_size: 10Gi
+  - site: sa-east-1
+    stage: test
+    instance_type: small
+    storage_size: 10Gi
+  - site: sa-east-1
+    stage: production
+    instance_type: small
+    storage_size: 10Gi
+  - site: us-east-1
+    stage: test
+    instance_type: small
+    storage_size: 10Gi
+  - site: us-east-1
+    stage: staging
+    instance_type: small
+    storage_size: 10Gi
+  - site: us-east-1
+    stage: production
+    instance_type: medium
+    storage_size: 50Gi
+  - site: us-east-2
+    stage: staging
+    instance_type: small
+    storage_size: 10Gi
+  - site: us-west-1
+    stage: test
+    instance_type: medium
+    storage_size: 50Gi
+  - site: us-west-1
+    stage: production
+    instance_type: small
+    storage_size: 10Gi
+  - site: us-west-2
+    stage: production
+    instance_type: medium
+    storage_size: 50Gi
+- name: mariadb-023
+  owner: app-b
+  lifecycle: production
+  version: '11.4'
+  instances:
+  - site: eu-west-1
+    stage: staging
+    instance_type: medium
+    storage_size: 50Gi
+  - site: eu-west-1
+    stage: production
+    instance_type: small
+    storage_size: 10Gi
+  - site: us-west-1
+    stage: staging
+    instance_type: medium
+    storage_size: 50Gi
+- name: mariadb-024
+  owner: app-a
+  lifecycle: production
+  version: '10.11'
+  instances:
+  - site: ap-northeast-1
+    stage: test
+    instance_type: small
+    storage_size: 10Gi
+  - site: ap-south-1
+    stage: test
+    instance_type: medium
+    storage_size: 50Gi
+  - site: ap-south-1
+    stage: staging
+    instance_type: medium
+    storage_size: 50Gi
+  - site: ap-south-1
+    stage: production
+    instance_type: medium
+    storage_size: 50Gi
+  - site: ap-southeast-1
+    stage: test
+    instance_type: large
+    storage_size: 100Gi
+  - site: ap-southeast-1
+    stage: staging
+    instance_type: large
+    storage_size: 100Gi
+  - site: ap-southeast-1
+    stage: production
+    instance_type: small
+    storage_size: 10Gi
+  - site: eu-west-1
+    stage: production
+    instance_type: small
+    storage_size: 10Gi
+  - site: us-east-1
+    stage: test
+    instance_type: small
+    storage_size: 10Gi
+  - site: us-east-1
+    stage: production
+    instance_type: small
+    storage_size: 10Gi
+  - site: us-west-1
+    stage: production
+    instance_type: small
+    storage_size: 10Gi
+  - site: us-west-2
+    stage: test
+    instance_type: medium
+    storage_size: 50Gi
+- name: mariadb-025
+  owner: app-d
+  lifecycle: production
+  version: '11.4'
+  instances:
+  - site: eu-central-1
+    stage: test
+    instance_type: medium
+    storage_size: 50Gi
+  - site: eu-central-1
+    stage: staging
+    instance_type: large
+    storage_size: 100Gi
+  - site: eu-central-1
+    stage: production
+    instance_type: large
+    storage_size: 100Gi
+  - site: eu-west-1
+    stage: test
+    instance_type: large
+    storage_size: 100Gi
+  - site: eu-west-1
+    stage: staging
+    instance_type: small
+    storage_size: 10Gi
+  - site: eu-west-1
+    stage: production
+    instance_type: large
+    storage_size: 100Gi
+  - site: us-east-1
+    stage: staging
+    instance_type: small
+    storage_size: 10Gi
+  - site: us-east-2
+    stage: test
+    instance_type: small
+    storage_size: 10Gi
+  - site: us-west-1
+    stage: staging
+    instance_type: medium
+    storage_size: 50Gi
+  - site: us-west-1
+    stage: production
+    instance_type: small
+    storage_size: 10Gi
+- name: mariadb-026
+  owner: app-d
+  lifecycle: production
+  version: '11.4'
+  instances:
+  - site: ap-northeast-1
+    stage: staging
+    instance_type: large
+    storage_size: 100Gi
+  - site: ap-northeast-1
+    stage: production
+    instance_type: medium
+    storage_size: 50Gi
+  - site: ap-south-1
+    stage: test
+    instance_type: small
+    storage_size: 10Gi
+  - site: eu-central-1
+    stage: test
+    instance_type: large
+    storage_size: 100Gi
+  - site: eu-central-1
+    stage: staging
+    instance_type: small
+    storage_size: 10Gi
+  - site: eu-central-1
+    stage: production
+    instance_type: small
+    storage_size: 10Gi
+  - site: eu-west-1
+    stage: staging
+    instance_type: medium
+    storage_size: 50Gi
+  - site: eu-west-1
+    stage: production
+    instance_type: small
+    storage_size: 10Gi
+  - site: sa-east-1
+    stage: test
+    instance_type: medium
+    storage_size: 50Gi
+  - site: sa-east-1
+    stage: staging
+    instance_type: medium
+    storage_size: 50Gi
+  - site: sa-east-1
+    stage: production
+    instance_type: medium
+    storage_size: 50Gi
+  - site: us-east-2
+    stage: test
+    instance_type: small
+    storage_size: 10Gi
+  - site: us-east-2
+    stage: staging
+    instance_type: medium
+    storage_size: 50Gi
+  - site: us-west-1
+    stage: staging
+    instance_type: medium
+    storage_size: 50Gi
+  - site: us-west-1
+    stage: production
+    instance_type: large
+    storage_size: 100Gi
+- name: mariadb-027
+  owner: app-d
+  lifecycle: production
+  version: '10.11'
+  instances:
+  - site: ap-south-1
+    stage: test
+    instance_type: small
+    storage_size: 10Gi
+  - site: ap-south-1
+    stage: staging
+    instance_type: large
+    storage_size: 100Gi
+  - site: ap-south-1
+    stage: production
+    instance_type: medium
+    storage_size: 50Gi
+  - site: ap-southeast-1
+    stage: test
+    instance_type: small
+    storage_size: 10Gi
+  - site: ap-southeast-1
+    stage: staging
+    instance_type: medium
+    storage_size: 50Gi
+  - site: ap-southeast-1
+    stage: production
+    instance_type: large
+    storage_size: 100Gi
+  - site: eu-central-1
+    stage: staging
+    instance_type: medium
+    storage_size: 50Gi
+  - site: eu-west-1
+    stage: test
+    instance_type: large
+    storage_size: 100Gi
+  - site: eu-west-1
+    stage: staging
+    instance_type: large
+    storage_size: 100Gi
+  - site: eu-west-1
+    stage: production
+    instance_type: small
+    storage_size: 10Gi
+  - site: us-east-1
+    stage: test
+    instance_type: large
+    storage_size: 100Gi
+  - site: us-east-1
+    stage: staging
+    instance_type: medium
+    storage_size: 50Gi
+  - site: us-east-1
+    stage: production
+    instance_type: small
+    storage_size: 10Gi
+  - site: us-east-2
+    stage: test
+    instance_type: medium
+    storage_size: 50Gi
+  - site: us-west-1
+    stage: production
+    instance_type: small
+    storage_size: 10Gi
+  - site: us-west-2
+    stage: staging
+    instance_type: large
+    storage_size: 100Gi
+  - site: us-west-2
+    stage: production
+    instance_type: large
+    storage_size: 100Gi
+- name: mariadb-028
+  owner: app-c
+  lifecycle: production
+  version: '11.4'
+  instances:
+  - site: ap-northeast-1
+    stage: test
+    instance_type: medium
+    storage_size: 50Gi
+  - site: ap-northeast-1
+    stage: staging
+    instance_type: medium
+    storage_size: 50Gi
+  - site: ap-northeast-1
+    stage: production
+    instance_type: medium
+    storage_size: 50Gi
+  - site: ap-south-1
+    stage: test
+    instance_type: large
+    storage_size: 100Gi
+  - site: ap-south-1
+    stage: staging
+    instance_type: medium
+    storage_size: 50Gi
+  - site: ap-south-1
+    stage: production
+    instance_type: large
+    storage_size: 100Gi
+  - site: eu-central-1
+    stage: test
+    instance_type: medium
+    storage_size: 50Gi
+  - site: eu-central-1
+    stage: staging
+    instance_type: large
+    storage_size: 100Gi
+  - site: eu-central-1
+    stage: production
+    instance_type: medium
+    storage_size: 50Gi
+  - site: eu-west-1
+    stage: staging
+    instance_type: medium
+    storage_size: 50Gi
+  - site: eu-west-1
+    stage: production
+    instance_type: medium
+    storage_size: 50Gi
+  - site: sa-east-1
+    stage: production
+    instance_type: small
+    storage_size: 10Gi
+  - site: us-east-1
+    stage: test
+    instance_type: small
+    storage_size: 10Gi
+  - site: us-east-1
+    stage: staging
+    instance_type: medium
+    storage_size: 50Gi
+  - site: us-east-1
+    stage: production
+    instance_type: large
+    storage_size: 100Gi
+  - site: us-east-2
+    stage: staging
+    instance_type: medium
+    storage_size: 50Gi
+  - site: us-east-2
+    stage: production
+    instance_type: large
+    storage_size: 100Gi
+  - site: us-west-2
+    stage: test
+    instance_type: small
+    storage_size: 10Gi
+  - site: us-west-2
+    stage: staging
+    instance_type: large
+    storage_size: 100Gi
+  - site: us-west-2
+    stage: production
+    instance_type: large
+    storage_size: 100Gi
+- name: mariadb-029
+  owner: app-c
+  lifecycle: production
+  version: '10.11'
+  instances:
+  - site: ap-northeast-1
+    stage: test
+    instance_type: medium
+    storage_size: 50Gi
+  - site: ap-south-1
+    stage: staging
+    instance_type: large
+    storage_size: 100Gi
+  - site: ap-south-1
+    stage: production
+    instance_type: small
+    storage_size: 10Gi
+  - site: eu-central-1
+    stage: staging
+    instance_type: medium
+    storage_size: 50Gi
+  - site: eu-central-1
+    stage: production
+    instance_type: large
+    storage_size: 100Gi
+  - site: sa-east-1
+    stage: test
+    instance_type: small
+    storage_size: 10Gi
+  - site: sa-east-1
+    stage: staging
+    instance_type: large
+    storage_size: 100Gi
+  - site: sa-east-1
+    stage: production
+    instance_type: large
+    storage_size: 100Gi
+  - site: us-east-1
+    stage: test
+    instance_type: medium
+    storage_size: 50Gi
+  - site: us-east-1
+    stage: production
+    instance_type: small
+    storage_size: 10Gi
+  - site: us-east-2
+    stage: test
+    instance_type: small
+    storage_size: 10Gi
+  - site: us-east-2
+    stage: staging
+    instance_type: large
+    storage_size: 100Gi
+  - site: us-east-2
+    stage: production
+    instance_type: medium
+    storage_size: 50Gi
+  - site: us-west-1
+    stage: test
+    instance_type: medium
+    storage_size: 50Gi
+  - site: us-west-2
+    stage: staging
+    instance_type: medium
+    storage_size: 50Gi
+- name: mariadb-030
+  owner: app-c
+  lifecycle: production
+  version: '11.4'
+  instances:
+  - site: ap-south-1
+    stage: test
+    instance_type: small
+    storage_size: 10Gi
+  - site: ap-south-1
+    stage: staging
+    instance_type: small
+    storage_size: 10Gi
+  - site: ap-south-1
+    stage: production
+    instance_type: large
+    storage_size: 100Gi
+  - site: ap-southeast-1
+    stage: test
+    instance_type: medium
+    storage_size: 50Gi
+  - site: ap-southeast-1
+    stage: production
+    instance_type: large
+    storage_size: 100Gi
+  - site: us-east-2
+    stage: test
+    instance_type: medium
+    storage_size: 50Gi
+- name: mariadb-031
+  owner: app-c
+  lifecycle: production
+  version: '11.4'
+  instances:
+  - site: ap-northeast-1
+    stage: test
+    instance_type: medium
+    storage_size: 50Gi
+  - site: ap-south-1
+    stage: staging
+    instance_type: large
+    storage_size: 100Gi
+  - site: ap-south-1
+    stage: production
+    instance_type: medium
+    storage_size: 50Gi
+  - site: eu-central-1
+    stage: test
+    instance_type: small
+    storage_size: 10Gi
+  - site: eu-central-1
+    stage: staging
+    instance_type: medium
+    storage_size: 50Gi
+  - site: eu-central-1
+    stage: production
+    instance_type: medium
+    storage_size: 50Gi
+  - site: eu-west-1
+    stage: test
+    instance_type: medium
+    storage_size: 50Gi
+  - site: us-west-1
+    stage: test
+    instance_type: small
+    storage_size: 10Gi
+  - site: us-west-1
+    stage: staging
+    instance_type: large
+    storage_size: 100Gi
+  - site: us-west-1
+    stage: production
+    instance_type: medium
+    storage_size: 50Gi
+- name: mariadb-032
+  owner: app-c
+  lifecycle: production
+  version: '10.11'
+  instances:
+  - site: ap-northeast-1
+    stage: test
+    instance_type: large
+    storage_size: 100Gi
+  - site: ap-northeast-1
+    stage: staging
+    instance_type: large
+    storage_size: 100Gi
+  - site: ap-northeast-1
+    stage: production
+    instance_type: small
+    storage_size: 10Gi
+  - site: ap-south-1
+    stage: test
+    instance_type: large
+    storage_size: 100Gi
+  - site: ap-south-1
+    stage: staging
+    instance_type: medium
+    storage_size: 50Gi
+  - site: ap-southeast-1
+    stage: test
+    instance_type: medium
+    storage_size: 50Gi
+  - site: ap-southeast-1
+    stage: staging
+    instance_type: large
+    storage_size: 100Gi
+  - site: ap-southeast-1
+    stage: production
+    instance_type: medium
+    storage_size: 50Gi
+  - site: eu-central-1
+    stage: test
+    instance_type: small
+    storage_size: 10Gi
+  - site: eu-west-1
+    stage: test
+    instance_type: medium
+    storage_size: 50Gi
+  - site: eu-west-1
+    stage: staging
+    instance_type: medium
+    storage_size: 50Gi
+  - site: eu-west-1
+    stage: production
+    instance_type: medium
+    storage_size: 50Gi
+  - site: sa-east-1
+    stage: test
+    instance_type: small
+    storage_size: 10Gi
+  - site: sa-east-1
+    stage: staging
+    instance_type: small
+    storage_size: 10Gi
+  - site: sa-east-1
+    stage: production
+    instance_type: small
+    storage_size: 10Gi
+  - site: us-east-1
+    stage: test
+    instance_type: small
+    storage_size: 10Gi
+  - site: us-east-1
+    stage: staging
+    instance_type: medium
+    storage_size: 50Gi
+  - site: us-east-1
+    stage: production
+    instance_type: small
+    storage_size: 10Gi
+  - site: us-east-2
+    stage: test
+    instance_type: medium
+    storage_size: 50Gi
+  - site: us-east-2
+    stage: production
+    instance_type: medium
+    storage_size: 50Gi
+  - site: us-west-1
+    stage: test
+    instance_type: large
+    storage_size: 100Gi
+  - site: us-west-1
+    stage: staging
+    instance_type: medium
+    storage_size: 50Gi
+  - site: us-west-1
+    stage: production
+    instance_type: small
+    storage_size: 10Gi
+  - site: us-west-2
+    stage: test
+    instance_type: large
+    storage_size: 100Gi
+  - site: us-west-2
+    stage: staging
+    instance_type: large
+    storage_size: 100Gi
+  - site: us-west-2
+    stage: production
+    instance_type: medium
+    storage_size: 50Gi
+- name: mariadb-033
+  owner: app-e
+  lifecycle: production
+  version: '10.11'
+  instances:
+  - site: ap-northeast-1
+    stage: test
+    instance_type: small
+    storage_size: 10Gi
+  - site: ap-northeast-1
+    stage: staging
+    instance_type: small
+    storage_size: 10Gi
+  - site: ap-northeast-1
+    stage: production
+    instance_type: medium
+    storage_size: 50Gi
+  - site: eu-west-1
+    stage: test
+    instance_type: small
+    storage_size: 10Gi
+  - site: eu-west-1
+    stage: production
+    instance_type: large
+    storage_size: 100Gi
+- name: mariadb-034
+  owner: app-b
+  lifecycle: production
+  version: '11.4'
+  instances:
+  - site: ap-south-1
+    stage: staging
+    instance_type: large
+    storage_size: 100Gi
+  - site: ap-southeast-1
+    stage: test
+    instance_type: large
+    storage_size: 100Gi
+  - site: ap-southeast-1
+    stage: staging
+    instance_type: medium
+    storage_size: 50Gi
+  - site: eu-central-1
+    stage: staging
+    instance_type: medium
+    storage_size: 50Gi
+  - site: eu-west-1
+    stage: staging
+    instance_type: small
+    storage_size: 10Gi
+  - site: sa-east-1
+    stage: test
+    instance_type: medium
+    storage_size: 50Gi
+  - site: sa-east-1
+    stage: staging
+    instance_type: medium
+    storage_size: 50Gi
+  - site: sa-east-1
+    stage: production
+    instance_type: small
+    storage_size: 10Gi
+  - site: us-east-1
+    stage: staging
+    instance_type: small
+    storage_size: 10Gi
+  - site: us-east-2
+    stage: test
+    instance_type: medium
+    storage_size: 50Gi
+  - site: us-east-2
+    stage: staging
+    instance_type: small
+    storage_size: 10Gi
+  - site: us-east-2
+    stage: production
+    instance_type: small
+    storage_size: 10Gi
+  - site: us-west-2
+    stage: test
+    instance_type: large
+    storage_size: 100Gi
+  - site: us-west-2
+    stage: staging
+    instance_type: small
+    storage_size: 10Gi
+  - site: us-west-2
+    stage: production
+    instance_type: small
+    storage_size: 10Gi
+- name: mariadb-035
+  owner: app-c
+  lifecycle: production
+  version: '10.11'
+  instances:
+  - site: ap-northeast-1
+    stage: staging
+    instance_type: small
+    storage_size: 10Gi
+  - site: ap-south-1
+    stage: test
+    instance_type: medium
+    storage_size: 50Gi
+  - site: ap-south-1
+    stage: staging
+    instance_type: small
+    storage_size: 10Gi
+  - site: ap-south-1
+    stage: production
+    instance_type: small
+    storage_size: 10Gi
+  - site: ap-southeast-1
+    stage: test
+    instance_type: medium
+    storage_size: 50Gi
+  - site: ap-southeast-1
+    stage: staging
+    instance_type: medium
+    storage_size: 50Gi
+  - site: ap-southeast-1
+    stage: production
+    instance_type: medium
+    storage_size: 50Gi
+  - site: eu-central-1
+    stage: test
+    instance_type: large
+    storage_size: 100Gi
+  - site: eu-central-1
+    stage: staging
+    instance_type: small
+    storage_size: 10Gi
+  - site: eu-central-1
+    stage: production
+    instance_type: large
+    storage_size: 100Gi
+  - site: eu-west-1
+    stage: production
+    instance_type: large
+    storage_size: 100Gi
+  - site: sa-east-1
+    stage: test
+    instance_type: small
+    storage_size: 10Gi
+  - site: sa-east-1
+    stage: staging
+    instance_type: medium
+    storage_size: 50Gi
+  - site: sa-east-1
+    stage: production
+    instance_type: medium
+    storage_size: 50Gi
+  - site: us-east-1
+    stage: test
+    instance_type: medium
+    storage_size: 50Gi
+  - site: us-east-1
+    stage: production
+    instance_type: large
+    storage_size: 100Gi
+  - site: us-east-2
+    stage: test
+    instance_type: medium
+    storage_size: 50Gi
+  - site: us-east-2
+    stage: production
+    instance_type: large
+    storage_size: 100Gi
+  - site: us-west-1
+    stage: test
+    instance_type: small
+    storage_size: 10Gi
+  - site: us-west-2
+    stage: staging
+    instance_type: medium
+    storage_size: 50Gi
+  - site: us-west-2
+    stage: production
+    instance_type: large
+    storage_size: 100Gi
+- name: mariadb-036
+  owner: app-e
+  lifecycle: production
+  version: '11.4'
+  instances:
+  - site: ap-northeast-1
+    stage: test
+    instance_type: medium
+    storage_size: 50Gi
+  - site: ap-northeast-1
+    stage: staging
+    instance_type: medium
+    storage_size: 50Gi
+  - site: ap-south-1
+    stage: test
+    instance_type: medium
+    storage_size: 50Gi
+  - site: ap-south-1
+    stage: staging
+    instance_type: medium
+    storage_size: 50Gi
+  - site: ap-southeast-1
+    stage: staging
+    instance_type: medium
+    storage_size: 50Gi
+  - site: ap-southeast-1
+    stage: production
+    instance_type: small
+    storage_size: 10Gi
+  - site: eu-central-1
+    stage: test
+    instance_type: small
+    storage_size: 10Gi
+  - site: eu-central-1
+    stage: staging
+    instance_type: small
+    storage_size: 10Gi
+  - site: eu-central-1
+    stage: production
+    instance_type: medium
+    storage_size: 50Gi
+  - site: sa-east-1
+    stage: production
+    instance_type: large
+    storage_size: 100Gi
+  - site: us-east-2
+    stage: test
+    instance_type: large
+    storage_size: 100Gi
+  - site: us-east-2
+    stage: production
+    instance_type: large
+    storage_size: 100Gi
+  - site: us-west-1
+    stage: test
+    instance_type: medium
+    storage_size: 50Gi
+  - site: us-west-1
+    stage: staging
+    instance_type: large
+    storage_size: 100Gi
+  - site: us-west-1
+    stage: production
+    instance_type: medium
+    storage_size: 50Gi
+  - site: us-west-2
+    stage: test
+    instance_type: medium
+    storage_size: 50Gi
+  - site: us-west-2
+    stage: staging
+    instance_type: small
+    storage_size: 10Gi
+  - site: us-west-2
+    stage: production
+    instance_type: large
+    storage_size: 100Gi
+- name: mariadb-037
+  owner: app-e
+  lifecycle: production
+  version: '10.11'
+  instances:
+  - site: ap-northeast-1
+    stage: staging
+    instance_type: small
+    storage_size: 10Gi
+  - site: ap-northeast-1
+    stage: production
+    instance_type: medium
+    storage_size: 50Gi
+  - site: us-east-2
+    stage: test
+    instance_type: large
+    storage_size: 100Gi
+  - site: us-east-2
+    stage: staging
+    instance_type: large
+    storage_size: 100Gi
+  - site: us-east-2
+    stage: production
+    instance_type: large
+    storage_size: 100Gi
+  - site: us-west-2
+    stage: test
+    instance_type: medium
+    storage_size: 50Gi
+  - site: us-west-2
+    stage: production
+    instance_type: large
+    storage_size: 100Gi
+- name: mariadb-038
+  owner: app-c
+  lifecycle: production
+  version: '11.4'
+  instances:
+  - site: ap-south-1
+    stage: test
+    instance_type: large
+    storage_size: 100Gi
+  - site: eu-central-1
+    stage: test
+    instance_type: medium
+    storage_size: 50Gi
+  - site: eu-central-1
+    stage: staging
+    instance_type: medium
+    storage_size: 50Gi
+  - site: eu-central-1
+    stage: production
+    instance_type: medium
+    storage_size: 50Gi
+  - site: eu-west-1
+    stage: test
+    instance_type: medium
+    storage_size: 50Gi
+  - site: eu-west-1
+    stage: staging
+    instance_type: large
+    storage_size: 100Gi
+  - site: us-east-1
+    stage: test
+    instance_type: small
+    storage_size: 10Gi
+  - site: us-east-1
+    stage: production
+    instance_type: small
+    storage_size: 10Gi
+  - site: us-east-2
+    stage: production
+    instance_type: small
+    storage_size: 10Gi
+  - site: us-west-1
+    stage: test
+    instance_type: large
+    storage_size: 100Gi
+  - site: us-west-1
+    stage: staging
+    instance_type: medium
+    storage_size: 50Gi
+  - site: us-west-1
+    stage: production
+    instance_type: medium
+    storage_size: 50Gi
+- name: mariadb-039
+  owner: app-e
+  lifecycle: production
+  version: '11.4'
+  instances:
+  - site: ap-south-1
+    stage: test
+    instance_type: small
+    storage_size: 10Gi
+  - site: ap-south-1
+    stage: staging
+    instance_type: small
+    storage_size: 10Gi
+  - site: ap-south-1
+    stage: production
+    instance_type: medium
+    storage_size: 50Gi
+  - site: ap-southeast-1
+    stage: test
+    instance_type: medium
+    storage_size: 50Gi
+  - site: ap-southeast-1
+    stage: staging
+    instance_type: small
+    storage_size: 10Gi
+  - site: ap-southeast-1
+    stage: production
+    instance_type: small
+    storage_size: 10Gi
+  - site: eu-west-1
+    stage: staging
+    instance_type: small
+    storage_size: 10Gi
+  - site: eu-west-1
+    stage: production
+    instance_type: small
+    storage_size: 10Gi
+  - site: us-east-1
+    stage: staging
+    instance_type: small
+    storage_size: 10Gi
+  - site: us-east-1
+    stage: production
+    instance_type: small
+    storage_size: 10Gi
+  - site: us-east-2
+    stage: test
+    instance_type: large
+    storage_size: 100Gi
+  - site: us-east-2
+    stage: production
+    instance_type: large
+    storage_size: 100Gi
+  - site: us-west-1
+    stage: test
+    instance_type: large
+    storage_size: 100Gi
+  - site: us-west-1
+    stage: staging
+    instance_type: small
+    storage_size: 10Gi
+  - site: us-west-1
+    stage: production
+    instance_type: medium
+    storage_size: 50Gi
+  - site: us-west-2
+    stage: staging
+    instance_type: small
+    storage_size: 10Gi
+- name: mariadb-040
+  owner: app-c
+  lifecycle: production
+  version: '11.4'
+  instances:
+  - site: ap-northeast-1
+    stage: staging
+    instance_type: small
+    storage_size: 10Gi
+  - site: ap-south-1
+    stage: staging
+    instance_type: large
+    storage_size: 100Gi
+  - site: ap-southeast-1
+    stage: test
+    instance_type: medium
+    storage_size: 50Gi
+  - site: ap-southeast-1
+    stage: production
+    instance_type: medium
+    storage_size: 50Gi
+  - site: eu-central-1
+    stage: test
+    instance_type: small
+    storage_size: 10Gi
+  - site: eu-central-1
+    stage: staging
+    instance_type: small
+    storage_size: 10Gi
+  - site: eu-central-1
+    stage: production
+    instance_type: large
+    storage_size: 100Gi
+  - site: eu-west-1
+    stage: test
+    instance_type: medium
+    storage_size: 50Gi
+  - site: eu-west-1
+    stage: staging
+    instance_type: large
+    storage_size: 100Gi
+  - site: eu-west-1
+    stage: production
+    instance_type: large
+    storage_size: 100Gi
+  - site: sa-east-1
+    stage: test
+    instance_type: small
+    storage_size: 10Gi
+  - site: us-east-1
+    stage: staging
+    instance_type: small
+    storage_size: 10Gi
+  - site: us-east-2
+    stage: production
+    instance_type: small
+    storage_size: 10Gi
+  - site: us-west-1
+    stage: test
+    instance_type: medium
+    storage_size: 50Gi
+  - site: us-west-1
+    stage: staging
+    instance_type: large
+    storage_size: 100Gi
+  - site: us-west-1
+    stage: production
+    instance_type: large
+    storage_size: 100Gi
+  - site: us-west-2
+    stage: staging
+    instance_type: large
+    storage_size: 100Gi
+  - site: us-west-2
+    stage: production
+    instance_type: medium
+    storage_size: 50Gi
+- name: mariadb-041
+  owner: app-b
+  lifecycle: production
+  version: '11.4'
+  instances:
+  - site: ap-northeast-1
+    stage: test
+    instance_type: medium
+    storage_size: 50Gi
+  - site: ap-northeast-1
+    stage: staging
+    instance_type: large
+    storage_size: 100Gi
+  - site: ap-northeast-1
+    stage: production
+    instance_type: small
+    storage_size: 10Gi
+  - site: sa-east-1
+    stage: staging
+    instance_type: small
+    storage_size: 10Gi
+  - site: sa-east-1
+    stage: production
+    instance_type: small
+    storage_size: 10Gi
+- name: mariadb-042
+  owner: app-c
+  lifecycle: production
+  version: '11.4'
+  instances:
+  - site: ap-south-1
+    stage: test
+    instance_type: medium
+    storage_size: 50Gi
+  - site: ap-south-1
+    stage: staging
+    instance_type: large
+    storage_size: 100Gi
+  - site: us-west-2
+    stage: test
+    instance_type: large
+    storage_size: 100Gi
+  - site: us-west-2
+    stage: staging
+    instance_type: small
+    storage_size: 10Gi
+  - site: us-west-2
+    stage: production
+    instance_type: small
+    storage_size: 10Gi
+- name: mariadb-043
+  owner: app-d
+  lifecycle: production
+  version: '10.11'
+  instances:
+  - site: ap-south-1
+    stage: test
+    instance_type: medium
+    storage_size: 50Gi
+  - site: ap-south-1
+    stage: production
+    instance_type: medium
+    storage_size: 50Gi
+  - site: sa-east-1
+    stage: staging
+    instance_type: medium
+    storage_size: 50Gi
+  - site: sa-east-1
+    stage: production
+    instance_type: large
+    storage_size: 100Gi
+  - site: us-east-1
+    stage: test
+    instance_type: medium
+    storage_size: 50Gi
+  - site: us-east-1
+    stage: staging
+    instance_type: small
+    storage_size: 10Gi
+  - site: us-east-1
+    stage: production
+    instance_type: large
+    storage_size: 100Gi
+  - site: us-east-2
+    stage: test
+    instance_type: large
+    storage_size: 100Gi
+  - site: us-east-2
+    stage: staging
+    instance_type: large
+    storage_size: 100Gi
+  - site: us-east-2
+    stage: production
+    instance_type: large
+    storage_size: 100Gi
+  - site: us-west-1
+    stage: staging
+    instance_type: small
+    storage_size: 10Gi
+  - site: us-west-2
+    stage: test
+    instance_type: medium
+    storage_size: 50Gi
+  - site: us-west-2
+    stage: staging
+    instance_type: large
+    storage_size: 100Gi
+  - site: us-west-2
+    stage: production
+    instance_type: large
+    storage_size: 100Gi
+- name: mariadb-044
+  owner: app-d
+  lifecycle: production
+  version: '10.11'
+  instances:
+  - site: ap-northeast-1
+    stage: staging
+    instance_type: medium
+    storage_size: 50Gi
+  - site: ap-south-1
+    stage: test
+    instance_type: medium
+    storage_size: 50Gi
+  - site: ap-southeast-1
+    stage: test
+    instance_type: small
+    storage_size: 10Gi
+  - site: ap-southeast-1
+    stage: production
+    instance_type: small
+    storage_size: 10Gi
+  - site: eu-central-1
+    stage: staging
+    instance_type: small
+    storage_size: 10Gi
+  - site: eu-west-1
+    stage: test
+    instance_type: large
+    storage_size: 100Gi
+  - site: eu-west-1
+    stage: staging
+    instance_type: small
+    storage_size: 10Gi
+  - site: eu-west-1
+    stage: production
+    instance_type: large
+    storage_size: 100Gi
+  - site: sa-east-1
+    stage: test
+    instance_type: small
+    storage_size: 10Gi
+  - site: sa-east-1
+    stage: production
+    instance_type: large
+    storage_size: 100Gi
+  - site: us-east-1
+    stage: test
+    instance_type: medium
+    storage_size: 50Gi
+  - site: us-east-1
+    stage: staging
+    instance_type: medium
+    storage_size: 50Gi
+  - site: us-east-1
+    stage: production
+    instance_type: large
+    storage_size: 100Gi
+  - site: us-east-2
+    stage: test
+    instance_type: large
+    storage_size: 100Gi
+  - site: us-east-2
+    stage: staging
+    instance_type: medium
+    storage_size: 50Gi
+  - site: us-east-2
+    stage: production
+    instance_type: small
+    storage_size: 10Gi
+  - site: us-west-1
+    stage: test
+    instance_type: small
+    storage_size: 10Gi
+  - site: us-west-1
+    stage: staging
+    instance_type: medium
+    storage_size: 50Gi
+  - site: us-west-1
+    stage: production
+    instance_type: large
+    storage_size: 100Gi
+  - site: us-west-2
+    stage: test
+    instance_type: medium
+    storage_size: 50Gi
+  - site: us-west-2
+    stage: staging
+    instance_type: large
+    storage_size: 100Gi
+  - site: us-west-2
+    stage: production
+    instance_type: large
+    storage_size: 100Gi
+- name: mariadb-045
+  owner: app-d
+  lifecycle: production
+  version: '10.11'
+  instances:
+  - site: eu-west-1
+    stage: test
+    instance_type: large
+    storage_size: 100Gi
+  - site: eu-west-1
+    stage: staging
+    instance_type: large
+    storage_size: 100Gi
+  - site: eu-west-1
+    stage: production
+    instance_type: small
+    storage_size: 10Gi
+  - site: sa-east-1
+    stage: test
+    instance_type: medium
+    storage_size: 50Gi
+  - site: sa-east-1
+    stage: production
+    instance_type: medium
+    storage_size: 50Gi
+  - site: us-east-1
+    stage: test
+    instance_type: small
+    storage_size: 10Gi
+  - site: us-east-1
+    stage: staging
+    instance_type: medium
+    storage_size: 50Gi
+  - site: us-east-1
+    stage: production
+    instance_type: medium
+    storage_size: 50Gi
+  - site: us-west-1
+    stage: staging
+    instance_type: small
+    storage_size: 10Gi
+- name: mariadb-046
+  owner: app-d
+  lifecycle: production
+  version: '11.4'
+  instances:
+  - site: ap-south-1
+    stage: staging
+    instance_type: small
+    storage_size: 10Gi
+  - site: ap-southeast-1
+    stage: test
+    instance_type: small
+    storage_size: 10Gi
+  - site: ap-southeast-1
+    stage: staging
+    instance_type: small
+    storage_size: 10Gi
+  - site: ap-southeast-1
+    stage: production
+    instance_type: medium
+    storage_size: 50Gi
+  - site: eu-central-1
+    stage: test
+    instance_type: large
+    storage_size: 100Gi
+  - site: eu-central-1
+    stage: production
+    instance_type: medium
+    storage_size: 50Gi
+  - site: us-west-2
+    stage: test
+    instance_type: small
+    storage_size: 10Gi
+  - site: us-west-2
+    stage: production
+    instance_type: small
+    storage_size: 10Gi
+- name: mariadb-047
+  owner: app-c
+  lifecycle: production
+  version: '10.11'
+  instances:
+  - site: ap-south-1
+    stage: staging
+    instance_type: small
+    storage_size: 10Gi
+  - site: ap-southeast-1
+    stage: test
+    instance_type: small
+    storage_size: 10Gi
+  - site: ap-southeast-1
+    stage: production
+    instance_type: medium
+    storage_size: 50Gi
+  - site: sa-east-1
+    stage: test
+    instance_type: small
+    storage_size: 10Gi
+  - site: sa-east-1
+    stage: staging
+    instance_type: medium
+    storage_size: 50Gi
+  - site: sa-east-1
+    stage: production
+    instance_type: large
+    storage_size: 100Gi
+- name: mariadb-048
+  owner: app-e
+  lifecycle: production
+  version: '10.11'
+  instances:
+  - site: ap-northeast-1
+    stage: production
+    instance_type: large
+    storage_size: 100Gi
+  - site: ap-south-1
+    stage: production
+    instance_type: medium
+    storage_size: 50Gi
+  - site: ap-southeast-1
+    stage: production
+    instance_type: large
+    storage_size: 100Gi
+  - site: eu-west-1
+    stage: test
+    instance_type: medium
+    storage_size: 50Gi
+  - site: eu-west-1
+    stage: staging
+    instance_type: small
+    storage_size: 10Gi
+  - site: eu-west-1
+    stage: production
+    instance_type: large
+    storage_size: 100Gi
+  - site: sa-east-1
+    stage: staging
+    instance_type: large
+    storage_size: 100Gi
+  - site: sa-east-1
+    stage: production
+    instance_type: small
+    storage_size: 10Gi
+  - site: us-east-1
+    stage: test
+    instance_type: small
+    storage_size: 10Gi
+  - site: us-east-1
+    stage: staging
+    instance_type: large
+    storage_size: 100Gi
+  - site: us-east-2
+    stage: test
+    instance_type: small
+    storage_size: 10Gi
+  - site: us-east-2
+    stage: staging
+    instance_type: small
+    storage_size: 10Gi
+  - site: us-east-2
+    stage: production
+    instance_type: medium
+    storage_size: 50Gi
+  - site: us-west-1
+    stage: test
+    instance_type: large
+    storage_size: 100Gi
+  - site: us-west-1
+    stage: staging
+    instance_type: medium
+    storage_size: 50Gi
+  - site: us-west-1
+    stage: production
+    instance_type: large
+    storage_size: 100Gi
+  - site: us-west-2
+    stage: test
+    instance_type: small
+    storage_size: 10Gi
+- name: mariadb-049
+  owner: app-d
+  lifecycle: production
+  version: '10.11'
+  instances:
+  - site: ap-south-1
+    stage: staging
+    instance_type: large
+    storage_size: 100Gi
+  - site: ap-south-1
+    stage: production
+    instance_type: medium
+    storage_size: 50Gi
+  - site: sa-east-1
+    stage: test
+    instance_type: medium
+    storage_size: 50Gi
+  - site: sa-east-1
+    stage: production
+    instance_type: medium
+    storage_size: 50Gi
+  - site: us-east-1
+    stage: production
+    instance_type: medium
+    storage_size: 50Gi
+  - site: us-east-2
+    stage: test
+    instance_type: medium
+    storage_size: 50Gi
+  - site: us-east-2
+    stage: staging
+    instance_type: medium
+    storage_size: 50Gi
+  - site: us-west-1
+    stage: test
+    instance_type: small
+    storage_size: 10Gi
+  - site: us-west-1
+    stage: staging
+    instance_type: medium
+    storage_size: 50Gi
+  - site: us-west-1
+    stage: production
+    instance_type: large
+    storage_size: 100Gi
+- name: mariadb-050
+  owner: app-d
+  lifecycle: production
+  version: '11.4'
+  instances:
+  - site: ap-south-1
+    stage: test
+    instance_type: medium
+    storage_size: 50Gi
+  - site: ap-south-1
+    stage: production
+    instance_type: large
+    storage_size: 100Gi
+  - site: ap-southeast-1
+    stage: staging
+    instance_type: large
+    storage_size: 100Gi
+  - site: ap-southeast-1
+    stage: production
+    instance_type: large
+    storage_size: 100Gi
+  - site: eu-central-1
+    stage: test
+    instance_type: medium
+    storage_size: 50Gi
+  - site: eu-central-1
+    stage: staging
+    instance_type: medium
+    storage_size: 50Gi
+  - site: eu-west-1
+    stage: production
+    instance_type: medium
+    storage_size: 50Gi
+  - site: sa-east-1
+    stage: test
+    instance_type: small
+    storage_size: 10Gi
+  - site: sa-east-1
+    stage: staging
+    instance_type: large
+    storage_size: 100Gi
+  - site: sa-east-1
+    stage: production
+    instance_type: large
+    storage_size: 100Gi
+  - site: us-east-1
+    stage: test
+    instance_type: small
+    storage_size: 10Gi
+  - site: us-east-1
+    stage: staging
+    instance_type: small
+    storage_size: 10Gi
+  - site: us-east-2
+    stage: test
+    instance_type: small
+    storage_size: 10Gi
+  - site: us-east-2
+    stage: staging
+    instance_type: small
+    storage_size: 10Gi
+  - site: us-east-2
+    stage: production
+    instance_type: small
+    storage_size: 10Gi
+  - site: us-west-1
+    stage: test
+    instance_type: large
+    storage_size: 100Gi
+  - site: us-west-1
+    stage: staging
+    instance_type: small
+    storage_size: 10Gi
+  - site: us-west-1
+    stage: production
+    instance_type: large
+    storage_size: 100Gi
+  - site: us-west-2
+    stage: production
+    instance_type: medium
+    storage_size: 50Gi

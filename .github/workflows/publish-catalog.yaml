@@ -42,8 +42,8 @@ jobs:
             git rm -rf . || true
           fi
 
-          cp output/databases.yaml databases.yaml
-          git add databases.yaml
+          cp output/*.yaml .
+          git add *.yaml
           if git diff --cached --quiet; then
             echo "No changes to catalog."
           else

@@ -1,14 +1,1671 @@
-instances:
-  - name: mongodb-app-b-prod
-    system: app-b
-    owner: app-b-devs
-    lifecycle: production
-    description: Production MongoDB
-    tags: [critical, production]
-    spec:
-      version: "7.0"
-      instance_type: large
-      storage_size: 100Gi
-    connection:
-      host: mongodb01.internal
-      port: 27017
+resources:
+- name: mongodb-001
+  owner: app-c
+  lifecycle: production
+  version: '7.0'
+  instances:
+  - site: ap-northeast-1
+    stage: production
+    instance_type: small
+    storage_size: 10Gi
+  - site: ap-south-1
+    stage: staging
+    instance_type: large
+    storage_size: 100Gi
+  - site: ap-south-1
+    stage: production
+    instance_type: small
+    storage_size: 10Gi
+  - site: eu-central-1
+    stage: staging
+    instance_type: small
+    storage_size: 10Gi
+  - site: eu-central-1
+    stage: production
+    instance_type: large
+    storage_size: 100Gi
+  - site: sa-east-1
+    stage: staging
+    instance_type: small
+    storage_size: 10Gi
+  - site: sa-east-1
+    stage: production
+    instance_type: small
+    storage_size: 10Gi
+  - site: us-east-1
+    stage: test
+    instance_type: medium
+    storage_size: 50Gi
+  - site: us-east-2
+    stage: production
+    instance_type: medium
+    storage_size: 50Gi
+  - site: us-west-1
+    stage: production
+    instance_type: medium
+    storage_size: 50Gi
+  - site: us-west-2
+    stage: test
+    instance_type: medium
+    storage_size: 50Gi
+  - site: us-west-2
+    stage: staging
+    instance_type: small
+    storage_size: 10Gi
+  - site: us-west-2
+    stage: production
+    instance_type: large
+    storage_size: 100Gi
+- name: mongodb-002
+  owner: app-b
+  lifecycle: production
+  version: '7.0'
+  instances:
+  - site: ap-northeast-1
+    stage: test
+    instance_type: large
+    storage_size: 100Gi
+  - site: ap-northeast-1
+    stage: staging
+    instance_type: small
+    storage_size: 10Gi
+  - site: ap-northeast-1
+    stage: production
+    instance_type: large
+    storage_size: 100Gi
+  - site: ap-south-1
+    stage: test
+    instance_type: medium
+    storage_size: 50Gi
+  - site: ap-southeast-1
+    stage: staging
+    instance_type: large
+    storage_size: 100Gi
+  - site: ap-southeast-1
+    stage: production
+    instance_type: medium
+    storage_size: 50Gi
+  - site: eu-central-1
+    stage: test
+    instance_type: small
+    storage_size: 10Gi
+  - site: eu-central-1
+    stage: production
+    instance_type: medium
+    storage_size: 50Gi
+  - site: eu-west-1
+    stage: test
+    instance_type: large
+    storage_size: 100Gi
+  - site: eu-west-1
+    stage: staging
+    instance_type: large
+    storage_size: 100Gi
+  - site: eu-west-1
+    stage: production
+    instance_type: medium
+    storage_size: 50Gi
+  - site: sa-east-1
+    stage: production
+    instance_type: large
+    storage_size: 100Gi
+  - site: us-east-2
+    stage: test
+    instance_type: large
+    storage_size: 100Gi
+  - site: us-east-2
+    stage: staging
+    instance_type: small
+    storage_size: 10Gi
+  - site: us-east-2
+    stage: production
+    instance_type: small
+    storage_size: 10Gi
+  - site: us-west-1
+    stage: test
+    instance_type: small
+    storage_size: 10Gi
+  - site: us-west-1
+    stage: staging
+    instance_type: medium
+    storage_size: 50Gi
+  - site: us-west-1
+    stage: production
+    instance_type: large
+    storage_size: 100Gi
+  - site: us-west-2
+    stage: staging
+    instance_type: large
+    storage_size: 100Gi
+- name: mongodb-003
+  owner: app-c
+  lifecycle: production
+  version: '6.0'
+  instances:
+  - site: ap-south-1
+    stage: test
+    instance_type: large
+    storage_size: 100Gi
+  - site: ap-south-1
+    stage: production
+    instance_type: large
+    storage_size: 100Gi
+  - site: eu-central-1
+    stage: production
+    instance_type: large
+    storage_size: 100Gi
+  - site: eu-west-1
+    stage: test
+    instance_type: large
+    storage_size: 100Gi
+  - site: us-east-2
+    stage: test
+    instance_type: small
+    storage_size: 10Gi
+  - site: us-east-2
+    stage: staging
+    instance_type: small
+    storage_size: 10Gi
+  - site: us-east-2
+    stage: production
+    instance_type: small
+    storage_size: 10Gi
+  - site: us-west-2
+    stage: test
+    instance_type: large
+    storage_size: 100Gi
+  - site: us-west-2
+    stage: staging
+    instance_type: medium
+    storage_size: 50Gi
+  - site: us-west-2
+    stage: production
+    instance_type: large
+    storage_size: 100Gi
+- name: mongodb-004
+  owner: app-a
+  lifecycle: production
+  version: '7.0'
+  instances:
+  - site: ap-northeast-1
+    stage: test
+    instance_type: medium
+    storage_size: 50Gi
+  - site: ap-northeast-1
+    stage: staging
+    instance_type: medium
+    storage_size: 50Gi
+  - site: ap-northeast-1
+    stage: production
+    instance_type: medium
+    storage_size: 50Gi
+  - site: ap-southeast-1
+    stage: staging
+    instance_type: large
+    storage_size: 100Gi
+  - site: eu-central-1
+    stage: staging
+    instance_type: large
+    storage_size: 100Gi
+  - site: eu-west-1
+    stage: staging
+    instance_type: medium
+    storage_size: 50Gi
+  - site: eu-west-1
+    stage: production
+    instance_type: small
+    storage_size: 10Gi
+  - site: sa-east-1
+    stage: test
+    instance_type: medium
+    storage_size: 50Gi
+  - site: sa-east-1
+    stage: production
+    instance_type: small
+    storage_size: 10Gi
+  - site: us-east-1
+    stage: test
+    instance_type: medium
+    storage_size: 50Gi
+  - site: us-east-1
+    stage: staging
+    instance_type: small
+    storage_size: 10Gi
+  - site: us-east-2
+    stage: test
+    instance_type: small
+    storage_size: 10Gi
+  - site: us-west-1
+    stage: staging
+    instance_type: small
+    storage_size: 10Gi
+  - site: us-west-1
+    stage: production
+    instance_type: small
+    storage_size: 10Gi
+  - site: us-west-2
+    stage: staging
+    instance_type: small
+    storage_size: 10Gi
+  - site: us-west-2
+    stage: production
+    instance_type: small
+    storage_size: 10Gi
+- name: mongodb-005
+  owner: app-d
+  lifecycle: production
+  version: '7.0'
+  instances:
+  - site: ap-northeast-1
+    stage: production
+    instance_type: medium
+    storage_size: 50Gi
+  - site: ap-south-1
+    stage: test
+    instance_type: medium
+    storage_size: 50Gi
+  - site: ap-southeast-1
+    stage: staging
+    instance_type: medium
+    storage_size: 50Gi
+  - site: ap-southeast-1
+    stage: production
+    instance_type: large
+    storage_size: 100Gi
+  - site: eu-central-1
+    stage: test
+    instance_type: medium
+    storage_size: 50Gi
+  - site: eu-west-1
+    stage: staging
+    instance_type: large
+    storage_size: 100Gi
+  - site: sa-east-1
+    stage: staging
+    instance_type: small
+    storage_size: 10Gi
+  - site: sa-east-1
+    stage: production
+    instance_type: medium
+    storage_size: 50Gi
+  - site: us-east-2
+    stage: production
+    instance_type: large
+    storage_size: 100Gi
+  - site: us-west-1
+    stage: staging
+    instance_type: large
+    storage_size: 100Gi
+- name: mongodb-006
+  owner: app-c
+  lifecycle: production
+  version: '6.0'
+  instances:
+  - site: ap-northeast-1
+    stage: test
+    instance_type: medium
+    storage_size: 50Gi
+  - site: ap-south-1
+    stage: staging
+    instance_type: small
+    storage_size: 10Gi
+  - site: ap-south-1
+    stage: production
+    instance_type: small
+    storage_size: 10Gi
+  - site: ap-southeast-1
+    stage: test
+    instance_type: small
+    storage_size: 10Gi
+  - site: ap-southeast-1
+    stage: staging
+    instance_type: small
+    storage_size: 10Gi
+  - site: ap-southeast-1
+    stage: production
+    instance_type: small
+    storage_size: 10Gi
+  - site: eu-central-1
+    stage: test
+    instance_type: small
+    storage_size: 10Gi
+  - site: eu-central-1
+    stage: staging
+    instance_type: large
+    storage_size: 100Gi
+  - site: eu-central-1
+    stage: production
+    instance_type: large
+    storage_size: 100Gi
+  - site: eu-west-1
+    stage: staging
+    instance_type: large
+    storage_size: 100Gi
+  - site: sa-east-1
+    stage: test
+    instance_type: large
+    storage_size: 100Gi
+  - site: sa-east-1
+    stage: staging
+    instance_type: large
+    storage_size: 100Gi
+  - site: us-west-1
+    stage: staging
+    instance_type: large
+    storage_size: 100Gi
+  - site: us-west-1
+    stage: production
+    instance_type: large
+    storage_size: 100Gi
+- name: mongodb-007
+  owner: app-e
+  lifecycle: production
+  version: '7.0'
+  instances:
+  - site: ap-northeast-1
+    stage: test
+    instance_type: large
+    storage_size: 100Gi
+  - site: ap-northeast-1
+    stage: staging
+    instance_type: small
+    storage_size: 10Gi
+  - site: ap-northeast-1
+    stage: production
+    instance_type: large
+    storage_size: 100Gi
+  - site: ap-south-1
+    stage: test
+    instance_type: small
+    storage_size: 10Gi
+  - site: ap-south-1
+    stage: staging
+    instance_type: large
+    storage_size: 100Gi
+  - site: ap-southeast-1
+    stage: test
+    instance_type: large
+    storage_size: 100Gi
+  - site: eu-central-1
+    stage: test
+    instance_type: medium
+    storage_size: 50Gi
+  - site: eu-central-1
+    stage: staging
+    instance_type: medium
+    storage_size: 50Gi
+  - site: eu-central-1
+    stage: production
+    instance_type: medium
+    storage_size: 50Gi
+  - site: eu-west-1
+    stage: staging
+    instance_type: large
+    storage_size: 100Gi
+  - site: sa-east-1
+    stage: staging
+    instance_type: large
+    storage_size: 100Gi
+  - site: us-east-1
+    stage: test
+    instance_type: large
+    storage_size: 100Gi
+  - site: us-east-1
+    stage: staging
+    instance_type: small
+    storage_size: 10Gi
+  - site: us-east-1
+    stage: production
+    instance_type: large
+    storage_size: 100Gi
+  - site: us-east-2
+    stage: staging
+    instance_type: large
+    storage_size: 100Gi
+  - site: us-east-2
+    stage: production
+    instance_type: medium
+    storage_size: 50Gi
+  - site: us-west-1
+    stage: test
+    instance_type: large
+    storage_size: 100Gi
+  - site: us-west-1
+    stage: staging
+    instance_type: medium
+    storage_size: 50Gi
+  - site: us-west-2
+    stage: test
+    instance_type: small
+    storage_size: 10Gi
+  - site: us-west-2
+    stage: staging
+    instance_type: small
+    storage_size: 10Gi
+  - site: us-west-2
+    stage: production
+    instance_type: medium
+    storage_size: 50Gi
+- name: mongodb-008
+  owner: app-e
+  lifecycle: production
+  version: '7.0'
+  instances:
+  - site: eu-central-1
+    stage: test
+    instance_type: medium
+    storage_size: 50Gi
+  - site: eu-central-1
+    stage: staging
+    instance_type: large
+    storage_size: 100Gi
+  - site: eu-central-1
+    stage: production
+    instance_type: large
+    storage_size: 100Gi
+  - site: eu-west-1
+    stage: test
+    instance_type: large
+    storage_size: 100Gi
+  - site: eu-west-1
+    stage: staging
+    instance_type: large
+    storage_size: 100Gi
+  - site: sa-east-1
+    stage: test
+    instance_type: small
+    storage_size: 10Gi
+  - site: sa-east-1
+    stage: staging
+    instance_type: medium
+    storage_size: 50Gi
+  - site: sa-east-1
+    stage: production
+    instance_type: small
+    storage_size: 10Gi
+  - site: us-east-2
+    stage: test
+    instance_type: medium
+    storage_size: 50Gi
+  - site: us-east-2
+    stage: production
+    instance_type: medium
+    storage_size: 50Gi
+- name: mongodb-009
+  owner: app-c
+  lifecycle: production
+  version: '7.0'
+  instances:
+  - site: ap-northeast-1
+    stage: test
+    instance_type: large
+    storage_size: 100Gi
+  - site: ap-northeast-1
+    stage: staging
+    instance_type: large
+    storage_size: 100Gi
+  - site: ap-northeast-1
+    stage: production
+    instance_type: large
+    storage_size: 100Gi
+  - site: ap-south-1
+    stage: test
+    instance_type: small
+    storage_size: 10Gi
+  - site: eu-west-1
+    stage: test
+    instance_type: small
+    storage_size: 10Gi
+  - site: eu-west-1
+    stage: staging
+    instance_type: small
+    storage_size: 10Gi
+  - site: eu-west-1
+    stage: production
+    instance_type: medium
+    storage_size: 50Gi
+  - site: us-east-2
+    stage: staging
+    instance_type: small
+    storage_size: 10Gi
+  - site: us-east-2
+    stage: production
+    instance_type: large
+    storage_size: 100Gi
+- name: mongodb-010
+  owner: app-b
+  lifecycle: production
+  version: '6.0'
+  instances:
+  - site: ap-northeast-1
+    stage: test
+    instance_type: large
+    storage_size: 100Gi
+  - site: ap-northeast-1
+    stage: staging
+    instance_type: large
+    storage_size: 100Gi
+  - site: ap-northeast-1
+    stage: production
+    instance_type: large
+    storage_size: 100Gi
+  - site: ap-south-1
+    stage: test
+    instance_type: medium
+    storage_size: 50Gi
+  - site: ap-southeast-1
+    stage: test
+    instance_type: medium
+    storage_size: 50Gi
+  - site: eu-central-1
+    stage: test
+    instance_type: small
+    storage_size: 10Gi
+  - site: eu-central-1
+    stage: staging
+    instance_type: small
+    storage_size: 10Gi
+  - site: eu-west-1
+    stage: test
+    instance_type: medium
+    storage_size: 50Gi
+  - site: eu-west-1
+    stage: production
+    instance_type: medium
+    storage_size: 50Gi
+  - site: sa-east-1
+    stage: staging
+    instance_type: small
+    storage_size: 10Gi
+  - site: sa-east-1
+    stage: production
+    instance_type: large
+    storage_size: 100Gi
+  - site: us-east-1
+    stage: test
+    instance_type: small
+    storage_size: 10Gi
+  - site: us-east-1
+    stage: staging
+    instance_type: medium
+    storage_size: 50Gi
+  - site: us-east-2
+    stage: production
+    instance_type: medium
+    storage_size: 50Gi
+  - site: us-west-2
+    stage: test
+    instance_type: large
+    storage_size: 100Gi
+  - site: us-west-2
+    stage: staging
+    instance_type: medium
+    storage_size: 50Gi
+  - site: us-west-2
+    stage: production
+    instance_type: medium
+    storage_size: 50Gi
+- name: mongodb-011
+  owner: app-e
+  lifecycle: production
+  version: '6.0'
+  instances:
+  - site: ap-south-1
+    stage: test
+    instance_type: large
+    storage_size: 100Gi
+  - site: ap-south-1
+    stage: staging
+    instance_type: small
+    storage_size: 10Gi
+  - site: ap-south-1
+    stage: production
+    instance_type: small
+    storage_size: 10Gi
+  - site: ap-southeast-1
+    stage: staging
+    instance_type: medium
+    storage_size: 50Gi
+  - site: sa-east-1
+    stage: test
+    instance_type: medium
+    storage_size: 50Gi
+- name: mongodb-012
+  owner: app-d
+  lifecycle: production
+  version: '6.0'
+  instances:
+  - site: ap-northeast-1
+    stage: test
+    instance_type: large
+    storage_size: 100Gi
+  - site: ap-northeast-1
+    stage: staging
+    instance_type: small
+    storage_size: 10Gi
+  - site: ap-northeast-1
+    stage: production
+    instance_type: medium
+    storage_size: 50Gi
+  - site: ap-south-1
+    stage: test
+    instance_type: large
+    storage_size: 100Gi
+  - site: ap-south-1
+    stage: staging
+    instance_type: large
+    storage_size: 100Gi
+  - site: ap-southeast-1
+    stage: test
+    instance_type: medium
+    storage_size: 50Gi
+  - site: ap-southeast-1
+    stage: staging
+    instance_type: large
+    storage_size: 100Gi
+  - site: ap-southeast-1
+    stage: production
+    instance_type: small
+    storage_size: 10Gi
+  - site: eu-central-1
+    stage: test
+    instance_type: medium
+    storage_size: 50Gi
+  - site: eu-west-1
+    stage: staging
+    instance_type: large
+    storage_size: 100Gi
+  - site: sa-east-1
+    stage: test
+    instance_type: large
+    storage_size: 100Gi
+  - site: sa-east-1
+    stage: staging
+    instance_type: large
+    storage_size: 100Gi
+  - site: sa-east-1
+    stage: production
+    instance_type: small
+    storage_size: 10Gi
+  - site: us-west-1
+    stage: production
+    instance_type: large
+    storage_size: 100Gi
+  - site: us-west-2
+    stage: production
+    instance_type: medium
+    storage_size: 50Gi
+- name: mongodb-013
+  owner: app-e
+  lifecycle: production
+  version: '7.0'
+  instances:
+  - site: sa-east-1
+    stage: production
+    instance_type: large
+    storage_size: 100Gi
+  - site: us-west-2
+    stage: production
+    instance_type: large
+    storage_size: 100Gi
+- name: mongodb-014
+  owner: app-b
+  lifecycle: production
+  version: '6.0'
+  instances:
+  - site: ap-northeast-1
+    stage: test
+    instance_type: small
+    storage_size: 10Gi
+  - site: ap-northeast-1
+    stage: staging
+    instance_type: medium
+    storage_size: 50Gi
+  - site: ap-south-1
+    stage: production
+    instance_type: medium
+    storage_size: 50Gi
+  - site: eu-central-1
+    stage: test
+    instance_type: large
+    storage_size: 100Gi
+  - site: eu-central-1
+    stage: production
+    instance_type: medium
+    storage_size: 50Gi
+  - site: eu-west-1
+    stage: test
+    instance_type: medium
+    storage_size: 50Gi
+  - site: eu-west-1
+    stage: staging
+    instance_type: small
+    storage_size: 10Gi
+  - site: eu-west-1
+    stage: production
+    instance_type: large
+    storage_size: 100Gi
+  - site: sa-east-1
+    stage: production
+    instance_type: small
+    storage_size: 10Gi
+  - site: us-west-2
+    stage: staging
+    instance_type: medium
+    storage_size: 50Gi
+- name: mongodb-015
+  owner: app-a
+  lifecycle: production
+  version: '6.0'
+  instances:
+  - site: ap-northeast-1
+    stage: test
+    instance_type: small
+    storage_size: 10Gi
+  - site: ap-northeast-1
+    stage: staging
+    instance_type: large
+    storage_size: 100Gi
+  - site: us-west-1
+    stage: test
+    instance_type: medium
+    storage_size: 50Gi
+  - site: us-west-1
+    stage: staging
+    instance_type: medium
+    storage_size: 50Gi
+  - site: us-west-1
+    stage: production
+    instance_type: medium
+    storage_size: 50Gi
+- name: mongodb-016
+  owner: app-d
+  lifecycle: production
+  version: '6.0'
+  instances:
+  - site: ap-northeast-1
+    stage: test
+    instance_type: medium
+    storage_size: 50Gi
+  - site: ap-southeast-1
+    stage: staging
+    instance_type: large
+    storage_size: 100Gi
+  - site: ap-southeast-1
+    stage: production
+    instance_type: medium
+    storage_size: 50Gi
+  - site: eu-central-1
+    stage: test
+    instance_type: medium
+    storage_size: 50Gi
+  - site: eu-west-1
+    stage: test
+    instance_type: small
+    storage_size: 10Gi
+  - site: eu-west-1
+    stage: staging
+    instance_type: large
+    storage_size: 100Gi
+  - site: sa-east-1
+    stage: test
+    instance_type: large
+    storage_size: 100Gi
+  - site: us-east-1
+    stage: test
+    instance_type: small
+    storage_size: 10Gi
+  - site: us-east-1
+    stage: production
+    instance_type: small
+    storage_size: 10Gi
+  - site: us-east-2
+    stage: test
+    instance_type: large
+    storage_size: 100Gi
+  - site: us-west-1
+    stage: staging
+    instance_type: large
+    storage_size: 100Gi
+  - site: us-west-2
+    stage: test
+    instance_type: large
+    storage_size: 100Gi
+  - site: us-west-2
+    stage: staging
+    instance_type: small
+    storage_size: 10Gi
+  - site: us-west-2
+    stage: production
+    instance_type: medium
+    storage_size: 50Gi
+- name: mongodb-017
+  owner: app-d
+  lifecycle: production
+  version: '6.0'
+  instances:
+  - site: ap-northeast-1
+    stage: staging
+    instance_type: small
+    storage_size: 10Gi
+  - site: ap-southeast-1
+    stage: test
+    instance_type: medium
+    storage_size: 50Gi
+  - site: ap-southeast-1
+    stage: staging
+    instance_type: medium
+    storage_size: 50Gi
+  - site: ap-southeast-1
+    stage: production
+    instance_type: small
+    storage_size: 10Gi
+  - site: eu-central-1
+    stage: test
+    instance_type: large
+    storage_size: 100Gi
+  - site: eu-central-1
+    stage: staging
+    instance_type: medium
+    storage_size: 50Gi
+  - site: eu-central-1
+    stage: production
+    instance_type: small
+    storage_size: 10Gi
+  - site: eu-west-1
+    stage: staging
+    instance_type: large
+    storage_size: 100Gi
+  - site: eu-west-1
+    stage: production
+    instance_type: medium
+    storage_size: 50Gi
+  - site: sa-east-1
+    stage: test
+    instance_type: medium
+    storage_size: 50Gi
+  - site: sa-east-1
+    stage: staging
+    instance_type: medium
+    storage_size: 50Gi
+  - site: sa-east-1
+    stage: production
+    instance_type: small
+    storage_size: 10Gi
+  - site: us-east-1
+    stage: test
+    instance_type: medium
+    storage_size: 50Gi
+  - site: us-east-1
+    stage: staging
+    instance_type: large
+    storage_size: 100Gi
+  - site: us-east-1
+    stage: production
+    instance_type: small
+    storage_size: 10Gi
+  - site: us-east-2
+    stage: test
+    instance_type: medium
+    storage_size: 50Gi
+  - site: us-east-2
+    stage: staging
+    instance_type: large
+    storage_size: 100Gi
+  - site: us-west-1
+    stage: test
+    instance_type: medium
+    storage_size: 50Gi
+  - site: us-west-1
+    stage: staging
+    instance_type: small
+    storage_size: 10Gi
+  - site: us-west-1
+    stage: production
+    instance_type: medium
+    storage_size: 50Gi
+  - site: us-west-2
+    stage: test
+    instance_type: small
+    storage_size: 10Gi
+  - site: us-west-2
+    stage: staging
+    instance_type: large
+    storage_size: 100Gi
+  - site: us-west-2
+    stage: production
+    instance_type: large
+    storage_size: 100Gi
+- name: mongodb-018
+  owner: app-b
+  lifecycle: production
+  version: '6.0'
+  instances:
+  - site: ap-northeast-1
+    stage: test
+    instance_type: small
+    storage_size: 10Gi
+  - site: ap-northeast-1
+    stage: staging
+    instance_type: medium
+    storage_size: 50Gi
+  - site: ap-northeast-1
+    stage: production
+    instance_type: medium
+    storage_size: 50Gi
+  - site: ap-southeast-1
+    stage: test
+    instance_type: small
+    storage_size: 10Gi
+  - site: eu-west-1
+    stage: test
+    instance_type: large
+    storage_size: 100Gi
+  - site: eu-west-1
+    stage: staging
+    instance_type: large
+    storage_size: 100Gi
+  - site: eu-west-1
+    stage: production
+    instance_type: large
+    storage_size: 100Gi
+  - site: us-west-1
+    stage: staging
+    instance_type: small
+    storage_size: 10Gi
+  - site: us-west-2
+    stage: test
+    instance_type: medium
+    storage_size: 50Gi
+  - site: us-west-2
+    stage: staging
+    instance_type: large
+    storage_size: 100Gi
+  - site: us-west-2
+    stage: production
+    instance_type: large
+    storage_size: 100Gi
+- name: mongodb-019
+  owner: app-c
+  lifecycle: production
+  version: '7.0'
+  instances:
+  - site: ap-northeast-1
+    stage: test
+    instance_type: medium
+    storage_size: 50Gi
+  - site: ap-northeast-1
+    stage: staging
+    instance_type: medium
+    storage_size: 50Gi
+  - site: ap-northeast-1
+    stage: production
+    instance_type: medium
+    storage_size: 50Gi
+  - site: ap-south-1
+    stage: production
+    instance_type: small
+    storage_size: 10Gi
+  - site: eu-central-1
+    stage: test
+    instance_type: large
+    storage_size: 100Gi
+  - site: eu-central-1
+    stage: staging
+    instance_type: large
+    storage_size: 100Gi
+  - site: eu-central-1
+    stage: production
+    instance_type: large
+    storage_size: 100Gi
+  - site: us-east-2
+    stage: test
+    instance_type: small
+    storage_size: 10Gi
+  - site: us-east-2
+    stage: staging
+    instance_type: medium
+    storage_size: 50Gi
+  - site: us-east-2
+    stage: production
+    instance_type: small
+    storage_size: 10Gi
+  - site: us-west-1
+    stage: test
+    instance_type: medium
+    storage_size: 50Gi
+  - site: us-west-1
+    stage: production
+    instance_type: large
+    storage_size: 100Gi
+- name: mongodb-020
+  owner: app-c
+  lifecycle: production
+  version: '7.0'
+  instances:
+  - site: ap-northeast-1
+    stage: test
+    instance_type: large
+    storage_size: 100Gi
+  - site: ap-northeast-1
+    stage: staging
+    instance_type: small
+    storage_size: 10Gi
+  - site: ap-northeast-1
+    stage: production
+    instance_type: small
+    storage_size: 10Gi
+  - site: ap-south-1
+    stage: test
+    instance_type: small
+    storage_size: 10Gi
+  - site: ap-south-1
+    stage: staging
+    instance_type: large
+    storage_size: 100Gi
+  - site: ap-south-1
+    stage: production
+    instance_type: small
+    storage_size: 10Gi
+  - site: ap-southeast-1
+    stage: production
+    instance_type: small
+    storage_size: 10Gi
+  - site: eu-central-1
+    stage: test
+    instance_type: large
+    storage_size: 100Gi
+  - site: eu-west-1
+    stage: test
+    instance_type: large
+    storage_size: 100Gi
+  - site: eu-west-1
+    stage: staging
+    instance_type: large
+    storage_size: 100Gi
+  - site: sa-east-1
+    stage: test
+    instance_type: small
+    storage_size: 10Gi
+  - site: sa-east-1
+    stage: staging
+    instance_type: small
+    storage_size: 10Gi
+  - site: sa-east-1
+    stage: production
+    instance_type: large
+    storage_size: 100Gi
+  - site: us-east-1
+    stage: test
+    instance_type: large
+    storage_size: 100Gi
+  - site: us-east-1
+    stage: staging
+    instance_type: large
+    storage_size: 100Gi
+  - site: us-east-1
+    stage: production
+    instance_type: medium
+    storage_size: 50Gi
+  - site: us-west-2
+    stage: test
+    instance_type: small
+    storage_size: 10Gi
+  - site: us-west-2
+    stage: staging
+    instance_type: small
+    storage_size: 10Gi
+  - site: us-west-2
+    stage: production
+    instance_type: small
+    storage_size: 10Gi
+- name: mongodb-021
+  owner: app-e
+  lifecycle: production
+  version: '6.0'
+  instances:
+  - site: ap-south-1
+    stage: staging
+    instance_type: small
+    storage_size: 10Gi
+  - site: ap-south-1
+    stage: production
+    instance_type: medium
+    storage_size: 50Gi
+  - site: ap-southeast-1
+    stage: test
+    instance_type: large
+    storage_size: 100Gi
+  - site: ap-southeast-1
+    stage: staging
+    instance_type: small
+    storage_size: 10Gi
+  - site: eu-west-1
+    stage: test
+    instance_type: large
+    storage_size: 100Gi
+  - site: eu-west-1
+    stage: production
+    instance_type: large
+    storage_size: 100Gi
+  - site: us-east-2
+    stage: test
+    instance_type: medium
+    storage_size: 50Gi
+- name: mongodb-022
+  owner: app-d
+  lifecycle: production
+  version: '7.0'
+  instances:
+  - site: ap-northeast-1
+    stage: test
+    instance_type: small
+    storage_size: 10Gi
+  - site: ap-northeast-1
+    stage: staging
+    instance_type: large
+    storage_size: 100Gi
+  - site: ap-northeast-1
+    stage: production
+    instance_type: large
+    storage_size: 100Gi
+  - site: ap-south-1
+    stage: test
+    instance_type: small
+    storage_size: 10Gi
+  - site: ap-south-1
+    stage: staging
+    instance_type: large
+    storage_size: 100Gi
+  - site: ap-southeast-1
+    stage: test
+    instance_type: small
+    storage_size: 10Gi
+  - site: ap-southeast-1
+    stage: production
+    instance_type: medium
+    storage_size: 50Gi
+  - site: eu-central-1
+    stage: test
+    instance_type: large
+    storage_size: 100Gi
+  - site: sa-east-1
+    stage: production
+    instance_type: medium
+    storage_size: 50Gi
+  - site: us-east-1
+    stage: staging
+    instance_type: small
+    storage_size: 10Gi
+  - site: us-east-2
+    stage: test
+    instance_type: medium
+    storage_size: 50Gi
+  - site: us-east-2
+    stage: staging
+    instance_type: large
+    storage_size: 100Gi
+  - site: us-east-2
+    stage: production
+    instance_type: small
+    storage_size: 10Gi
+  - site: us-west-1
+    stage: test
+    instance_type: small
+    storage_size: 10Gi
+  - site: us-west-1
+    stage: staging
+    instance_type: small
+    storage_size: 10Gi
+  - site: us-west-1
+    stage: production
+    instance_type: medium
+    storage_size: 50Gi
+  - site: us-west-2
+    stage: test
+    instance_type: medium
+    storage_size: 50Gi
+- name: mongodb-023
+  owner: app-e
+  lifecycle: production
+  version: '7.0'
+  instances:
+  - site: ap-northeast-1
+    stage: test
+    instance_type: large
+    storage_size: 100Gi
+  - site: ap-northeast-1
+    stage: staging
+    instance_type: large
+    storage_size: 100Gi
+  - site: ap-northeast-1
+    stage: production
+    instance_type: large
+    storage_size: 100Gi
+  - site: eu-west-1
+    stage: test
+    instance_type: small
+    storage_size: 10Gi
+  - site: eu-west-1
+    stage: staging
+    instance_type: large
+    storage_size: 100Gi
+  - site: us-east-1
+    stage: test
+    instance_type: medium
+    storage_size: 50Gi
+  - site: us-east-2
+    stage: staging
+    instance_type: large
+    storage_size: 100Gi
+  - site: us-west-1
+    stage: test
+    instance_type: medium
+    storage_size: 50Gi
+  - site: us-west-1
+    stage: staging
+    instance_type: small
+    storage_size: 10Gi
+  - site: us-west-1
+    stage: production
+    instance_type: small
+    storage_size: 10Gi
+  - site: us-west-2
+    stage: staging
+    instance_type: medium
+    storage_size: 50Gi
+- name: mongodb-024
+  owner: app-c
+  lifecycle: production
+  version: '7.0'
+  instances:
+  - site: us-east-1
+    stage: staging
+    instance_type: medium
+    storage_size: 50Gi
+  - site: us-west-2
+    stage: test
+    instance_type: small
+    storage_size: 10Gi
+  - site: us-west-2
+    stage: staging
+    instance_type: small
+    storage_size: 10Gi
+  - site: us-west-2
+    stage: production
+    instance_type: medium
+    storage_size: 50Gi
+- name: mongodb-025
+  owner: app-e
+  lifecycle: production
+  version: '6.0'
+  instances:
+  - site: ap-northeast-1
+    stage: test
+    instance_type: medium
+    storage_size: 50Gi
+  - site: ap-northeast-1
+    stage: staging
+    instance_type: medium
+    storage_size: 50Gi
+  - site: ap-northeast-1
+    stage: production
+    instance_type: medium
+    storage_size: 50Gi
+  - site: ap-south-1
+    stage: test
+    instance_type: small
+    storage_size: 10Gi
+  - site: ap-south-1
+    stage: production
+    instance_type: medium
+    storage_size: 50Gi
+  - site: ap-southeast-1
+    stage: staging
+    instance_type: medium
+    storage_size: 50Gi
+  - site: ap-southeast-1
+    stage: production
+    instance_type: small
+    storage_size: 10Gi
+  - site: eu-central-1
+    stage: test
+    instance_type: large
+    storage_size: 100Gi
+  - site: eu-central-1
+    stage: staging
+    instance_type: large
+    storage_size: 100Gi
+  - site: eu-west-1
+    stage: test
+    instance_type: medium
+    storage_size: 50Gi
+  - site: eu-west-1
+    stage: production
+    instance_type: small
+    storage_size: 10Gi
+  - site: sa-east-1
+    stage: staging
+    instance_type: small
+    storage_size: 10Gi
+  - site: us-east-1
+    stage: staging
+    instance_type: medium
+    storage_size: 50Gi
+  - site: us-east-1
+    stage: production
+    instance_type: medium
+    storage_size: 50Gi
+  - site: us-east-2
+    stage: test
+    instance_type: medium
+    storage_size: 50Gi
+  - site: us-east-2
+    stage: staging
+    instance_type: medium
+    storage_size: 50Gi
+  - site: us-west-1
+    stage: test
+    instance_type: medium
+    storage_size: 50Gi
+  - site: us-west-1
+    stage: staging
+    instance_type: small
+    storage_size: 10Gi
+  - site: us-west-1
+    stage: production
+    instance_type: medium
+    storage_size: 50Gi
+  - site: us-west-2
+    stage: staging
+    instance_type: large
+    storage_size: 100Gi
+  - site: us-west-2
+    stage: production
+    instance_type: small
+    storage_size: 10Gi
+- name: mongodb-026
+  owner: app-c
+  lifecycle: production
+  version: '7.0'
+  instances:
+  - site: ap-northeast-1
+    stage: test
+    instance_type: large
+    storage_size: 100Gi
+  - site: ap-northeast-1
+    stage: staging
+    instance_type: medium
+    storage_size: 50Gi
+  - site: ap-northeast-1
+    stage: production
+    instance_type: large
+    storage_size: 100Gi
+  - site: ap-southeast-1
+    stage: staging
+    instance_type: medium
+    storage_size: 50Gi
+  - site: eu-central-1
+    stage: test
+    instance_type: small
+    storage_size: 10Gi
+  - site: eu-central-1
+    stage: staging
+    instance_type: large
+    storage_size: 100Gi
+  - site: eu-central-1
+    stage: production
+    instance_type: medium
+    storage_size: 50Gi
+  - site: eu-west-1
+    stage: staging
+    instance_type: large
+    storage_size: 100Gi
+  - site: us-west-2
+    stage: production
+    instance_type: medium
+    storage_size: 50Gi
+- name: mongodb-027
+  owner: app-d
+  lifecycle: production
+  version: '6.0'
+  instances:
+  - site: ap-northeast-1
+    stage: test
+    instance_type: small
+    storage_size: 10Gi
+  - site: ap-northeast-1
+    stage: staging
+    instance_type: large
+    storage_size: 100Gi
+  - site: ap-northeast-1
+    stage: production
+    instance_type: large
+    storage_size: 100Gi
+  - site: ap-south-1
+    stage: test
+    instance_type: large
+    storage_size: 100Gi
+  - site: ap-south-1
+    stage: production
+    instance_type: large
+    storage_size: 100Gi
+  - site: ap-southeast-1
+    stage: test
+    instance_type: medium
+    storage_size: 50Gi
+  - site: ap-southeast-1
+    stage: staging
+    instance_type: small
+    storage_size: 10Gi
+  - site: ap-southeast-1
+    stage: production
+    instance_type: small
+    storage_size: 10Gi
+  - site: eu-west-1
+    stage: staging
+    instance_type: small
+    storage_size: 10Gi
+  - site: sa-east-1
+    stage: test
+    instance_type: medium
+    storage_size: 50Gi
+  - site: sa-east-1
+    stage: staging
+    instance_type: medium
+    storage_size: 50Gi
+  - site: sa-east-1
+    stage: production
+    instance_type: medium
+    storage_size: 50Gi
+  - site: us-east-2
+    stage: test
+    instance_type: small
+    storage_size: 10Gi
+  - site: us-east-2
+    stage: staging
+    instance_type: medium
+    storage_size: 50Gi
+  - site: us-east-2
+    stage: production
+    instance_type: small
+    storage_size: 10Gi
+  - site: us-west-1
+    stage: test
+    instance_type: small
+    storage_size: 10Gi
+  - site: us-west-1
+    stage: staging
+    instance_type: large
+    storage_size: 100Gi
+  - site: us-west-2
+    stage: staging
+    instance_type: medium
+    storage_size: 50Gi
+- name: mongodb-028
+  owner: app-c
+  lifecycle: production
+  version: '7.0'
+  instances:
+  - site: ap-northeast-1
+    stage: staging
+    instance_type: large
+    storage_size: 100Gi
+  - site: ap-south-1
+    stage: test
+    instance_type: medium
+    storage_size: 50Gi
+  - site: ap-south-1
+    stage: staging
+    instance_type: small
+    storage_size: 10Gi
+  - site: ap-south-1
+    stage: production
+    instance_type: large
+    storage_size: 100Gi
+  - site: eu-central-1
+    stage: test
+    instance_type: medium
+    storage_size: 50Gi
+  - site: us-east-2
+    stage: test
+    instance_type: large
+    storage_size: 100Gi
+  - site: us-east-2
+    stage: staging
+    instance_type: small
+    storage_size: 10Gi
+  - site: us-east-2
+    stage: production
+    instance_type: large
+    storage_size: 100Gi
+- name: mongodb-029
+  owner: app-b
+  lifecycle: production
+  version: '7.0'
+  instances:
+  - site: ap-northeast-1
+    stage: test
+    instance_type: medium
+    storage_size: 50Gi
+  - site: ap-northeast-1
+    stage: production
+    instance_type: large
+    storage_size: 100Gi
+  - site: ap-south-1
+    stage: test
+    instance_type: large
+    storage_size: 100Gi
+  - site: ap-south-1
+    stage: staging
+    instance_type: small
+    storage_size: 10Gi
+  - site: ap-southeast-1
+    stage: staging
+    instance_type: large
+    storage_size: 100Gi
+  - site: eu-central-1
+    stage: production
+    instance_type: small
+    storage_size: 10Gi
+  - site: eu-west-1
+    stage: test
+    instance_type: small
+    storage_size: 10Gi
+  - site: eu-west-1
+    stage: staging
+    instance_type: medium
+    storage_size: 50Gi
+  - site: eu-west-1
+    stage: production
+    instance_type: small
+    storage_size: 10Gi
+  - site: sa-east-1
+    stage: staging
+    instance_type: large
+    storage_size: 100Gi
+  - site: sa-east-1
+    stage: production
+    instance_type: large
+    storage_size: 100Gi
+  - site: us-east-1
+    stage: staging
+    instance_type: large
+    storage_size: 100Gi
+  - site: us-east-1
+    stage: production
+    instance_type: medium
+    storage_size: 50Gi
+  - site: us-east-2
+    stage: test
+    instance_type: medium
+    storage_size: 50Gi
+  - site: us-east-2
+    stage: staging
+    instance_type: large
+    storage_size: 100Gi
+  - site: us-east-2
+    stage: production
+    instance_type: small
+    storage_size: 10Gi
+  - site: us-west-2
+    stage: test
+    instance_type: large
+    storage_size: 100Gi
+  - site: us-west-2
+    stage: staging
+    instance_type: small
+    storage_size: 10Gi
+  - site: us-west-2
+    stage: production
+    instance_type: medium
+    storage_size: 50Gi
+- name: mongodb-030
+  owner: app-a
+  lifecycle: production
+  version: '6.0'
+  instances:
+  - site: ap-northeast-1
+    stage: test
+    instance_type: large
+    storage_size: 100Gi
+  - site: ap-northeast-1
+    stage: staging
+    instance_type: medium
+    storage_size: 50Gi
+  - site: ap-northeast-1
+    stage: production
+    instance_type: medium
+    storage_size: 50Gi
+  - site: eu-central-1
+    stage: staging
+    instance_type: large
+    storage_size: 100Gi
+  - site: sa-east-1
+    stage: test
+    instance_type: medium
+    storage_size: 50Gi
+  - site: sa-east-1
+    stage: staging
+    instance_type: medium
+    storage_size: 50Gi
+  - site: sa-east-1
+    stage: production
+    instance_type: small
+    storage_size: 10Gi
+  - site: us-east-1
+    stage: staging
+    instance_type: medium
+    storage_size: 50Gi
+  - site: us-west-2
+    stage: test
+    instance_type: medium
+    storage_size: 50Gi
+  - site: us-west-2
+    stage: staging
+    instance_type: small
+    storage_size: 10Gi
+  - site: us-west-2
+    stage: production
+    instance_type: small
+    storage_size: 10Gi
