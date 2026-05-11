@@ -65,6 +65,11 @@
           "type": "string",
           "description": "Database engine version"
         },
+        "maintenance": {
+          "type": "string",
+          "pattern": "^[0-9]{8}$",
+          "description": "Scheduled maintenance date (YYYYMMDD)"
+        },
         "instance_type": {
           "type": "string",
           "enum": ["small", "medium", "large"],

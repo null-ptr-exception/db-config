@@ -12,6 +12,7 @@ resources:
     stage: staging
     instance_type: small
     storage_size: 10Gi
+    maintenance: "20260601"
   - site: eu-central-1
     stage: production
     instance_type: small

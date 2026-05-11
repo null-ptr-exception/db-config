@@ -47,10 +47,14 @@ def resource_to_entities(db_type: str, resource: dict) -> list[dict]:
         if version:
             properties["version"] = version
 
+        metadata = {"name": instance_name}
+        if "maintenance" in inst:
+            metadata["annotations"] = {"maintenance/scheduled": inst["maintenance"]}
+
         instance_entity = {
             "apiVersion": "dbms.io/v1alpha1",
             "kind": "Instance",
-            "metadata": {"name": instance_name},
+            "metadata": metadata,
             "spec": {
                 "target": f"resource:default/{name}",
                 "site": f"site:default/{site}",
